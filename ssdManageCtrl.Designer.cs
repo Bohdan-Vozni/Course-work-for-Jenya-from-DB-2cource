@@ -28,135 +28,108 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.openDeleteSsdBtn = new System.Windows.Forms.Button();
-            this.openEditSsdBtn = new System.Windows.Forms.Button();
-            this.openAddSsdBtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MemoryQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReadingSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WriteSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RadiatorType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // openDeleteSsdBtn
-            // 
-            this.openDeleteSsdBtn.Location = new System.Drawing.Point(231, 378);
-            this.openDeleteSsdBtn.Name = "openDeleteSsdBtn";
-            this.openDeleteSsdBtn.Size = new System.Drawing.Size(108, 23);
-            this.openDeleteSsdBtn.TabIndex = 11;
-            this.openDeleteSsdBtn.Text = "Видалити";
-            this.openDeleteSsdBtn.UseVisualStyleBackColor = true;
-            // 
-            // openEditSsdBtn
-            // 
-            this.openEditSsdBtn.Location = new System.Drawing.Point(117, 378);
-            this.openEditSsdBtn.Name = "openEditSsdBtn";
-            this.openEditSsdBtn.Size = new System.Drawing.Size(108, 23);
-            this.openEditSsdBtn.TabIndex = 10;
-            this.openEditSsdBtn.Text = "Редагувати";
-            this.openEditSsdBtn.UseVisualStyleBackColor = true;
+            openAddSsdBtn = new System.Windows.Forms.Button();
+            dataGridView1 = new System.Windows.Forms.DataGridView();
+            id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            MemoryQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ReadingSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            WriteSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            RadiatorType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // openAddSsdBtn
             // 
-            this.openAddSsdBtn.Location = new System.Drawing.Point(3, 378);
-            this.openAddSsdBtn.Name = "openAddSsdBtn";
-            this.openAddSsdBtn.Size = new System.Drawing.Size(108, 23);
-            this.openAddSsdBtn.TabIndex = 9;
-            this.openAddSsdBtn.Text = "Додати";
-            this.openAddSsdBtn.UseVisualStyleBackColor = true;
-            this.openAddSsdBtn.Click += new System.EventHandler(this.openAddSsdBtn_Click);
+            openAddSsdBtn.Location = new System.Drawing.Point(3, 472);
+            openAddSsdBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            openAddSsdBtn.Name = "openAddSsdBtn";
+            openAddSsdBtn.Size = new System.Drawing.Size(108, 29);
+            openAddSsdBtn.TabIndex = 9;
+            openAddSsdBtn.Text = "Додати";
+            openAddSsdBtn.UseVisualStyleBackColor = true;
+            openAddSsdBtn.Click += openAddSsdBtn_Click;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Title,
-            this.MemoryQuantity,
-            this.ReadingSpeed,
-            this.WriteSpeed,
-            this.RadiatorType,
-            this.Cost});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1014, 372);
-            this.dataGridView1.TabIndex = 8;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { id, Title, MemoryQuantity, ReadingSpeed, WriteSpeed, RadiatorType, Cost });
+            dataGridView1.Location = new System.Drawing.Point(0, 32);
+            dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 24;
+            dataGridView1.Size = new System.Drawing.Size(1014, 433);
+            dataGridView1.TabIndex = 8;
+            dataGridView1.CellContentDoubleClick += dataGridView1_CellContentDoubleClick;
             // 
             // id
             // 
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Width = 150;
+            id.HeaderText = "id";
+            id.MinimumWidth = 6;
+            id.Name = "id";
+            id.Width = 150;
             // 
             // Title
             // 
-            this.Title.HeaderText = "Title";
-            this.Title.MinimumWidth = 6;
-            this.Title.Name = "Title";
-            this.Title.Width = 150;
+            Title.HeaderText = "Title";
+            Title.MinimumWidth = 6;
+            Title.Name = "Title";
+            Title.Width = 150;
             // 
             // MemoryQuantity
             // 
-            this.MemoryQuantity.HeaderText = "MemoryQuantity";
-            this.MemoryQuantity.MinimumWidth = 6;
-            this.MemoryQuantity.Name = "MemoryQuantity";
-            this.MemoryQuantity.Width = 150;
+            MemoryQuantity.HeaderText = "MemoryQuantity";
+            MemoryQuantity.MinimumWidth = 6;
+            MemoryQuantity.Name = "MemoryQuantity";
+            MemoryQuantity.Width = 150;
             // 
             // ReadingSpeed
             // 
-            this.ReadingSpeed.HeaderText = "ReadingSpeed";
-            this.ReadingSpeed.MinimumWidth = 6;
-            this.ReadingSpeed.Name = "ReadingSpeed";
-            this.ReadingSpeed.Width = 150;
+            ReadingSpeed.HeaderText = "ReadingSpeed";
+            ReadingSpeed.MinimumWidth = 6;
+            ReadingSpeed.Name = "ReadingSpeed";
+            ReadingSpeed.Width = 150;
             // 
             // WriteSpeed
             // 
-            this.WriteSpeed.HeaderText = "WriteSpeed";
-            this.WriteSpeed.MinimumWidth = 6;
-            this.WriteSpeed.Name = "WriteSpeed";
-            this.WriteSpeed.Width = 150;
+            WriteSpeed.HeaderText = "WriteSpeed";
+            WriteSpeed.MinimumWidth = 6;
+            WriteSpeed.Name = "WriteSpeed";
+            WriteSpeed.Width = 150;
             // 
             // RadiatorType
             // 
-            this.RadiatorType.HeaderText = "RadiatorType";
-            this.RadiatorType.MinimumWidth = 6;
-            this.RadiatorType.Name = "RadiatorType";
-            this.RadiatorType.Width = 125;
+            RadiatorType.HeaderText = "RadiatorType";
+            RadiatorType.MinimumWidth = 6;
+            RadiatorType.Name = "RadiatorType";
+            RadiatorType.Width = 125;
             // 
             // Cost
             // 
-            this.Cost.HeaderText = "Cost";
-            this.Cost.MinimumWidth = 6;
-            this.Cost.Name = "Cost";
-            this.Cost.Width = 150;
+            Cost.HeaderText = "Cost";
+            Cost.MinimumWidth = 6;
+            Cost.Name = "Cost";
+            Cost.Width = 150;
             // 
             // ssdManageCtrl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.openDeleteSsdBtn);
-            this.Controls.Add(this.openEditSsdBtn);
-            this.Controls.Add(this.openAddSsdBtn);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "ssdManageCtrl";
-            this.Size = new System.Drawing.Size(1014, 416);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(openAddSsdBtn);
+            Controls.Add(dataGridView1);
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Name = "ssdManageCtrl";
+            Size = new System.Drawing.Size(1014, 520);
+            Load += ssdManageCtrl_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button openDeleteSsdBtn;
-        private System.Windows.Forms.Button openEditSsdBtn;
         private System.Windows.Forms.Button openAddSsdBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;

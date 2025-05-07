@@ -50,7 +50,7 @@ namespace jenya_lab_7
                 };
 
                 editHdd editForm = new editHdd(hdd);
-                editForm.ShowDialog();
+                editForm.Show();
 
                 dataGridView1.DataSource = GetAllHDDs();
             }

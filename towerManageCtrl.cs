@@ -48,7 +48,7 @@ namespace jenya_lab_7
                 };
 
                 editTower editForm = new editTower(tower);
-                editForm.ShowDialog();
+                editForm.Show();
 
                 dataGridView1.DataSource = GetAllTowers();
             }

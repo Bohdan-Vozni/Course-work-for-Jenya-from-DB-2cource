@@ -54,7 +54,7 @@ namespace jenya_lab_7
                 };
 
                 editCPU editForm = new editCPU(cpu);
-                editForm.ShowDialog();
+                editForm.Show();
 
                 dataGridView1.DataSource = GetAllCPUs();
             }

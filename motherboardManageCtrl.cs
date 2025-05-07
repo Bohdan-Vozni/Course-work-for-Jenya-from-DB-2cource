@@ -49,7 +49,7 @@ namespace jenya_lab_7
                 };
 
                 editMotherBoard editForm = new editMotherBoard(motherboard);
-                editForm.ShowDialog();
+                editForm.Show();
 
                 dataGridView1.DataSource = GetAllMotherboards();
             }
