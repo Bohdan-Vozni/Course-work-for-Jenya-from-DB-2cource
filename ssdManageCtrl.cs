@@ -22,7 +22,7 @@ namespace jenya_lab_7
             using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand("GetAllSsds", connection); // Имя хранимой процедуры
+                SqlCommand command = new SqlCommand("GetAllSSD", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
