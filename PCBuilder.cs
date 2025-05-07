@@ -1,0 +1,91 @@
+﻿using System.Windows.Forms;
+
+namespace jenya_lab_7
+{
+    public partial class PCBuilder : Form
+    {
+        public PCBuilder()
+        {
+            InitializeComponent();
+            this.cleanView();
+        }
+
+        private void cleanView()
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is UserControl userControl)
+                {
+                    userControl.Visible = false;
+                }
+            }
+        }
+
+        private void exitTL_Click(object sender, System.EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+            Hide();
+        }
+
+        private void configBTN_Click(object sender, System.EventArgs e)
+        {
+            this.cleanView();
+            Configuration.Visible = true;
+        }
+
+        private void catalogTL_Click(object sender, System.EventArgs e)
+        {
+            this.cleanView();
+            Catalog.Visible = true;
+        }
+
+        private void mainTL_Click(object sender, System.EventArgs e)
+        {
+            this.cleanView();
+        }
+
+        private void cpuMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.cleanView();
+            cpuManageCtrl1.Visible = true;
+        }
+
+        private void hddMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.cleanView();
+            hddManageCtrl1.Visible = true;
+        }
+
+        private void ramMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.cleanView();
+            ramManageCtrl1.Visible = true;
+        }
+
+        private void motherboardMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.cleanView();
+            motherboardManageCtrl1.Visible = true;
+        }
+
+        private void gpuMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.cleanView();
+            gpuManageCtrl1.Visible = true;
+        }
+
+        private void ssdMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.cleanView();
+            ssdManageCtrl1.Visible = true;
+        }
+
+        private void towerMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.cleanView();
+
+            towerManageCtrl1.Visible = true;
+        }
+    }
+}

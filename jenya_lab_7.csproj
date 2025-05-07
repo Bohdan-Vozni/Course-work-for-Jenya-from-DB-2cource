@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>jenya_lab_7</RootNamespace>
+    <AssemblyName>jenya_lab_7</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addCpu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addCpu.Designer.cs">
+      <DependentUpon>addCpu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addGpu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addGpu.Designer.cs">
+      <DependentUpon>addGpu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addHdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addHdd.Designer.cs">
+      <DependentUpon>addHdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addMotherboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addMotherboard.Designer.cs">
+      <DependentUpon>addMotherboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addRam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addRam.Designer.cs">
+      <DependentUpon>addRam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addSsd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addSsd.Designer.cs">
+      <DependentUpon>addSsd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addTower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addTower.Designer.cs">
+      <DependentUpon>addTower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CatalogCtrl.Designer.cs">
+      <DependentUpon>CatalogCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigurationCtrl.Designer.cs">
+      <DependentUpon>ConfigurationCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cpuManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="cpuManageCtrl.Designer.cs">
+      <DependentUpon>cpuManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gpuManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gpuManageCtrl.Designer.cs">
+      <DependentUpon>gpuManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hddManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="hddManageCtrl.Designer.cs">
+      <DependentUpon>hddManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="motherboardManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="motherboardManageCtrl.Designer.cs">
+      <DependentUpon>motherboardManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCBuilder.Designer.cs">
+      <DependentUpon>PCBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ramManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ramManageCtrl.Designer.cs">
+      <DependentUpon>ramManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ssdManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ssdManageCtrl.Designer.cs">
+      <DependentUpon>ssdManageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="towerManageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="towerManageCtrl.Designer.cs">
+      <DependentUpon>towerManageCtrl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addCpu.aa-DJ.resx">
+      <DependentUpon>addCpu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addCpu.resx">
+      <DependentUpon>addCpu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addGpu.resx">
+      <DependentUpon>addGpu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addHdd.resx">
+      <DependentUpon>addHdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addMotherboard.resx">
+      <DependentUpon>addMotherboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addRam.resx">
+      <DependentUpon>addRam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addSsd.resx">
+      <DependentUpon>addSsd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addTower.resx">
+      <DependentUpon>addTower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogCtrl.resx">
+      <DependentUpon>CatalogCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationCtrl.resx">
+      <DependentUpon>ConfigurationCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cpuManageCtrl.resx">
+      <DependentUpon>cpuManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gpuManageCtrl.resx">
+      <DependentUpon>gpuManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hddManageCtrl.resx">
+      <DependentUpon>hddManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="motherboardManageCtrl.resx">
+      <DependentUpon>motherboardManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCBuilder.resx">
+      <DependentUpon>PCBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ramManageCtrl.resx">
+      <DependentUpon>ramManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ssdManageCtrl.resx">
+      <DependentUpon>ssdManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="towerManageCtrl.resx">
+      <DependentUpon>towerManageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
