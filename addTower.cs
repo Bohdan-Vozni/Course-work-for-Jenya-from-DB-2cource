@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace jenya_lab_7
@@ -25,23 +27,54 @@ namespace jenya_lab_7
         {
             try
             {
-                string title = titleTB.Text;
-                string typeSize = typeSizeTB.Text;
-                bool fanIncluded = fanIncludedRadioBTN.Checked;
-                string fanType = fanIncluded ? fanTypeTB.Text : null;
-                float cost = float.Parse(costTB.Text);
+                string title = titleTB.Text.Trim();
+                string typeSize = typeSizeTB.Text.Trim();
+                string fanType = fanTypeTB.Text.Trim();
+                string fanIncluded = fanIncludedTB.Text.Trim();
+                string cost = costTB.Text.Trim();
 
-                MessageBox.Show("Tower успішно додано");
+                if (title == "" ||
+                    typeSize == "" ||
+                    fanIncluded == "" ||
+                    fanType == "" ||
+                    cost == ""
+                    )
+                {
+                    MessageBox.Show("Будь ласка, заповніть усі поля.");
+                    return;
+                }
 
-                emptyTB();
 
-                this.Close();
+
+                using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("AddTower", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    string idUnic = Guid.NewGuid().ToString();
+
+                    command.Parameters.AddWithValue("@Tower_ID", idUnic);
+                    command.Parameters.AddWithValue("@Title", title);
+                    command.Parameters.AddWithValue("@TypeSize", typeSize);
+                    command.Parameters.AddWithValue("@FanType", fanType);
+                    command.Parameters.AddWithValue("@FanIncluded", fanIncluded);
+                    command.Parameters.AddWithValue("@Cost", cost);
+                    command.ExecuteNonQuery();
+
+
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Помилка SQL при додаванні Корпус");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Помилка при додаванні Tower:\n{ex.Message}");
+                MessageBox.Show(ex.Message, "Неочікувана помилка");
             }
         }
+
 
         private void closeBTN_Click(object sender, EventArgs e)
         {

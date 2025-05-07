@@ -7,9 +7,9 @@ namespace jenya_lab_7
 {
     public partial class editGpu : Form
     {
-        private GPU gpu;  // Храним объект GPU
+        private GPU gpu;
 
-        // Конструктор для передачи объекта GPU
+
         public editGpu(GPU gpu)
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace jenya_lab_7
 
         private void editBTN_Click(object sender, EventArgs e)
         {
-            // Проверка на заполненность всех полей
+
             if (titleTB.Text.Trim() == "" ||
                 coresTB.Text.Trim() == "" ||
                 threadsTB.Text.Trim() == "" ||
