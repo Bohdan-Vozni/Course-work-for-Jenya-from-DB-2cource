@@ -28,119 +28,96 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.openDeleteHddBtn = new System.Windows.Forms.Button();
-            this.openEditHddBtn = new System.Windows.Forms.Button();
-            this.openAddHddBtn = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MemoryQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReadingSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WriteSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            dataGridView1 = new System.Windows.Forms.DataGridView();
+            id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            MemoryQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ReadingSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            WriteSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            openAddHddBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Title,
-            this.MemoryQuantity,
-            this.ReadingSpeed,
-            this.WriteSpeed,
-            this.Cost});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1014, 372);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // openDeleteHddBtn
-            // 
-            this.openDeleteHddBtn.Location = new System.Drawing.Point(231, 378);
-            this.openDeleteHddBtn.Name = "openDeleteHddBtn";
-            this.openDeleteHddBtn.Size = new System.Drawing.Size(108, 23);
-            this.openDeleteHddBtn.TabIndex = 7;
-            this.openDeleteHddBtn.Text = "Видалити";
-            this.openDeleteHddBtn.UseVisualStyleBackColor = true;
-            // 
-            // openEditHddBtn
-            // 
-            this.openEditHddBtn.Location = new System.Drawing.Point(117, 378);
-            this.openEditHddBtn.Name = "openEditHddBtn";
-            this.openEditHddBtn.Size = new System.Drawing.Size(108, 23);
-            this.openEditHddBtn.TabIndex = 6;
-            this.openEditHddBtn.Text = "Редагувати";
-            this.openEditHddBtn.UseVisualStyleBackColor = true;
-            // 
-            // openAddHddBtn
-            // 
-            this.openAddHddBtn.Location = new System.Drawing.Point(3, 378);
-            this.openAddHddBtn.Name = "openAddHddBtn";
-            this.openAddHddBtn.Size = new System.Drawing.Size(108, 23);
-            this.openAddHddBtn.TabIndex = 5;
-            this.openAddHddBtn.Text = "Додати";
-            this.openAddHddBtn.UseVisualStyleBackColor = true;
-            this.openAddHddBtn.Click += new System.EventHandler(this.openAddHddBtn_Click);
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { id, Title, MemoryQuantity, ReadingSpeed, WriteSpeed, Cost });
+            dataGridView1.Location = new System.Drawing.Point(0, 41);
+            dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 24;
+            dataGridView1.Size = new System.Drawing.Size(1014, 424);
+            dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentDoubleClick += dataGridView1_CellContentDoubleClick;
             // 
             // id
             // 
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Width = 150;
+            id.HeaderText = "id";
+            id.MinimumWidth = 6;
+            id.Name = "id";
+            id.Width = 150;
             // 
             // Title
             // 
-            this.Title.HeaderText = "Title";
-            this.Title.MinimumWidth = 6;
-            this.Title.Name = "Title";
-            this.Title.Width = 150;
+            Title.HeaderText = "Title";
+            Title.MinimumWidth = 6;
+            Title.Name = "Title";
+            Title.Width = 150;
             // 
             // MemoryQuantity
             // 
-            this.MemoryQuantity.HeaderText = "MemoryQuantity";
-            this.MemoryQuantity.MinimumWidth = 6;
-            this.MemoryQuantity.Name = "MemoryQuantity";
-            this.MemoryQuantity.Width = 150;
+            MemoryQuantity.HeaderText = "MemoryQuantity";
+            MemoryQuantity.MinimumWidth = 6;
+            MemoryQuantity.Name = "MemoryQuantity";
+            MemoryQuantity.Width = 150;
             // 
             // ReadingSpeed
             // 
-            this.ReadingSpeed.HeaderText = "ReadingSpeed";
-            this.ReadingSpeed.MinimumWidth = 6;
-            this.ReadingSpeed.Name = "ReadingSpeed";
-            this.ReadingSpeed.Width = 150;
+            ReadingSpeed.HeaderText = "ReadingSpeed";
+            ReadingSpeed.MinimumWidth = 6;
+            ReadingSpeed.Name = "ReadingSpeed";
+            ReadingSpeed.Width = 150;
             // 
             // WriteSpeed
             // 
-            this.WriteSpeed.HeaderText = "WriteSpeed";
-            this.WriteSpeed.MinimumWidth = 6;
-            this.WriteSpeed.Name = "WriteSpeed";
-            this.WriteSpeed.Width = 150;
+            WriteSpeed.HeaderText = "WriteSpeed";
+            WriteSpeed.MinimumWidth = 6;
+            WriteSpeed.Name = "WriteSpeed";
+            WriteSpeed.Width = 150;
             // 
             // Cost
             // 
-            this.Cost.HeaderText = "Cost";
-            this.Cost.MinimumWidth = 6;
-            this.Cost.Name = "Cost";
-            this.Cost.Width = 150;
+            Cost.HeaderText = "Cost";
+            Cost.MinimumWidth = 6;
+            Cost.Name = "Cost";
+            Cost.Width = 150;
+            // 
+            // openAddHddBtn
+            // 
+            openAddHddBtn.Location = new System.Drawing.Point(3, 472);
+            openAddHddBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            openAddHddBtn.Name = "openAddHddBtn";
+            openAddHddBtn.Size = new System.Drawing.Size(108, 29);
+            openAddHddBtn.TabIndex = 5;
+            openAddHddBtn.Text = "Додати";
+            openAddHddBtn.UseVisualStyleBackColor = true;
+            openAddHddBtn.Click += openAddHddBtn_Click;
             // 
             // hddManageCtrl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.openDeleteHddBtn);
-            this.Controls.Add(this.openEditHddBtn);
-            this.Controls.Add(this.openAddHddBtn);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "hddManageCtrl";
-            this.Size = new System.Drawing.Size(1014, 416);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(openAddHddBtn);
+            Controls.Add(dataGridView1);
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Name = "hddManageCtrl";
+            Size = new System.Drawing.Size(1014, 520);
+            Load += hddManageCtrl_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
 
         }
 
@@ -153,8 +130,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ReadingSpeed;
         private System.Windows.Forms.DataGridViewTextBoxColumn WriteSpeed;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
-        private System.Windows.Forms.Button openDeleteHddBtn;
-        private System.Windows.Forms.Button openEditHddBtn;
         private System.Windows.Forms.Button openAddHddBtn;
     }
 }

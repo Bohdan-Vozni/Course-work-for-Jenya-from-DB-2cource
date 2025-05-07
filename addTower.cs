@@ -28,46 +28,53 @@ namespace jenya_lab_7
             try
             {
                 string title = titleTB.Text.Trim();
-                string typeSize = typeSizeTB.Text.Trim();
-                string fanType = fanTypeTB.Text.Trim();
-                string fanIncluded = fanIncludedTB.Text.Trim();
-                string cost = costTB.Text.Trim();
+                string memoryQuantity = memoryQuantityTB.Text.Trim();
+                string readingSpeed = readingSpeedTB.Text.Trim();
+                string writeSpeed = writeSpeedTB.Text.Trim();
+                string costText = costTB.Text.Trim();
 
                 if (title == "" ||
-                    typeSize == "" ||
-                    fanIncluded == "" ||
-                    fanType == "" ||
-                    cost == ""
-                    )
+                    memoryQuantity == "" ||
+                    readingSpeed == "" ||
+                    writeSpeed == "" ||
+                    costText == "")
                 {
                     MessageBox.Show("Будь ласка, заповніть усі поля.");
                     return;
                 }
 
-
+                float cost;
+                if (!float.TryParse(costText, out cost))
+                {
+                    MessageBox.Show("Невірно введена ціна!");
+                    return;
+                }
 
                 using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
                 {
                     connection.Open();
-                    SqlCommand command = new SqlCommand("AddTower", connection);
+                    SqlCommand command = new SqlCommand("AddHDD", connection);
                     command.CommandType = CommandType.StoredProcedure;
 
                     string idUnic = Guid.NewGuid().ToString();
 
-                    command.Parameters.AddWithValue("@Tower_ID", idUnic);
+                    command.Parameters.AddWithValue("@HDD_ID", idUnic);
                     command.Parameters.AddWithValue("@Title", title);
-                    command.Parameters.AddWithValue("@TypeSize", typeSize);
-                    command.Parameters.AddWithValue("@FanType", fanType);
-                    command.Parameters.AddWithValue("@FanIncluded", fanIncluded);
+                    command.Parameters.AddWithValue("@MemoryQuantity", memoryQuantity);
+                    command.Parameters.AddWithValue("@ReadingSpeed", readingSpeed);
+                    command.Parameters.AddWithValue("@WriteSpeed", writeSpeed);
                     command.Parameters.AddWithValue("@Cost", cost);
+
                     command.ExecuteNonQuery();
+                    MessageBox.Show("HDD успішно додано!");
 
-
+                    emptyTB();
+                    this.Close();
                 }
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message, "Помилка SQL при додаванні Корпус");
+                MessageBox.Show(ex.Message, "Помилка SQL при додаванні HDD");
             }
             catch (Exception ex)
             {

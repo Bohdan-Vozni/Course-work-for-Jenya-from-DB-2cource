@@ -1,6 +1,6 @@
 ﻿namespace jenya_lab_7
 {
-    partial class addHdd
+    partial class editHdd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            saveBTN = new System.Windows.Forms.Button();
+            closeBTN = new System.Windows.Forms.Button();
+            editBTN = new System.Windows.Forms.Button();
             label3 = new System.Windows.Forms.Label();
             costTB = new System.Windows.Forms.TextBox();
             label8 = new System.Windows.Forms.Label();
@@ -40,146 +41,158 @@
             titleTB = new System.Windows.Forms.TextBox();
             memoryQuantityTB = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
-            closeBTN = new System.Windows.Forms.Button();
+            deleteBTN = new System.Windows.Forms.Button();
             SuspendLayout();
-            // 
-            // saveBTN
-            // 
-            saveBTN.Location = new System.Drawing.Point(174, 356);
-            saveBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            saveBTN.Name = "saveBTN";
-            saveBTN.Size = new System.Drawing.Size(129, 55);
-            saveBTN.TabIndex = 33;
-            saveBTN.Text = "Зберегти";
-            saveBTN.UseVisualStyleBackColor = true;
-            saveBTN.Click += saveBTN_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label3.Location = new System.Drawing.Point(248, 152);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(60, 31);
-            label3.TabIndex = 32;
-            label3.Text = "Cost";
-            // 
-            // costTB
-            // 
-            costTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            costTB.Location = new System.Drawing.Point(254, 190);
-            costTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            costTB.Name = "costTB";
-            costTB.Size = new System.Drawing.Size(176, 31);
-            costTB.TabIndex = 31;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label8.Location = new System.Drawing.Point(32, 152);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(195, 31);
-            label8.TabIndex = 30;
-            label8.Text = "Memory quantity";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label7.Location = new System.Drawing.Point(32, 248);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(166, 31);
-            label7.TabIndex = 29;
-            label7.Text = "Reading speed";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label6.Location = new System.Drawing.Point(243, 64);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(139, 31);
-            label6.TabIndex = 28;
-            label6.Text = "Write speed";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.Location = new System.Drawing.Point(32, 61);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(59, 31);
-            label2.TabIndex = 25;
-            label2.Text = "Title";
-            // 
-            // readingSpeedTB
-            // 
-            readingSpeedTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            readingSpeedTB.Location = new System.Drawing.Point(38, 285);
-            readingSpeedTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            readingSpeedTB.Name = "readingSpeedTB";
-            readingSpeedTB.Size = new System.Drawing.Size(176, 31);
-            readingSpeedTB.TabIndex = 24;
-            // 
-            // writeSpeedTB
-            // 
-            writeSpeedTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            writeSpeedTB.Location = new System.Drawing.Point(249, 104);
-            writeSpeedTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            writeSpeedTB.Name = "writeSpeedTB";
-            writeSpeedTB.Size = new System.Drawing.Size(176, 31);
-            writeSpeedTB.TabIndex = 23;
-            // 
-            // titleTB
-            // 
-            titleTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            titleTB.Location = new System.Drawing.Point(38, 104);
-            titleTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            titleTB.Name = "titleTB";
-            titleTB.Size = new System.Drawing.Size(176, 31);
-            titleTB.TabIndex = 22;
-            // 
-            // memoryQuantityTB
-            // 
-            memoryQuantityTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            memoryQuantityTB.Location = new System.Drawing.Point(38, 195);
-            memoryQuantityTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            memoryQuantityTB.Name = "memoryQuantityTB";
-            memoryQuantityTB.Size = new System.Drawing.Size(176, 31);
-            memoryQuantityTB.TabIndex = 21;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(38, 11);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(366, 31);
-            label1.TabIndex = 18;
-            label1.Text = "Додайте жерсткий накопичувач";
             // 
             // closeBTN
             // 
             closeBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             closeBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             closeBTN.ForeColor = System.Drawing.Color.FromArgb(255, 128, 128);
-            closeBTN.Location = new System.Drawing.Point(420, -1);
+            closeBTN.Location = new System.Drawing.Point(420, 0);
             closeBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             closeBTN.Name = "closeBTN";
             closeBTN.Size = new System.Drawing.Size(48, 52);
-            closeBTN.TabIndex = 47;
+            closeBTN.TabIndex = 60;
             closeBTN.Text = "X";
             closeBTN.UseVisualStyleBackColor = true;
             closeBTN.Click += closeBTN_Click;
             // 
-            // addHdd
+            // editBTN
+            // 
+            editBTN.Location = new System.Drawing.Point(98, 357);
+            editBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            editBTN.Name = "editBTN";
+            editBTN.Size = new System.Drawing.Size(129, 55);
+            editBTN.TabIndex = 59;
+            editBTN.Text = "Редагувати";
+            editBTN.UseVisualStyleBackColor = true;
+            editBTN.Click += editBTN_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label3.Location = new System.Drawing.Point(248, 153);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(60, 31);
+            label3.TabIndex = 58;
+            label3.Text = "Cost";
+            // 
+            // costTB
+            // 
+            costTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            costTB.Location = new System.Drawing.Point(254, 191);
+            costTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            costTB.Name = "costTB";
+            costTB.Size = new System.Drawing.Size(176, 31);
+            costTB.TabIndex = 57;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label8.Location = new System.Drawing.Point(32, 153);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(195, 31);
+            label8.TabIndex = 56;
+            label8.Text = "Memory quantity";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label7.Location = new System.Drawing.Point(32, 249);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(166, 31);
+            label7.TabIndex = 55;
+            label7.Text = "Reading speed";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label6.Location = new System.Drawing.Point(243, 65);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(139, 31);
+            label6.TabIndex = 54;
+            label6.Text = "Write speed";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label2.Location = new System.Drawing.Point(32, 62);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(59, 31);
+            label2.TabIndex = 53;
+            label2.Text = "Title";
+            // 
+            // readingSpeedTB
+            // 
+            readingSpeedTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            readingSpeedTB.Location = new System.Drawing.Point(38, 286);
+            readingSpeedTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            readingSpeedTB.Name = "readingSpeedTB";
+            readingSpeedTB.Size = new System.Drawing.Size(176, 31);
+            readingSpeedTB.TabIndex = 52;
+            // 
+            // writeSpeedTB
+            // 
+            writeSpeedTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            writeSpeedTB.Location = new System.Drawing.Point(249, 105);
+            writeSpeedTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            writeSpeedTB.Name = "writeSpeedTB";
+            writeSpeedTB.Size = new System.Drawing.Size(176, 31);
+            writeSpeedTB.TabIndex = 51;
+            // 
+            // titleTB
+            // 
+            titleTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            titleTB.Location = new System.Drawing.Point(38, 105);
+            titleTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            titleTB.Name = "titleTB";
+            titleTB.Size = new System.Drawing.Size(176, 31);
+            titleTB.TabIndex = 50;
+            // 
+            // memoryQuantityTB
+            // 
+            memoryQuantityTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            memoryQuantityTB.Location = new System.Drawing.Point(38, 196);
+            memoryQuantityTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            memoryQuantityTB.Name = "memoryQuantityTB";
+            memoryQuantityTB.Size = new System.Drawing.Size(176, 31);
+            memoryQuantityTB.TabIndex = 49;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label1.Location = new System.Drawing.Point(85, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(250, 62);
+            label1.TabIndex = 48;
+            label1.Text = "Редагувати жерсткий \r\nнакопичувач";
+            // 
+            // deleteBTN
+            // 
+            deleteBTN.Location = new System.Drawing.Point(254, 357);
+            deleteBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            deleteBTN.Name = "deleteBTN";
+            deleteBTN.Size = new System.Drawing.Size(129, 55);
+            deleteBTN.TabIndex = 61;
+            deleteBTN.Text = "Видалити";
+            deleteBTN.UseVisualStyleBackColor = true;
+            deleteBTN.Click += deleteBTN_Click;
+            // 
+            // editHdd
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(467, 442);
+            Controls.Add(deleteBTN);
             Controls.Add(closeBTN);
-            Controls.Add(saveBTN);
+            Controls.Add(editBTN);
             Controls.Add(label3);
             Controls.Add(costTB);
             Controls.Add(label8);
@@ -192,18 +205,17 @@
             Controls.Add(memoryQuantityTB);
             Controls.Add(label1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            Name = "addHdd";
+            Name = "editHdd";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "addHdd";
+            Text = "editHdd";
             ResumeLayout(false);
             PerformLayout();
-
         }
 
         #endregion
 
-        private System.Windows.Forms.Button saveBTN;
+        private System.Windows.Forms.Button closeBTN;
+        private System.Windows.Forms.Button editBTN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox costTB;
         private System.Windows.Forms.Label label8;
@@ -215,6 +227,6 @@
         private System.Windows.Forms.TextBox titleTB;
         private System.Windows.Forms.TextBox memoryQuantityTB;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button closeBTN;
+        private System.Windows.Forms.Button deleteBTN;
     }
 }
