@@ -28,147 +28,137 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.openDeleteMthrBtn = new System.Windows.Forms.Button();
-            this.openEditMthrBtn = new System.Windows.Forms.Button();
-            this.openAddMthrBtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cores = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Threads = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VRAMType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VRAMQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cache = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            openDeleteMthrBtn = new System.Windows.Forms.Button();
+            openEditMthrBtn = new System.Windows.Forms.Button();
+            openAddMthrBtn = new System.Windows.Forms.Button();
+            dataGridView1 = new System.Windows.Forms.DataGridView();
+            id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Cores = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Threads = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            VRAMType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            VRAMQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Cache = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Clock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // openDeleteMthrBtn
             // 
-            this.openDeleteMthrBtn.Location = new System.Drawing.Point(234, 378);
-            this.openDeleteMthrBtn.Name = "openDeleteMthrBtn";
-            this.openDeleteMthrBtn.Size = new System.Drawing.Size(108, 23);
-            this.openDeleteMthrBtn.TabIndex = 12;
-            this.openDeleteMthrBtn.Text = "Видалити";
-            this.openDeleteMthrBtn.UseVisualStyleBackColor = true;
+            openDeleteMthrBtn.Location = new System.Drawing.Point(205, 354);
+            openDeleteMthrBtn.Name = "openDeleteMthrBtn";
+            openDeleteMthrBtn.Size = new System.Drawing.Size(94, 22);
+            openDeleteMthrBtn.TabIndex = 12;
+            openDeleteMthrBtn.Text = "Видалити";
+            openDeleteMthrBtn.UseVisualStyleBackColor = true;
             // 
             // openEditMthrBtn
             // 
-            this.openEditMthrBtn.Location = new System.Drawing.Point(120, 378);
-            this.openEditMthrBtn.Name = "openEditMthrBtn";
-            this.openEditMthrBtn.Size = new System.Drawing.Size(108, 23);
-            this.openEditMthrBtn.TabIndex = 11;
-            this.openEditMthrBtn.Text = "Редагувати";
-            this.openEditMthrBtn.UseVisualStyleBackColor = true;
+            openEditMthrBtn.Location = new System.Drawing.Point(105, 354);
+            openEditMthrBtn.Name = "openEditMthrBtn";
+            openEditMthrBtn.Size = new System.Drawing.Size(94, 22);
+            openEditMthrBtn.TabIndex = 11;
+            openEditMthrBtn.Text = "Редагувати";
+            openEditMthrBtn.UseVisualStyleBackColor = true;
             // 
             // openAddMthrBtn
             // 
-            this.openAddMthrBtn.Location = new System.Drawing.Point(6, 378);
-            this.openAddMthrBtn.Name = "openAddMthrBtn";
-            this.openAddMthrBtn.Size = new System.Drawing.Size(108, 23);
-            this.openAddMthrBtn.TabIndex = 10;
-            this.openAddMthrBtn.Text = "Додати";
-            this.openAddMthrBtn.UseVisualStyleBackColor = true;
-            this.openAddMthrBtn.Click += new System.EventHandler(this.openAddMthrBtn_Click);
+            openAddMthrBtn.Location = new System.Drawing.Point(5, 354);
+            openAddMthrBtn.Name = "openAddMthrBtn";
+            openAddMthrBtn.Size = new System.Drawing.Size(94, 22);
+            openAddMthrBtn.TabIndex = 10;
+            openAddMthrBtn.Text = "Додати";
+            openAddMthrBtn.UseVisualStyleBackColor = true;
+            openAddMthrBtn.Click += openAddMthrBtn_Click;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Title,
-            this.Cores,
-            this.Threads,
-            this.VRAMType,
-            this.VRAMQuantity,
-            this.Cache,
-            this.Clock,
-            this.Cost});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1014, 372);
-            this.dataGridView1.TabIndex = 9;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { id, Title, Cores, Threads, VRAMType, VRAMQuantity, Cache, Clock, Cost });
+            dataGridView1.Location = new System.Drawing.Point(5, 27);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 24;
+            dataGridView1.Size = new System.Drawing.Size(887, 349);
+            dataGridView1.TabIndex = 9;
             // 
             // id
             // 
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Width = 150;
+            id.HeaderText = "id";
+            id.MinimumWidth = 6;
+            id.Name = "id";
+            id.Width = 150;
             // 
             // Title
             // 
-            this.Title.HeaderText = "Title";
-            this.Title.MinimumWidth = 6;
-            this.Title.Name = "Title";
-            this.Title.Width = 150;
+            Title.HeaderText = "Title";
+            Title.MinimumWidth = 6;
+            Title.Name = "Title";
+            Title.Width = 150;
             // 
             // Cores
             // 
-            this.Cores.HeaderText = "Cores";
-            this.Cores.MinimumWidth = 6;
-            this.Cores.Name = "Cores";
-            this.Cores.Width = 125;
+            Cores.HeaderText = "Cores";
+            Cores.MinimumWidth = 6;
+            Cores.Name = "Cores";
+            Cores.Width = 125;
             // 
             // Threads
             // 
-            this.Threads.HeaderText = "Threads";
-            this.Threads.MinimumWidth = 6;
-            this.Threads.Name = "Threads";
-            this.Threads.Width = 125;
+            Threads.HeaderText = "Threads";
+            Threads.MinimumWidth = 6;
+            Threads.Name = "Threads";
+            Threads.Width = 125;
             // 
             // VRAMType
             // 
-            this.VRAMType.HeaderText = "VRAMType";
-            this.VRAMType.MinimumWidth = 6;
-            this.VRAMType.Name = "VRAMType";
-            this.VRAMType.Width = 125;
+            VRAMType.HeaderText = "VRAMType";
+            VRAMType.MinimumWidth = 6;
+            VRAMType.Name = "VRAMType";
+            VRAMType.Width = 125;
             // 
             // VRAMQuantity
             // 
-            this.VRAMQuantity.HeaderText = "VRAMQuantity";
-            this.VRAMQuantity.MinimumWidth = 6;
-            this.VRAMQuantity.Name = "VRAMQuantity";
-            this.VRAMQuantity.Width = 125;
+            VRAMQuantity.HeaderText = "VRAMQuantity";
+            VRAMQuantity.MinimumWidth = 6;
+            VRAMQuantity.Name = "VRAMQuantity";
+            VRAMQuantity.Width = 125;
             // 
             // Cache
             // 
-            this.Cache.HeaderText = "Cache";
-            this.Cache.MinimumWidth = 6;
-            this.Cache.Name = "Cache";
-            this.Cache.Width = 125;
+            Cache.HeaderText = "Cache";
+            Cache.MinimumWidth = 6;
+            Cache.Name = "Cache";
+            Cache.Width = 125;
             // 
             // Clock
             // 
-            this.Clock.HeaderText = "Clock";
-            this.Clock.MinimumWidth = 6;
-            this.Clock.Name = "Clock";
-            this.Clock.Width = 125;
+            Clock.HeaderText = "Clock";
+            Clock.MinimumWidth = 6;
+            Clock.Name = "Clock";
+            Clock.Width = 125;
             // 
             // Cost
             // 
-            this.Cost.HeaderText = "Cost";
-            this.Cost.MinimumWidth = 6;
-            this.Cost.Name = "Cost";
-            this.Cost.Width = 150;
+            Cost.HeaderText = "Cost";
+            Cost.MinimumWidth = 6;
+            Cost.Name = "Cost";
+            Cost.Width = 150;
             // 
             // gpuManageCtrl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.openDeleteMthrBtn);
-            this.Controls.Add(this.openEditMthrBtn);
-            this.Controls.Add(this.openAddMthrBtn);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "gpuManageCtrl";
-            this.Size = new System.Drawing.Size(1014, 412);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(openDeleteMthrBtn);
+            Controls.Add(openEditMthrBtn);
+            Controls.Add(openAddMthrBtn);
+            Controls.Add(dataGridView1);
+            Name = "gpuManageCtrl";
+            Size = new System.Drawing.Size(887, 386);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

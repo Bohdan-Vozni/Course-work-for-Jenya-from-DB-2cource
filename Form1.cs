@@ -1,4 +1,8 @@
 ﻿using System.Windows.Forms;
+using System.Text.Json;
+using Microsoft.VisualBasic.Logging;
+using System.IO;
+using Microsoft.Data.SqlClient;
 
 namespace jenya_lab_7
 {
@@ -7,6 +11,9 @@ namespace jenya_lab_7
         public Form1()
         {
             InitializeComponent();
+
+            userNameTB.Text = "sa";
+            passwordTB.Text = "1234";
         }
 
         private void authBTN_Click(object sender, System.EventArgs e)
@@ -16,17 +23,58 @@ namespace jenya_lab_7
             userNameTB.Text = string.Empty;
             passwordTB.Text = string.Empty;
 
-            if (userName == "" && password == "")
+            string pathToConectionString = Application.StartupPath.ToString();
+            pathToConectionString += "/" + "ConectionString.json";
+
+            var options = new JsonSerializerOptions
             {
-                PCBuilder PCForm = new PCBuilder();
-                PCForm.Show();
-                Hide();
+                WriteIndented = true, // додає відступи для читаємості
+            };
+
+            if (!File.Exists(pathToConectionString))
+            {
+                using (FileStream file = new FileStream(pathToConectionString, FileMode.Create))
+                {
+                    JsonSerializer.Serialize(file, GetContectionString.getstr, options);
+                }
+            }
+            else
+            {
+                using (FileStream file = new FileStream(pathToConectionString, FileMode.Open))
+                {
+                    GetContectionString.getstr = JsonSerializer.Deserialize<string>(file) + "User Id =" + userName + ";" + "Password =" + password + ";";
+                }
+            }
+
+            using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
+            {
+                try
+                {
+                    connection.Open();
+                    MessageBox.Show("Підключення успішне!");
+
+                    var PCForm = new PCBuilder();
+                    PCForm.Show();
+                    Hide();
+                    connection.Close();
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Не вдалося підключитися до бази даних:");
+                }
+
             }
         }
 
         private void exitAppBTN_Click(object sender, System.EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_Load(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

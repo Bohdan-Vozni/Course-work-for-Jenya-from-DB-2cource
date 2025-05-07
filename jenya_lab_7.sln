@@ -5,6 +5,11 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jenya_lab_7", "jenya_lab_7.csproj", "{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9FE381E6-8E57-4B17-905D-32D696B3E1F3}"
+	ProjectSection(SolutionItems) = preProject
+		GetConectionString.cs = GetConectionString.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
