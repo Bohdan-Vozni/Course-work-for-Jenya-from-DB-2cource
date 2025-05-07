@@ -1,0 +1,14 @@
+USE PC_constructor
+GO
+
+IF exists ( SELECT name FROM sys.objects WHERE name = 'DeleteGPU')
+  DROP PROCEDURE DeleteGPU;
+GO
+
+CREATE PROCEDURE DeleteGPU
+    @GPU_ID CHAR(36)
+AS
+BEGIN
+    DELETE FROM GPU WHERE GPU_ID = @GPU_ID
+END
+GO

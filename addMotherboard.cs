@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace jenya_lab_7
@@ -25,21 +27,51 @@ namespace jenya_lab_7
         {
             try
             {
-                string title = titleTB.Text;
-                string socket = socketTB.Text;
-                string typeSize = typeSizeTB.Text;
-                string readingSpeed = chipsetTB.Text;
-                float cost = float.Parse(costTB.Text);
+                string title = titleTB.Text.Trim();
+                string socket = socketTB.Text.Trim();
+                string typeSize = typeSizeTB.Text.Trim();
+                string chipset = chipsetTB.Text.Trim();
+                string cost = costTB.Text.Trim();
 
-                MessageBox.Show("Motherboard успішно додано");
+                if (title == "" ||
+                    socket == "" ||
+                    typeSize == "" ||
+                    chipset == "" ||
+                    cost == "")
+                {
+                    MessageBox.Show("Будь ласка, заповніть усі поля.");
+                    return;
+                }
 
+                using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("AddMotherboard", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    string idUnic = Guid.NewGuid().ToString();
+
+                    command.Parameters.AddWithValue("@Motherboard_ID", idUnic);
+                    command.Parameters.AddWithValue("@Title", title);
+                    command.Parameters.AddWithValue("@Socket", socket);
+                    command.Parameters.AddWithValue("@TypeSize", typeSize);
+                    command.Parameters.AddWithValue("@Chipset", chipset);
+                    command.Parameters.AddWithValue("@Cost", float.Parse(cost));
+
+                    command.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Материнська плата успішно додана");
                 emptyTB();
-
                 this.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Помилка SQL при додаванні Материнська плата");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Помилка при додаванні Motherboard:\n{ex.Message}");
+                MessageBox.Show(ex.Message, "Неочікувана помилка");
             }
         }
 
