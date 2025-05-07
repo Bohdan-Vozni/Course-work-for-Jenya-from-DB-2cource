@@ -1,0 +1,14 @@
+use PC_constructor;
+go
+
+IF EXISTS (SELECT name FROM sys.objects WHERE name = 'DeleteRAM')
+  DROP PROCEDURE DeleteRAM;
+GO
+
+CREATE PROCEDURE DeleteRAM
+  @RAM_ID CHAR(36)
+AS
+BEGIN
+  DELETE FROM RAM WHERE RAM_ID = @RAM_ID;
+END;
+GO

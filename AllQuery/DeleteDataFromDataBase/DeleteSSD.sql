@@ -1,0 +1,14 @@
+use PC_constructor;
+go
+
+IF EXISTS (SELECT name FROM sys.objects WHERE name = 'DeleteSSD')
+  DROP PROCEDURE DeleteSSD;
+GO
+
+CREATE PROCEDURE DeleteSSD
+  @SSD_ID CHAR(36)
+AS
+BEGIN
+  DELETE FROM SSD WHERE SSD_ID = @SSD_ID;
+END;
+GO

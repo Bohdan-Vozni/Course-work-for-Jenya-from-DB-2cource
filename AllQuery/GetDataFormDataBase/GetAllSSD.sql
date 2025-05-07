@@ -1,0 +1,13 @@
+use PC_constructor;
+go
+
+IF EXISTS (SELECT name FROM sys.objects WHERE name = 'GetAllSSD')
+  DROP PROCEDURE GetAllSSD;
+GO
+
+CREATE PROCEDURE GetAllSSD
+AS
+BEGIN
+  SELECT * FROM SSD;
+END;
+GO

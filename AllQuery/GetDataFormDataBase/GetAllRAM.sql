@@ -1,0 +1,13 @@
+use PC_constructor;
+go
+
+IF EXISTS (SELECT name FROM sys.objects WHERE name = 'GetAllRAM')
+  DROP PROCEDURE GetAllRAM;
+GO
+
+CREATE PROCEDURE GetAllRAM
+AS
+BEGIN
+  SELECT * FROM RAM;
+END;
+GO
