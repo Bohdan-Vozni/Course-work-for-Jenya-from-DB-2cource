@@ -28,213 +28,223 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.costTB = new System.Windows.Forms.TextBox();
-            this.architectureTB = new System.Windows.Forms.TextBox();
-            this.coresTB = new System.Windows.Forms.TextBox();
-            this.titleTB = new System.Windows.Forms.TextBox();
-            this.cacheTB = new System.Windows.Forms.TextBox();
-            this.threadsTB = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.clockTB = new System.Windows.Forms.TextBox();
-            this.saveBTN = new System.Windows.Forms.Button();
-            this.closeBTN = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            label1 = new System.Windows.Forms.Label();
+            costTB = new System.Windows.Forms.TextBox();
+            architectureTB = new System.Windows.Forms.TextBox();
+            coresTB = new System.Windows.Forms.TextBox();
+            titleTB = new System.Windows.Forms.TextBox();
+            cacheTB = new System.Windows.Forms.TextBox();
+            threadsTB = new System.Windows.Forms.TextBox();
+            label2 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            label8 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            clockTB = new System.Windows.Forms.TextBox();
+            saveBTN = new System.Windows.Forms.Button();
+            closeBTN = new System.Windows.Forms.Button();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(141, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Додайте CPU";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label1.Location = new System.Drawing.Point(116, 10);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(230, 31);
+            label1.TabIndex = 0;
+            label1.Text = "Додайте процессор";
             // 
             // costTB
             // 
-            this.costTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.costTB.Location = new System.Drawing.Point(242, 227);
-            this.costTB.Name = "costTB";
-            this.costTB.Size = new System.Drawing.Size(176, 31);
-            this.costTB.TabIndex = 2;
+            costTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            costTB.Location = new System.Drawing.Point(242, 284);
+            costTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            costTB.Name = "costTB";
+            costTB.Size = new System.Drawing.Size(176, 31);
+            costTB.TabIndex = 2;
             // 
             // architectureTB
             // 
-            this.architectureTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.architectureTB.Location = new System.Drawing.Point(242, 155);
-            this.architectureTB.Name = "architectureTB";
-            this.architectureTB.Size = new System.Drawing.Size(176, 31);
-            this.architectureTB.TabIndex = 3;
+            architectureTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            architectureTB.Location = new System.Drawing.Point(242, 194);
+            architectureTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            architectureTB.Name = "architectureTB";
+            architectureTB.Size = new System.Drawing.Size(176, 31);
+            architectureTB.TabIndex = 3;
             // 
             // coresTB
             // 
-            this.coresTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.coresTB.Location = new System.Drawing.Point(41, 155);
-            this.coresTB.Name = "coresTB";
-            this.coresTB.Size = new System.Drawing.Size(176, 31);
-            this.coresTB.TabIndex = 4;
+            coresTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            coresTB.Location = new System.Drawing.Point(41, 194);
+            coresTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            coresTB.Name = "coresTB";
+            coresTB.Size = new System.Drawing.Size(176, 31);
+            coresTB.TabIndex = 4;
             // 
             // titleTB
             // 
-            this.titleTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.titleTB.Location = new System.Drawing.Point(41, 82);
-            this.titleTB.Name = "titleTB";
-            this.titleTB.Size = new System.Drawing.Size(176, 31);
-            this.titleTB.TabIndex = 5;
+            titleTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            titleTB.Location = new System.Drawing.Point(41, 102);
+            titleTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            titleTB.Name = "titleTB";
+            titleTB.Size = new System.Drawing.Size(176, 31);
+            titleTB.TabIndex = 5;
             // 
             // cacheTB
             // 
-            this.cacheTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cacheTB.Location = new System.Drawing.Point(242, 82);
-            this.cacheTB.Name = "cacheTB";
-            this.cacheTB.Size = new System.Drawing.Size(176, 31);
-            this.cacheTB.TabIndex = 6;
+            cacheTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            cacheTB.Location = new System.Drawing.Point(242, 102);
+            cacheTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            cacheTB.Name = "cacheTB";
+            cacheTB.Size = new System.Drawing.Size(176, 31);
+            cacheTB.TabIndex = 6;
             // 
             // threadsTB
             // 
-            this.threadsTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.threadsTB.Location = new System.Drawing.Point(41, 227);
-            this.threadsTB.Name = "threadsTB";
-            this.threadsTB.Size = new System.Drawing.Size(176, 31);
-            this.threadsTB.TabIndex = 7;
+            threadsTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            threadsTB.Location = new System.Drawing.Point(41, 284);
+            threadsTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            threadsTB.Name = "threadsTB";
+            threadsTB.Size = new System.Drawing.Size(176, 31);
+            threadsTB.TabIndex = 7;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 31);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Title";
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label2.Location = new System.Drawing.Point(35, 60);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(59, 31);
+            label2.TabIndex = 8;
+            label2.Text = "Title";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(236, 193);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 31);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Cost";
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label4.Location = new System.Drawing.Point(236, 241);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(60, 31);
+            label4.TabIndex = 10;
+            label4.Text = "Cost";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(236, 121);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(141, 31);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Architecture";
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label5.Location = new System.Drawing.Point(236, 151);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(141, 31);
+            label5.TabIndex = 11;
+            label5.Text = "Architecture";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(236, 50);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 31);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Cache";
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label6.Location = new System.Drawing.Point(236, 62);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(76, 31);
+            label6.TabIndex = 12;
+            label6.Text = "Cache";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(35, 197);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 31);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Threads";
+            label7.AutoSize = true;
+            label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label7.Location = new System.Drawing.Point(35, 246);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(97, 31);
+            label7.TabIndex = 13;
+            label7.Text = "Threads";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(35, 121);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 31);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Cores";
+            label8.AutoSize = true;
+            label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label8.Location = new System.Drawing.Point(35, 151);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(73, 31);
+            label8.TabIndex = 14;
+            label8.Text = "Cores";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 261);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 31);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Clock";
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label3.Location = new System.Drawing.Point(35, 326);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(71, 31);
+            label3.TabIndex = 16;
+            label3.Text = "Clock";
             // 
             // clockTB
             // 
-            this.clockTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.clockTB.Location = new System.Drawing.Point(41, 291);
-            this.clockTB.Name = "clockTB";
-            this.clockTB.Size = new System.Drawing.Size(176, 31);
-            this.clockTB.TabIndex = 15;
+            clockTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            clockTB.Location = new System.Drawing.Point(41, 364);
+            clockTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            clockTB.Name = "clockTB";
+            clockTB.Size = new System.Drawing.Size(176, 31);
+            clockTB.TabIndex = 15;
             // 
             // saveBTN
             // 
-            this.saveBTN.Location = new System.Drawing.Point(167, 341);
-            this.saveBTN.Name = "saveBTN";
-            this.saveBTN.Size = new System.Drawing.Size(129, 44);
-            this.saveBTN.TabIndex = 17;
-            this.saveBTN.Text = "Зберегти";
-            this.saveBTN.UseVisualStyleBackColor = true;
-            this.saveBTN.Click += new System.EventHandler(this.saveBTN_Click);
+            saveBTN.Location = new System.Drawing.Point(167, 426);
+            saveBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            saveBTN.Name = "saveBTN";
+            saveBTN.Size = new System.Drawing.Size(129, 55);
+            saveBTN.TabIndex = 17;
+            saveBTN.Text = "Зберегти";
+            saveBTN.UseVisualStyleBackColor = true;
+            saveBTN.Click += saveBTN_Click;
             // 
             // closeBTN
             // 
-            this.closeBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.closeBTN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.closeBTN.Location = new System.Drawing.Point(422, -2);
-            this.closeBTN.Name = "closeBTN";
-            this.closeBTN.Size = new System.Drawing.Size(48, 42);
-            this.closeBTN.TabIndex = 48;
-            this.closeBTN.Text = "X";
-            this.closeBTN.UseVisualStyleBackColor = true;
-            this.closeBTN.Click += new System.EventHandler(this.closeBTN_Click);
+            closeBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            closeBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
+            closeBTN.ForeColor = System.Drawing.Color.FromArgb(255, 128, 128);
+            closeBTN.Location = new System.Drawing.Point(422, -2);
+            closeBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            closeBTN.Name = "closeBTN";
+            closeBTN.Size = new System.Drawing.Size(48, 52);
+            closeBTN.TabIndex = 48;
+            closeBTN.Text = "X";
+            closeBTN.UseVisualStyleBackColor = true;
+            closeBTN.Click += closeBTN_Click;
             // 
             // addCpu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(467, 397);
-            this.Controls.Add(this.closeBTN);
-            this.Controls.Add(this.saveBTN);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.clockTB);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.threadsTB);
-            this.Controls.Add(this.cacheTB);
-            this.Controls.Add(this.titleTB);
-            this.Controls.Add(this.coresTB);
-            this.Controls.Add(this.architectureTB);
-            this.Controls.Add(this.costTB);
-            this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "addCpu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "addCpu";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            ClientSize = new System.Drawing.Size(467, 496);
+            Controls.Add(closeBTN);
+            Controls.Add(saveBTN);
+            Controls.Add(label3);
+            Controls.Add(clockTB);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label2);
+            Controls.Add(threadsTB);
+            Controls.Add(cacheTB);
+            Controls.Add(titleTB);
+            Controls.Add(coresTB);
+            Controls.Add(architectureTB);
+            Controls.Add(costTB);
+            Controls.Add(label1);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Name = "addCpu";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "addCpu";
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

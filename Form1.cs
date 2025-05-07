@@ -1,8 +1,7 @@
-﻿using System.Windows.Forms;
-using System.Text.Json;
-using Microsoft.VisualBasic.Logging;
+﻿using Microsoft.Data.SqlClient;
 using System.IO;
-using Microsoft.Data.SqlClient;
+using System.Text.Json;
+using System.Windows.Forms;
 
 namespace jenya_lab_7
 {
@@ -42,7 +41,7 @@ namespace jenya_lab_7
             {
                 using (FileStream file = new FileStream(pathToConectionString, FileMode.Open))
                 {
-                    GetContectionString.getstr = JsonSerializer.Deserialize<string>(file) + "User Id =" + userName + ";" + "Password =" + password + ";";
+                    GetContectionString.getstr = JsonSerializer.Deserialize<string>(file) + "User Id =" + userName + ";" + "Password =" + password + ";" + "TrustServerCertificate=True;"; ;
                 }
             }
 
@@ -61,7 +60,7 @@ namespace jenya_lab_7
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("Не вдалося підключитися до бази даних:");
+                    MessageBox.Show($"Не вдалося підключитися до бази даних: {ex}");
                 }
 
             }

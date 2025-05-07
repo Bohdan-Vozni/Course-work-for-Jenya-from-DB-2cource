@@ -1,26 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\",
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\configurationctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:configurationctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\cpumanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:cpumanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\configurationforallorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:configurationforallorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\cpumanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:cpumanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\configurationctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:configurationctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\addcpu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:addcpu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\configurationforallorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:configurationforallorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\editgpu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:editgpu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\pcforsaveorderforonetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:pcforsaveorderforonetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\addcpu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:addcpu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 233,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,71 +45,83 @@
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PcForSaveOrderForOneTime.cs",
-              "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\PcForSaveOrderForOneTime.cs",
-              "RelativeDocumentMoniker": "PcForSaveOrderForOneTime.cs",
-              "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\PcForSaveOrderForOneTime.cs",
-              "RelativeToolTip": "PcForSaveOrderForOneTime.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "cpuManageCtrl.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\cpuManageCtrl.cs",
+              "RelativeDocumentMoniker": "cpuManageCtrl.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\cpuManageCtrl.cs",
+              "RelativeToolTip": "cpuManageCtrl.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwBkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T14:12:09.15Z",
+              "WhenOpened": "2025-05-07T15:31:13.235Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ConfigurationForAllOrder.cs [Design]",
-              "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationForAllOrder.cs",
-              "RelativeDocumentMoniker": "ConfigurationForAllOrder.cs",
-              "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationForAllOrder.cs [Design]",
-              "RelativeToolTip": "ConfigurationForAllOrder.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T13:56:57.474Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ConfigurationForAllOrder.cs",
-              "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationForAllOrder.cs",
-              "RelativeDocumentMoniker": "ConfigurationForAllOrder.cs",
-              "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationForAllOrder.cs",
-              "RelativeToolTip": "ConfigurationForAllOrder.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAA7wCAAAAAIAAAAAAAAAA==",
+              "Title": "cpuManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\cpuManageCtrl.cs",
+              "RelativeDocumentMoniker": "cpuManageCtrl.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\cpuManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "cpuManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T14:04:02.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T15:30:58.671Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "editGpu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\editGpu.cs",
+              "RelativeDocumentMoniker": "editGpu.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\editGpu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "editGpu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T15:25:00.856Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ConfigurationCtrl.cs [Design]",
-              "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationCtrl.cs",
-              "RelativeDocumentMoniker": "ConfigurationCtrl.cs",
-              "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationCtrl.cs [Design]",
-              "RelativeToolTip": "ConfigurationCtrl.cs [Design]",
+              "Title": "addCpu.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\addCpu.cs",
+              "RelativeDocumentMoniker": "addCpu.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\addCpu.cs",
+              "RelativeToolTip": "addCpu.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwCsAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T13:49:13.636Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-07T15:23:15.731Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ConfigurationCtrl.cs",
-              "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationCtrl.cs",
-              "RelativeDocumentMoniker": "ConfigurationCtrl.cs",
-              "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationCtrl.cs",
-              "RelativeToolTip": "ConfigurationCtrl.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAewCYAAAArAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "addCpu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\addCpu.cs",
+              "RelativeDocumentMoniker": "addCpu.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\addCpu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "addCpu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T13:40:11.216Z",
+              "WhenOpened": "2025-05-07T15:23:11.697Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Tower.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\Tower.cs",
+              "RelativeDocumentMoniker": "Tower.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\Tower.cs",
+              "RelativeToolTip": "Tower.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAQwG0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T15:16:06.397Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         },
