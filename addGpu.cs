@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace jenya_lab_7
@@ -25,20 +27,71 @@ namespace jenya_lab_7
         {
             try
             {
-                string title = titleTB.Text;
-                string cores = coresTB.Text;
-                string clock = clockTB.Text;
-                string vramType = vramTypeTB.Text;
-                string vramQuant = vramQuantTB.Text;
-                string threads = threadsTB.Text;
-                string cache = cacheTB.Text;
-                float cost = float.Parse(costTB.Text);
+                string title = titleTB.Text.Trim();
+                string cores = coresTB.Text.Trim();
+                string clock = clockTB.Text.Trim();
+                string vramType = vramTypeTB.Text.Trim();
+                string vramQuant = vramQuantTB.Text.Trim();
+                string threads = threadsTB.Text.Trim();
+                string cache = cacheTB.Text.Trim();
+                string costText = costTB.Text.Trim();
 
-                MessageBox.Show("GPU успішно додано");
+                if (title == "" ||
+                    cores == "" ||
+                    threads == "" ||
+                    cache == "" ||
+                    clock == "" ||
+                    vramType == "" ||
+                    vramQuant == "" ||
+                    costText == "")
+                {
+                    MessageBox.Show("Будь ласка, заповніть усі поля.");
+                    return;
+                }
 
-                emptyTB();
 
-                this.Close();
+                // Преобразуем стоимость в число
+                float cost;
+                if (!float.TryParse(costText, out cost))
+                {
+                    MessageBox.Show("Невірно введена ціна!");
+                    return;
+                }
+
+                // Подключение к базе данных и выполнение процедуры
+                using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("AddGPU", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    var idUnic = Guid.NewGuid().ToString();
+                    command.Parameters.AddWithValue("@GPU_ID", idUnic);
+                    command.Parameters.AddWithValue("@Title", title);
+                    command.Parameters.AddWithValue("@Cores", cores);
+                    command.Parameters.AddWithValue("@Threads", threads);
+                    command.Parameters.AddWithValue("@VRAMType", vramType);
+                    command.Parameters.AddWithValue("@VRAMQuantity", vramQuant);
+                    command.Parameters.AddWithValue("@Cache", cache);
+                    command.Parameters.AddWithValue("@Clock", clock);
+                    command.Parameters.AddWithValue("@Cost", cost);
+
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("GPU успішно додано!");
+                        emptyTB();
+                        this.Close();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.Message, "Помилка при додаванні GPU");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Неочікувана помилка");
+                    }
+                }
             }
             catch (Exception ex)
             {

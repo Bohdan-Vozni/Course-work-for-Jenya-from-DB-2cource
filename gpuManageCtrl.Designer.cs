@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            openDeleteMthrBtn = new System.Windows.Forms.Button();
-            openEditMthrBtn = new System.Windows.Forms.Button();
-            openAddMthrBtn = new System.Windows.Forms.Button();
             dataGridView1 = new System.Windows.Forms.DataGridView();
             id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,52 +38,23 @@
             Cache = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Clock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            openAddGpuBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // openDeleteMthrBtn
-            // 
-            openDeleteMthrBtn.Location = new System.Drawing.Point(234, 472);
-            openDeleteMthrBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            openDeleteMthrBtn.Name = "openDeleteMthrBtn";
-            openDeleteMthrBtn.Size = new System.Drawing.Size(107, 29);
-            openDeleteMthrBtn.TabIndex = 12;
-            openDeleteMthrBtn.Text = "Видалити";
-            openDeleteMthrBtn.UseVisualStyleBackColor = true;
-            // 
-            // openEditMthrBtn
-            // 
-            openEditMthrBtn.Location = new System.Drawing.Point(120, 472);
-            openEditMthrBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            openEditMthrBtn.Name = "openEditMthrBtn";
-            openEditMthrBtn.Size = new System.Drawing.Size(107, 29);
-            openEditMthrBtn.TabIndex = 11;
-            openEditMthrBtn.Text = "Редагувати";
-            openEditMthrBtn.UseVisualStyleBackColor = true;
-            // 
-            // openAddMthrBtn
-            // 
-            openAddMthrBtn.Location = new System.Drawing.Point(6, 472);
-            openAddMthrBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            openAddMthrBtn.Name = "openAddMthrBtn";
-            openAddMthrBtn.Size = new System.Drawing.Size(107, 29);
-            openAddMthrBtn.TabIndex = 10;
-            openAddMthrBtn.Text = "Додати";
-            openAddMthrBtn.UseVisualStyleBackColor = true;
-            openAddMthrBtn.Click += openAddMthrBtn_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { id, Title, Cores, Threads, VRAMType, VRAMQuantity, Cache, Clock, Cost });
-            dataGridView1.Location = new System.Drawing.Point(0, 0);
+            dataGridView1.Location = new System.Drawing.Point(0, 49);
             dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new System.Drawing.Size(1014, 465);
+            dataGridView1.Size = new System.Drawing.Size(1014, 416);
             dataGridView1.TabIndex = 9;
+            dataGridView1.CellContentDoubleClick += dataGridView1_CellContentDoubleClick;
             // 
             // id
             // 
@@ -151,26 +119,30 @@
             Cost.Name = "Cost";
             Cost.Width = 150;
             // 
+            // openAddGpuBtn
+            // 
+            openAddGpuBtn.Location = new System.Drawing.Point(3, 472);
+            openAddGpuBtn.Name = "openAddGpuBtn";
+            openAddGpuBtn.Size = new System.Drawing.Size(130, 28);
+            openAddGpuBtn.TabIndex = 0;
+            openAddGpuBtn.Text = "Додати";
+            openAddGpuBtn.Click += openAddGpuBtn_Click;
+            // 
             // gpuManageCtrl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            Controls.Add(openDeleteMthrBtn);
-            Controls.Add(openEditMthrBtn);
-            Controls.Add(openAddMthrBtn);
+            Controls.Add(openAddGpuBtn);
             Controls.Add(dataGridView1);
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "gpuManageCtrl";
             Size = new System.Drawing.Size(1014, 515);
+            Load += gpuManageCtrl_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private System.Windows.Forms.Button openDeleteMthrBtn;
-        private System.Windows.Forms.Button openEditMthrBtn;
-        private System.Windows.Forms.Button openAddMthrBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
@@ -181,5 +153,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cache;
         private System.Windows.Forms.DataGridViewTextBoxColumn Clock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
+        private System.Windows.Forms.Button openAddGpuBtn;
     }
 }
