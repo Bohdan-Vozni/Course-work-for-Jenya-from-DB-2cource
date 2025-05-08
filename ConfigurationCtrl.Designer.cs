@@ -221,6 +221,7 @@
             savePcBTN.TabIndex = 41;
             savePcBTN.Text = "Зберегти";
             savePcBTN.UseVisualStyleBackColor = true;
+            savePcBTN.Click += savePcBTN_Click;
             // 
             // bluetooth_textBox
             // 
