@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace jenya_lab_7
@@ -62,7 +64,7 @@ namespace jenya_lab_7
         }
 
         private void HDD_textBox_DoubleClick(object sender, EventArgs e)
-        {           
+        {
             GoToSelctGritForConfig("Config_GetAllHDD");
         }
 
@@ -107,7 +109,59 @@ namespace jenya_lab_7
             GoToSelctGritForConfig("Config_GetAllTower");
         }
 
+        private void savePcBTN_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idCpu) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idGpu) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idMotherboard) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idRam) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idHdd) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idSsd) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idPopwerSupply) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idWaterCooling) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idFanCooling) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idWifi) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idBluetooth) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idTower))
+            {
+                MessageBox.Show("Будь ласка, заповніть усі компоненти ПК перед збереженням!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
+            {
+                SqlCommand command = new SqlCommand("InsertPC", connection);
+                command.CommandType = CommandType.StoredProcedure;
 
+                var unicId = Guid.NewGuid().ToString();
+
+                command.Parameters.AddWithValue("@PC_ID", unicId);
+
+                command.Parameters.AddWithValue("@CPU_ID", PcForSaveOrderForOneTime.idCpu);
+                command.Parameters.AddWithValue("@GPU_ID", PcForSaveOrderForOneTime.idGpu);
+                command.Parameters.AddWithValue("@Motherboard_ID", PcForSaveOrderForOneTime.idMotherboard);
+                command.Parameters.AddWithValue("@RAM_ID", PcForSaveOrderForOneTime.idRam);
+                command.Parameters.AddWithValue("@HDD_ID", PcForSaveOrderForOneTime.idHdd);
+                command.Parameters.AddWithValue("@SSD_ID", PcForSaveOrderForOneTime.idSsd);
+                command.Parameters.AddWithValue("@PowerSupply_ID", PcForSaveOrderForOneTime.idPopwerSupply);
+                command.Parameters.AddWithValue("@WaterCooling_ID", PcForSaveOrderForOneTime.idWaterCooling);
+                command.Parameters.AddWithValue("@FanCooling_ID", PcForSaveOrderForOneTime.idFanCooling);
+                command.Parameters.AddWithValue("@Wifi_ID", PcForSaveOrderForOneTime.idWifi);
+                command.Parameters.AddWithValue("@Bluetooth_ID", PcForSaveOrderForOneTime.idBluetooth);
+                command.Parameters.AddWithValue("@Tower_ID", PcForSaveOrderForOneTime.idTower);
+                command.Parameters.AddWithValue("@ExecutionDate", DateTime.Today);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("ПК успішно збережено!");
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Помилка при збереженні ПК: " + ex.Message);
+                }
+            }
+        }
     }
 }

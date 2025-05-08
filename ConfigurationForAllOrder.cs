@@ -39,7 +39,7 @@ namespace jenya_lab_7
                 SqlCommand command = new SqlCommand(nameProcedure, connection);
                 command.CommandType = CommandType.StoredProcedure;
 
-
+               
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 DataTable dt = new DataTable();
@@ -84,7 +84,7 @@ namespace jenya_lab_7
                     PcForSaveOrderForOneTime.Hdd = cpuValue;
                     PcForSaveOrderForOneTime.idHdd = idCpuValue;
 
-                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.Cpu}");
+                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.Hdd}");
                     return;
                 }
 
@@ -158,7 +158,7 @@ namespace jenya_lab_7
                     var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Відеокарти"].FormattedValue.ToString();
 
                     PcForSaveOrderForOneTime.gpu = cpuValue;
-                    PcForSaveOrderForOneTime.idCpu= idCpuValue;
+                    PcForSaveOrderForOneTime.idGpu= idCpuValue;
 
                     MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.gpu}");
                     return;
