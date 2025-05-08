@@ -23,6 +23,8 @@ namespace jenya_lab_7
             fanCooling_textBox.Text = PcForSaveOrderForOneTime.fanCooling;
             wifi_textBox.Text = PcForSaveOrderForOneTime.wifi;
             motherboard_textBox.Text = PcForSaveOrderForOneTime.motherboard;
+            waterCooling_textBox.Text = PcForSaveOrderForOneTime.waterCooling;
+            tower_textBox.Text = PcForSaveOrderForOneTime.tower;
         }
 
         private void ConfigurationCtrl_Load(object sender, EventArgs e)
@@ -39,6 +41,8 @@ namespace jenya_lab_7
             fanCooling_textBox.DoubleClick += fanCooling_textBox_DoubleClick;
             wifi_textBox.DoubleClick += wifi_textBox_DoubleClick;
             motherboard_textBox.DoubleClick += motherboard_textBox_DoubleClick;
+            waterCooling_textBox.DoubleClick += waterCooling_textBox_DoubleClick;
+            tower_textBox.DoubleClick += tower_textBox_DoubleClick;
 
 
         }
@@ -93,6 +97,14 @@ namespace jenya_lab_7
         private void motherboard_textBox_DoubleClick(object sender, EventArgs e)
         {
             GoToSelctGritForConfig("Config_GetAllMotherboard");
+        }
+        private void waterCooling_textBox_DoubleClick(object sender, EventArgs e)
+        {
+            GoToSelctGritForConfig("Config_GetAllWaterCooling");
+        }
+        private void tower_textBox_DoubleClick(object sender, EventArgs e)
+        {
+            GoToSelctGritForConfig("Config_GetAllTower");
         }
 
 

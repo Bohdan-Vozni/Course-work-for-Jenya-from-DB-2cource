@@ -38,6 +38,12 @@ namespace jenya_lab_7
         public static string idMotherboard;
         public static string motherboard;
 
+        public static string idWaterCooling;
+        public static string waterCooling;
+
+        public static string idTower;
+        public static string tower;
+
 
 
     }

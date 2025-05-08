@@ -44,12 +44,12 @@
             savePcBTN = new System.Windows.Forms.Button();
             bluetooth_textBox = new System.Windows.Forms.TextBox();
             wifi_textBox = new System.Windows.Forms.TextBox();
-            textBox10 = new System.Windows.Forms.TextBox();
+            tower_textBox = new System.Windows.Forms.TextBox();
             powerSupply_textBox = new System.Windows.Forms.TextBox();
             HDD_textBox = new System.Windows.Forms.TextBox();
             ssd_textBox = new System.Windows.Forms.TextBox();
             fanCooling_textBox = new System.Windows.Forms.TextBox();
-            textBox5 = new System.Windows.Forms.TextBox();
+            waterCooling_textBox = new System.Windows.Forms.TextBox();
             gpu_textBox = new System.Windows.Forms.TextBox();
             ram_textBox = new System.Windows.Forms.TextBox();
             motherboard_textBox = new System.Windows.Forms.TextBox();
@@ -242,15 +242,15 @@
             wifi_textBox.Size = new System.Drawing.Size(176, 37);
             wifi_textBox.TabIndex = 39;
             // 
-            // textBox10
+            // tower_textBox
             // 
-            textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox10.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            textBox10.Location = new System.Drawing.Point(459, 265);
-            textBox10.Multiline = true;
-            textBox10.Name = "textBox10";
-            textBox10.Size = new System.Drawing.Size(176, 37);
-            textBox10.TabIndex = 38;
+            tower_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            tower_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            tower_textBox.Location = new System.Drawing.Point(459, 265);
+            tower_textBox.Multiline = true;
+            tower_textBox.Name = "tower_textBox";
+            tower_textBox.Size = new System.Drawing.Size(176, 37);
+            tower_textBox.TabIndex = 38;
             // 
             // powerSupply_textBox
             // 
@@ -292,15 +292,15 @@
             fanCooling_textBox.Size = new System.Drawing.Size(176, 37);
             fanCooling_textBox.TabIndex = 34;
             // 
-            // textBox5
+            // waterCooling_textBox
             // 
-            textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox5.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            textBox5.Location = new System.Drawing.Point(244, 265);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new System.Drawing.Size(176, 37);
-            textBox5.TabIndex = 33;
+            waterCooling_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            waterCooling_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            waterCooling_textBox.Location = new System.Drawing.Point(244, 265);
+            waterCooling_textBox.Multiline = true;
+            waterCooling_textBox.Name = "waterCooling_textBox";
+            waterCooling_textBox.Size = new System.Drawing.Size(176, 37);
+            waterCooling_textBox.TabIndex = 33;
             // 
             // gpu_textBox
             // 
@@ -374,12 +374,12 @@
             Controls.Add(savePcBTN);
             Controls.Add(bluetooth_textBox);
             Controls.Add(wifi_textBox);
-            Controls.Add(textBox10);
+            Controls.Add(tower_textBox);
             Controls.Add(powerSupply_textBox);
             Controls.Add(HDD_textBox);
             Controls.Add(ssd_textBox);
             Controls.Add(fanCooling_textBox);
-            Controls.Add(textBox5);
+            Controls.Add(waterCooling_textBox);
             Controls.Add(gpu_textBox);
             Controls.Add(ram_textBox);
             Controls.Add(motherboard_textBox);
@@ -408,12 +408,12 @@
         private System.Windows.Forms.Button savePcBTN;
         private System.Windows.Forms.TextBox bluetooth_textBox;
         private System.Windows.Forms.TextBox wifi_textBox;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox tower_textBox;
         private System.Windows.Forms.TextBox powerSupply_textBox;
         private System.Windows.Forms.TextBox HDD_textBox;
         private System.Windows.Forms.TextBox ssd_textBox;
         private System.Windows.Forms.TextBox fanCooling_textBox;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox waterCooling_textBox;
         private System.Windows.Forms.TextBox gpu_textBox;
         private System.Windows.Forms.TextBox ram_textBox;
         private System.Windows.Forms.TextBox motherboard_textBox;

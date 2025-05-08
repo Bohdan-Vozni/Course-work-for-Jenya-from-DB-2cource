@@ -209,6 +209,36 @@ namespace jenya_lab_7
                     return;
                 }
 
+                bool hasWaterCoolint = result_dataGridView.Columns.Contains("Назва водяного охолодження");
+                bool hasIdWaterCoolint= result_dataGridView.Columns.Contains("ID Водяного охолодження");
+
+                if (hasWaterCoolint && hasIdWaterCoolint)
+                {
+                    var cpuValue = result_dataGridView.Rows[e.RowIndex].Cells["Назва водяного охолодження"].FormattedValue.ToString();
+                    var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Водяного охолодження"].FormattedValue.ToString();
+
+                    PcForSaveOrderForOneTime.waterCooling = cpuValue;
+                    PcForSaveOrderForOneTime.idWaterCooling= idCpuValue;
+
+                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.waterCooling}");
+                    return;
+                }
+
+                bool hasTower = result_dataGridView.Columns.Contains("Назва корпуса");
+                bool hasIdTower= result_dataGridView.Columns.Contains("ID Корпуса");
+
+                if (hasTower && hasIdTower)
+                {
+                    var cpuValue = result_dataGridView.Rows[e.RowIndex].Cells["Назва корпуса"].FormattedValue.ToString();
+                    var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Корпуса"].FormattedValue.ToString();
+
+                    PcForSaveOrderForOneTime.tower = cpuValue;
+                    PcForSaveOrderForOneTime.idTower= idCpuValue;
+
+                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.tower}");
+                    return;
+                }
+
             }
         }
     }
