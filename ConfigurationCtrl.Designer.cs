@@ -45,13 +45,13 @@
             textBox12 = new System.Windows.Forms.TextBox();
             textBox11 = new System.Windows.Forms.TextBox();
             textBox10 = new System.Windows.Forms.TextBox();
-            textBox9 = new System.Windows.Forms.TextBox();
-            textBox8 = new System.Windows.Forms.TextBox();
+            powerSupply_textBox = new System.Windows.Forms.TextBox();
+            HDD_textBox = new System.Windows.Forms.TextBox();
             textBox7 = new System.Windows.Forms.TextBox();
             textBox6 = new System.Windows.Forms.TextBox();
             textBox5 = new System.Windows.Forms.TextBox();
             textBox3 = new System.Windows.Forms.TextBox();
-            textBox2 = new System.Windows.Forms.TextBox();
+            ram_textBox = new System.Windows.Forms.TextBox();
             textBox4 = new System.Windows.Forms.TextBox();
             label13 = new System.Windows.Forms.Label();
             listBox1 = new System.Windows.Forms.ListBox();
@@ -252,25 +252,25 @@
             textBox10.Size = new System.Drawing.Size(176, 37);
             textBox10.TabIndex = 38;
             // 
-            // textBox9
+            // powerSupply_textBox
             // 
-            textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox9.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            textBox9.Location = new System.Drawing.Point(459, 37);
-            textBox9.Multiline = true;
-            textBox9.Name = "textBox9";
-            textBox9.Size = new System.Drawing.Size(176, 37);
-            textBox9.TabIndex = 37;
+            powerSupply_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            powerSupply_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            powerSupply_textBox.Location = new System.Drawing.Point(459, 37);
+            powerSupply_textBox.Multiline = true;
+            powerSupply_textBox.Name = "powerSupply_textBox";
+            powerSupply_textBox.Size = new System.Drawing.Size(176, 37);
+            powerSupply_textBox.TabIndex = 37;
             // 
-            // textBox8
+            // HDD_textBox
             // 
-            textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox8.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            textBox8.Location = new System.Drawing.Point(244, 37);
-            textBox8.Multiline = true;
-            textBox8.Name = "textBox8";
-            textBox8.Size = new System.Drawing.Size(176, 37);
-            textBox8.TabIndex = 36;
+            HDD_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            HDD_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            HDD_textBox.Location = new System.Drawing.Point(244, 37);
+            HDD_textBox.Multiline = true;
+            HDD_textBox.Name = "HDD_textBox";
+            HDD_textBox.Size = new System.Drawing.Size(176, 37);
+            HDD_textBox.TabIndex = 36;
             // 
             // textBox7
             // 
@@ -312,15 +312,15 @@
             textBox3.Size = new System.Drawing.Size(176, 37);
             textBox3.TabIndex = 32;
             // 
-            // textBox2
+            // ram_textBox
             // 
-            textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            textBox2.Location = new System.Drawing.Point(32, 112);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(176, 37);
-            textBox2.TabIndex = 31;
+            ram_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            ram_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            ram_textBox.Location = new System.Drawing.Point(32, 112);
+            ram_textBox.Multiline = true;
+            ram_textBox.Name = "ram_textBox";
+            ram_textBox.Size = new System.Drawing.Size(176, 37);
+            ram_textBox.TabIndex = 31;
             // 
             // textBox4
             // 
@@ -375,13 +375,13 @@
             Controls.Add(textBox12);
             Controls.Add(textBox11);
             Controls.Add(textBox10);
-            Controls.Add(textBox9);
-            Controls.Add(textBox8);
+            Controls.Add(powerSupply_textBox);
+            Controls.Add(HDD_textBox);
             Controls.Add(textBox7);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
             Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(ram_textBox);
             Controls.Add(textBox4);
             Name = "ConfigurationCtrl";
             Size = new System.Drawing.Size(887, 395);
@@ -409,13 +409,13 @@
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox powerSupply_textBox;
+        private System.Windows.Forms.TextBox HDD_textBox;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ram_textBox;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ListBox listBox1;

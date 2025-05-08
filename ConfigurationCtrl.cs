@@ -14,6 +14,9 @@ namespace jenya_lab_7
         private void updateAllFielAfterSelectItem()
         {
             cpu_textBox.Text = PcForSaveOrderForOneTime.Cpu;
+            HDD_textBox.Text = PcForSaveOrderForOneTime.Hdd;
+            powerSupply_textBox.Text = PcForSaveOrderForOneTime.popwerSupply;
+            ram_textBox.Text = PcForSaveOrderForOneTime.ram;
         }
 
         private void ConfigurationCtrl_Load(object sender, EventArgs e)
@@ -21,17 +24,39 @@ namespace jenya_lab_7
             updateAllFielAfterSelectItem();
 
             cpu_textBox.DoubleClick += cpu_textBox_Click;
+            HDD_textBox.DoubleClick += HDD_textBox_DoubleClick;
+            powerSupply_textBox.DoubleClick += popwerSupply_textBox_DoubleClick;
+            ram_textBox.DoubleClick += ram_textBox_DoubleClick;
         }
 
-        private void cpu_textBox_Click(object sender, EventArgs e)
+        private void GoToSelctGritForConfig(string str)
         {
-            var formForConfig = new ConfigurationForAllOrder("GetAllCPU");
+            var formForConfig = new ConfigurationForAllOrder(str);
 
             formForConfig.ShowDialog();
 
             updateAllFielAfterSelectItem();
-
         }
+
+        private void cpu_textBox_Click(object sender, EventArgs e)
+        {
+            GoToSelctGritForConfig("Config_GetAllCPU");
+        }
+
+        private void HDD_textBox_DoubleClick(object sender, EventArgs e)
+        {           
+            GoToSelctGritForConfig("Config_GetAllHDD");
+        }
+
+        private void popwerSupply_textBox_DoubleClick(object sender, EventArgs e)
+        {
+            GoToSelctGritForConfig("Config_GetAllPowerSupply");
+        }
+        private void ram_textBox_DoubleClick(object sender, EventArgs e)
+        {
+            GoToSelctGritForConfig("Config_GetAllRam");
+        }
+
 
 
     }

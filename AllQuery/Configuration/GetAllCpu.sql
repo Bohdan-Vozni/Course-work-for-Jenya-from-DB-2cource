@@ -12,8 +12,13 @@ BEGIN
 
     SELECT 
 		CPU_ID as 'idCPU',
-		Title as 'CPU'
-		
+		Title as 'CPU',
+		Cores,
+		Threads,
+		Cache,
+		Clock,
+		Architecture,
+		Cost
     
     
     FROM CPU;

@@ -69,8 +69,55 @@ namespace jenya_lab_7
                     PcForSaveOrderForOneTime.idCpu = idCpuValue;
 
                     MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.Cpu}");
+                    return;
                 }
 
+
+                bool hasHdd = result_dataGridView.Columns.Contains("Назва жосткого диску");
+                bool hasidHdd = result_dataGridView.Columns.Contains("HDD_ID");
+
+                if (hasHdd && hasidHdd)
+                {
+                    var cpuValue = result_dataGridView.Rows[e.RowIndex].Cells["Назва жосткого диску"].FormattedValue.ToString();
+                    var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["HDD_ID"].FormattedValue.ToString();
+
+                    PcForSaveOrderForOneTime.Hdd = cpuValue;
+                    PcForSaveOrderForOneTime.idHdd = idCpuValue;
+
+                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.Cpu}");
+                    return;
+                }
+
+
+                bool haspowerSupply = result_dataGridView.Columns.Contains("Назва блоку живлення");
+                bool hasidpowerSupply = result_dataGridView.Columns.Contains("PowerSupply_ID");
+
+                if (haspowerSupply && hasidpowerSupply)
+                {
+                    var cpuValue = result_dataGridView.Rows[e.RowIndex].Cells["Назва блоку живлення"].FormattedValue.ToString();
+                    var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["PowerSupply_ID"].FormattedValue.ToString();
+
+                    PcForSaveOrderForOneTime.popwerSupply = cpuValue;
+                    PcForSaveOrderForOneTime.idPopwerSupply = idCpuValue;
+
+                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.popwerSupply}");
+                    return;
+                }
+
+                bool hasRam = result_dataGridView.Columns.Contains("Назва оперативної пам’яті");
+                bool hasIdRam = result_dataGridView.Columns.Contains("ID ОЗП");
+
+                if (hasRam && hasIdRam)
+                {
+                    var cpuValue = result_dataGridView.Rows[e.RowIndex].Cells["Назва оперативної пам’яті"].FormattedValue.ToString();
+                    var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID ОЗП"].FormattedValue.ToString();
+
+                    PcForSaveOrderForOneTime.ram = cpuValue;
+                    PcForSaveOrderForOneTime.idRam = idCpuValue;
+
+                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.ram}");
+                    return;
+                }
 
             }
         }
