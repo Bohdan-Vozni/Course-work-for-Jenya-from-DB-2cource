@@ -119,6 +119,51 @@ namespace jenya_lab_7
                     return;
                 }
 
+                bool hasSsd = result_dataGridView.Columns.Contains("Назва SSD");
+                bool hasIdSsd = result_dataGridView.Columns.Contains("ID SSD");
+
+                if (hasSsd && hasIdSsd)
+                {
+                    var cpuValue = result_dataGridView.Rows[e.RowIndex].Cells["Назва SSD"].FormattedValue.ToString();
+                    var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID SSD"].FormattedValue.ToString();
+
+                    PcForSaveOrderForOneTime.ssd = cpuValue;
+                    PcForSaveOrderForOneTime.idSsd = idCpuValue;
+
+                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.ssd}");
+                    return;
+                }
+
+                bool hasBluetooth = result_dataGridView.Columns.Contains("Назва Bluetooth модуля");
+                bool hasIdBluetoth = result_dataGridView.Columns.Contains("ID Bluetooth");
+
+                if (hasBluetooth && hasIdBluetoth)
+                {
+                    var cpuValue = result_dataGridView.Rows[e.RowIndex].Cells["Назва Bluetooth модуля"].FormattedValue.ToString();
+                    var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Bluetooth"].FormattedValue.ToString();
+
+                    PcForSaveOrderForOneTime.bluetooth = cpuValue;
+                    PcForSaveOrderForOneTime.idBluetooth= idCpuValue;
+
+                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.bluetooth}");
+                    return;
+                }
+
+                bool hasGpu = result_dataGridView.Columns.Contains("Назва відеокарти");
+                bool hasIdGpu = result_dataGridView.Columns.Contains("ID Відеокарти");
+
+                if (hasGpu && hasIdGpu)
+                {
+                    var cpuValue = result_dataGridView.Rows[e.RowIndex].Cells["Назва відеокарти"].FormattedValue.ToString();
+                    var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Відеокарти"].FormattedValue.ToString();
+
+                    PcForSaveOrderForOneTime.gpu = cpuValue;
+                    PcForSaveOrderForOneTime.idCpu= idCpuValue;
+
+                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.gpu}");
+                    return;
+                }
+
             }
         }
     }

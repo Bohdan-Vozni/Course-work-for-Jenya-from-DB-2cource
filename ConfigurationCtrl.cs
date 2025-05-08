@@ -17,6 +17,9 @@ namespace jenya_lab_7
             HDD_textBox.Text = PcForSaveOrderForOneTime.Hdd;
             powerSupply_textBox.Text = PcForSaveOrderForOneTime.popwerSupply;
             ram_textBox.Text = PcForSaveOrderForOneTime.ram;
+            ssd_textBox.Text = PcForSaveOrderForOneTime.ssd;
+            bluetooth_textBox.Text = PcForSaveOrderForOneTime.bluetooth;
+            gpu_textBox.Text = PcForSaveOrderForOneTime.gpu;
         }
 
         private void ConfigurationCtrl_Load(object sender, EventArgs e)
@@ -27,6 +30,10 @@ namespace jenya_lab_7
             HDD_textBox.DoubleClick += HDD_textBox_DoubleClick;
             powerSupply_textBox.DoubleClick += popwerSupply_textBox_DoubleClick;
             ram_textBox.DoubleClick += ram_textBox_DoubleClick;
+            ssd_textBox.DoubleClick += ssd_textBox_DoubleClick;
+            bluetooth_textBox.DoubleClick += bluetooth_textBox_DoubleClick;
+            gpu_textBox.DoubleClick += gpu_textBox_DoubleClick;
+           
         }
 
         private void GoToSelctGritForConfig(string str)
@@ -55,6 +62,18 @@ namespace jenya_lab_7
         private void ram_textBox_DoubleClick(object sender, EventArgs e)
         {
             GoToSelctGritForConfig("Config_GetAllRam");
+        }
+        private void ssd_textBox_DoubleClick(object sender, EventArgs e)
+        {
+            GoToSelctGritForConfig("Config_GetAllSsd");
+        }
+        private void bluetooth_textBox_DoubleClick(object sender, EventArgs e)
+        {
+            GoToSelctGritForConfig("Config_GetAllBluetooth");
+        }
+        private void gpu_textBox_DoubleClick(object sender, EventArgs e)
+        {
+            GoToSelctGritForConfig("Config_GetAllGpu");
         }
 
 

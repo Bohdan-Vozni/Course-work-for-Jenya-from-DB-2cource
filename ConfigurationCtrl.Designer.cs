@@ -42,15 +42,15 @@
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             savePcBTN = new System.Windows.Forms.Button();
-            textBox12 = new System.Windows.Forms.TextBox();
+            bluetooth_textBox = new System.Windows.Forms.TextBox();
             textBox11 = new System.Windows.Forms.TextBox();
             textBox10 = new System.Windows.Forms.TextBox();
             powerSupply_textBox = new System.Windows.Forms.TextBox();
             HDD_textBox = new System.Windows.Forms.TextBox();
-            textBox7 = new System.Windows.Forms.TextBox();
+            ssd_textBox = new System.Windows.Forms.TextBox();
             textBox6 = new System.Windows.Forms.TextBox();
             textBox5 = new System.Windows.Forms.TextBox();
-            textBox3 = new System.Windows.Forms.TextBox();
+            gpu_textBox = new System.Windows.Forms.TextBox();
             ram_textBox = new System.Windows.Forms.TextBox();
             textBox4 = new System.Windows.Forms.TextBox();
             label13 = new System.Windows.Forms.Label();
@@ -222,15 +222,15 @@
             savePcBTN.Text = "Зберегти";
             savePcBTN.UseVisualStyleBackColor = true;
             // 
-            // textBox12
+            // bluetooth_textBox
             // 
-            textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox12.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            textBox12.Location = new System.Drawing.Point(459, 112);
-            textBox12.Multiline = true;
-            textBox12.Name = "textBox12";
-            textBox12.Size = new System.Drawing.Size(176, 37);
-            textBox12.TabIndex = 40;
+            bluetooth_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            bluetooth_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            bluetooth_textBox.Location = new System.Drawing.Point(459, 112);
+            bluetooth_textBox.Multiline = true;
+            bluetooth_textBox.Name = "bluetooth_textBox";
+            bluetooth_textBox.Size = new System.Drawing.Size(176, 37);
+            bluetooth_textBox.TabIndex = 40;
             // 
             // textBox11
             // 
@@ -272,15 +272,15 @@
             HDD_textBox.Size = new System.Drawing.Size(176, 37);
             HDD_textBox.TabIndex = 36;
             // 
-            // textBox7
+            // ssd_textBox
             // 
-            textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox7.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            textBox7.Location = new System.Drawing.Point(244, 112);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.Size = new System.Drawing.Size(176, 37);
-            textBox7.TabIndex = 35;
+            ssd_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            ssd_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            ssd_textBox.Location = new System.Drawing.Point(244, 112);
+            ssd_textBox.Multiline = true;
+            ssd_textBox.Name = "ssd_textBox";
+            ssd_textBox.Size = new System.Drawing.Size(176, 37);
+            ssd_textBox.TabIndex = 35;
             // 
             // textBox6
             // 
@@ -302,15 +302,15 @@
             textBox5.Size = new System.Drawing.Size(176, 37);
             textBox5.TabIndex = 33;
             // 
-            // textBox3
+            // gpu_textBox
             // 
-            textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            textBox3.Location = new System.Drawing.Point(32, 190);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new System.Drawing.Size(176, 37);
-            textBox3.TabIndex = 32;
+            gpu_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            gpu_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+            gpu_textBox.Location = new System.Drawing.Point(32, 190);
+            gpu_textBox.Multiline = true;
+            gpu_textBox.Name = "gpu_textBox";
+            gpu_textBox.Size = new System.Drawing.Size(176, 37);
+            gpu_textBox.TabIndex = 32;
             // 
             // ram_textBox
             // 
@@ -372,15 +372,15 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(savePcBTN);
-            Controls.Add(textBox12);
+            Controls.Add(bluetooth_textBox);
             Controls.Add(textBox11);
             Controls.Add(textBox10);
             Controls.Add(powerSupply_textBox);
             Controls.Add(HDD_textBox);
-            Controls.Add(textBox7);
+            Controls.Add(ssd_textBox);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
-            Controls.Add(textBox3);
+            Controls.Add(gpu_textBox);
             Controls.Add(ram_textBox);
             Controls.Add(textBox4);
             Name = "ConfigurationCtrl";
@@ -406,15 +406,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button savePcBTN;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox bluetooth_textBox;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox powerSupply_textBox;
         private System.Windows.Forms.TextBox HDD_textBox;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox ssd_textBox;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox gpu_textBox;
         private System.Windows.Forms.TextBox ram_textBox;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label13;

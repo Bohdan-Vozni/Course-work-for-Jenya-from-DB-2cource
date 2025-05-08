@@ -20,5 +20,14 @@ namespace jenya_lab_7
         public static string idRam;
         public static string ram;
 
+        public static string idSsd;
+        public static string ssd;
+
+        public static string idBluetooth;
+        public static string bluetooth;
+
+        public static string idGpu;
+        public static string gpu;
+
     }
 }
