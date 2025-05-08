@@ -23,7 +23,7 @@ namespace jenya_lab_7
             using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand("GetAllMotherboards", connection); // Название процедуры должно совпадать
+                SqlCommand command = new SqlCommand("GetAllMotherboard", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);

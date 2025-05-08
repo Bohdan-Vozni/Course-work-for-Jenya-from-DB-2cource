@@ -16,7 +16,6 @@ CREATE PROCEDURE UpdateCPU
     @Cost FLOAT
 AS
 BEGIN
-    -- Обновление записи в таблице CPU по CPU_ID
     UPDATE CPU
     SET 
         Title = @Title,

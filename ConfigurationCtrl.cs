@@ -33,9 +33,6 @@ namespace jenya_lab_7
 
         }
 
-        private void cpu_textBox_TextChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

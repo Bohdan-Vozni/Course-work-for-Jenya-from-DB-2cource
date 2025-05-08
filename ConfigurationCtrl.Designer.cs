@@ -66,7 +66,6 @@
             cpu_textBox.Name = "cpu_textBox";
             cpu_textBox.Size = new System.Drawing.Size(176, 37);
             cpu_textBox.TabIndex = 54;
-            cpu_textBox.TextChanged += cpu_textBox_TextChanged;
             // 
             // label12
             // 
