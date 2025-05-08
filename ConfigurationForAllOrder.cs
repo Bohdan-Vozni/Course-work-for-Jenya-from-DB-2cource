@@ -67,6 +67,8 @@ namespace jenya_lab_7
 
                     PcForSaveOrderForOneTime.Cpu = cpuValue;
                     PcForSaveOrderForOneTime.idCpu = idCpuValue;
+
+                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.Cpu}");
                 }
 
 

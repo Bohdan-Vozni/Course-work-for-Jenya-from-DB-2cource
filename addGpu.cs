@@ -103,5 +103,10 @@ namespace jenya_lab_7
         {
             this.Close();
         }
+
+        private void addGpu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
