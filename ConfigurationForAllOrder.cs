@@ -164,6 +164,51 @@ namespace jenya_lab_7
                     return;
                 }
 
+                bool hasFanCooling = result_dataGridView.Columns.Contains("Назва кулера");
+                bool hasIdFanCooling = result_dataGridView.Columns.Contains("ID Вентиляторного охолодження");
+
+                if (hasFanCooling && hasIdFanCooling)
+                {
+                    var cpuValue = result_dataGridView.Rows[e.RowIndex].Cells["Назва кулера"].FormattedValue.ToString();
+                    var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Вентиляторного охолодження"].FormattedValue.ToString();
+
+                    PcForSaveOrderForOneTime.fanCooling = cpuValue;
+                    PcForSaveOrderForOneTime.idFanCooling= idCpuValue;
+
+                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.fanCooling}");
+                    return;
+                }
+
+                bool hasWifi = result_dataGridView.Columns.Contains("Назва Wi-Fi модуля");
+                bool hasIdWifi = result_dataGridView.Columns.Contains("ID Wi-Fi модуля");
+
+                if (hasWifi && hasIdWifi)
+                {
+                    var cpuValue = result_dataGridView.Rows[e.RowIndex].Cells["Назва Wi-Fi модуля"].FormattedValue.ToString();
+                    var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Wi-Fi модуля"].FormattedValue.ToString();
+
+                    PcForSaveOrderForOneTime.wifi = cpuValue;
+                    PcForSaveOrderForOneTime.idWifi= idCpuValue;
+
+                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.wifi}");
+                    return;
+                }
+
+                bool hasMotherboard = result_dataGridView.Columns.Contains("Назва материнської плати");
+                bool hasIdMotherboard = result_dataGridView.Columns.Contains("ID Материнської плати");
+
+                if (hasMotherboard && hasIdMotherboard)
+                {
+                    var cpuValue = result_dataGridView.Rows[e.RowIndex].Cells["Назва материнської плати"].FormattedValue.ToString();
+                    var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Материнської плати"].FormattedValue.ToString();
+
+                    PcForSaveOrderForOneTime.motherboard = cpuValue;
+                    PcForSaveOrderForOneTime.idMotherboard= idCpuValue;
+
+                    MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.motherboard}");
+                    return;
+                }
+
             }
         }
     }

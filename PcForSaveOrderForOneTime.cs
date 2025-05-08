@@ -29,5 +29,16 @@ namespace jenya_lab_7
         public static string idGpu;
         public static string gpu;
 
+        public static string idFanCooling;
+        public static string fanCooling;
+
+        public static string idWifi;
+        public static string wifi;
+
+        public static string idMotherboard;
+        public static string motherboard;
+
+
+
     }
 }

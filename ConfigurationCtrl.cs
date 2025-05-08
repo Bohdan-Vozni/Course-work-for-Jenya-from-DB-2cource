@@ -20,6 +20,9 @@ namespace jenya_lab_7
             ssd_textBox.Text = PcForSaveOrderForOneTime.ssd;
             bluetooth_textBox.Text = PcForSaveOrderForOneTime.bluetooth;
             gpu_textBox.Text = PcForSaveOrderForOneTime.gpu;
+            fanCooling_textBox.Text = PcForSaveOrderForOneTime.fanCooling;
+            wifi_textBox.Text = PcForSaveOrderForOneTime.wifi;
+            motherboard_textBox.Text = PcForSaveOrderForOneTime.motherboard;
         }
 
         private void ConfigurationCtrl_Load(object sender, EventArgs e)
@@ -33,7 +36,11 @@ namespace jenya_lab_7
             ssd_textBox.DoubleClick += ssd_textBox_DoubleClick;
             bluetooth_textBox.DoubleClick += bluetooth_textBox_DoubleClick;
             gpu_textBox.DoubleClick += gpu_textBox_DoubleClick;
-           
+            fanCooling_textBox.DoubleClick += fanCooling_textBox_DoubleClick;
+            wifi_textBox.DoubleClick += wifi_textBox_DoubleClick;
+            motherboard_textBox.DoubleClick += motherboard_textBox_DoubleClick;
+
+
         }
 
         private void GoToSelctGritForConfig(string str)
@@ -74,6 +81,18 @@ namespace jenya_lab_7
         private void gpu_textBox_DoubleClick(object sender, EventArgs e)
         {
             GoToSelctGritForConfig("Config_GetAllGpu");
+        }
+        private void fanCooling_textBox_DoubleClick(object sender, EventArgs e)
+        {
+            GoToSelctGritForConfig("Config_GetAllFanCooling");
+        }
+        private void wifi_textBox_DoubleClick(object sender, EventArgs e)
+        {
+            GoToSelctGritForConfig("Config_GetAllWifi");
+        }
+        private void motherboard_textBox_DoubleClick(object sender, EventArgs e)
+        {
+            GoToSelctGritForConfig("Config_GetAllMotherboard");
         }
 
 
