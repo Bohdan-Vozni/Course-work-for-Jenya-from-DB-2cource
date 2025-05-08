@@ -5,25 +5,25 @@ using System.Windows.Forms;
 
 namespace jenya_lab_7
 {
-    public partial class motherboardManageCtrl : UserControl
+    public partial class bluetoothManageCtrl : UserControl
     {
-        public motherboardManageCtrl()
+        public bluetoothManageCtrl()
         {
             InitializeComponent();
         }
 
         private void openAddMthrBtn_Click(object sender, EventArgs e)
         {
-            addMotherboard addMotherboard = new addMotherboard();
-            addMotherboard.Show();
+            addBluetooth addBluetooth = new addBluetooth();
+            addBluetooth.Show();
         }
 
-        private DataTable GetAllMotherboards()
+        private DataTable GetAllBluetooths()
         {
             using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand("GetAllMotherboard", connection);
+                SqlCommand command = new SqlCommand("GetAllBluetooth", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -38,32 +38,29 @@ namespace jenya_lab_7
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                Motherboard motherboard = new Motherboard
+                Bluetooth bluetooth = new Bluetooth
                 {
-                    Motherboard_ID = row.Cells["Motherboard_ID"].Value.ToString(),
+                    Bluetooth_ID = row.Cells["Bluetooth_ID"].Value.ToString(),
                     Title = row.Cells["Title"].Value.ToString(),
-                    Socket = row.Cells["Socket"].Value.ToString(),
-                    TypeSize = row.Cells["TypeSize"].Value.ToString(),
-                    Chipset = row.Cells["Chipset"].Value.ToString(),
+                    Generation = row.Cells["Generation"].Value.ToString(),
                     Cost = float.Parse(row.Cells["Cost"].Value.ToString())
                 };
 
-                editMotherBoard editForm = new editMotherBoard(motherboard);
+                editBluetooth editForm = new editBluetooth(bluetooth);
                 editForm.Show();
 
-                dataGridView1.DataSource = GetAllMotherboards();
+                dataGridView1.DataSource = GetAllBluetooths();
             }
-        }
-
-        private void motherboardManageCtrl_Load(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = GetAllMotherboards();
-
         }
 
         private void reloadBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllMotherboards();
+            dataGridView1.DataSource = GetAllBluetooths();
+        }
+
+        private void bluetoothManageCtrl_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = GetAllBluetooths();
         }
     }
 }
