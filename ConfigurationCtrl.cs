@@ -111,6 +111,23 @@ namespace jenya_lab_7
 
         private void savePcBTN_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idCpu) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idGpu) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idMotherboard) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idRam) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idHdd) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idSsd) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idPopwerSupply) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idWaterCooling) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idFanCooling) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idWifi) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idBluetooth) ||
+                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idTower))
+            {
+                MessageBox.Show("Будь ласка, заповніть усі компоненти ПК перед збереженням!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
             {
                 SqlCommand command = new SqlCommand("InsertPC", connection);
