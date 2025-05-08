@@ -14,12 +14,6 @@ namespace jenya_lab_7
         {
             InitializeComponent();
             this.gpu = gpu;
-        }
-
-
-
-        private void editGpu_Load(object sender, EventArgs e)
-        {
             titleTB.Text = gpu.Title;
             coresTB.Text = gpu.Cores;
             threadsTB.Text = gpu.Threads;
@@ -28,6 +22,13 @@ namespace jenya_lab_7
             cacheTB.Text = gpu.Cache;
             clockTB.Text = gpu.Clock;
             costTB.Text = gpu.Cost.ToString();
+        }
+
+
+
+        private void editGpu_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void editBTN_Click(object sender, EventArgs e)
@@ -52,7 +53,7 @@ namespace jenya_lab_7
                 using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
                 {
                     connection.Open();
-                    SqlCommand command = new SqlCommand("EditGPU", connection);
+                    SqlCommand command = new SqlCommand("UpdateGPU", connection);
                     command.CommandType = CommandType.StoredProcedure;
 
                     // Передача параметров для редактирования

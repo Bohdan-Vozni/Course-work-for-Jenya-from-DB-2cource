@@ -64,6 +64,9 @@ namespace jenya_lab_7
 
 
                 }
+
+                MessageBox.Show("Корпус успішно додаванo ");
+                this.Close();
             }
             catch (SqlException ex)
             {

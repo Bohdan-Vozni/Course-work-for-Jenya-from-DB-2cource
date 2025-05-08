@@ -51,7 +51,7 @@ namespace jenya_lab_7
                 {
                     connection.Open();
 
-                    SqlCommand command = new SqlCommand("EditCPU", connection);
+                    SqlCommand command = new SqlCommand("UpdateCPU", connection);
                     command.CommandType = CommandType.StoredProcedure;
 
                     command.Parameters.AddWithValue("@CPU_ID", cpuId);
