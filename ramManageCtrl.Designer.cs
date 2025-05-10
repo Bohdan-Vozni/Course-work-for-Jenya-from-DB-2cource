@@ -38,10 +38,10 @@
             // 
             // openAddRamBtn
             // 
-            openAddRamBtn.Location = new System.Drawing.Point(417, 473);
+            openAddRamBtn.Location = new System.Drawing.Point(407, 473);
             openAddRamBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             openAddRamBtn.Name = "openAddRamBtn";
-            openAddRamBtn.Size = new System.Drawing.Size(201, 29);
+            openAddRamBtn.Size = new System.Drawing.Size(220, 29);
             openAddRamBtn.TabIndex = 6;
             openAddRamBtn.Text = "Додати";
             openAddRamBtn.UseVisualStyleBackColor = true;
