@@ -176,7 +176,7 @@
             // 
             // deleteBTN
             // 
-            deleteBTN.Location = new System.Drawing.Point(258, 374);
+            deleteBTN.Location = new System.Drawing.Point(258, 360);
             deleteBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             deleteBTN.Name = "deleteBTN";
             deleteBTN.Size = new System.Drawing.Size(129, 55);
@@ -206,6 +206,7 @@
             Controls.Add(label1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "edirRam";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "edirRam";
             ResumeLayout(false);
             PerformLayout();

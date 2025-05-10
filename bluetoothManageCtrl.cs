@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
@@ -19,6 +20,13 @@ namespace jenya_lab_7
         {
             addBluetooth addBluetooth = new addBluetooth();
             addBluetooth.Show();
+
+            addBluetooth.FormClosed += (s, args) =>
+             {
+                 allBluetooths = GetAllBluetooths();
+                 dataGridView1.DataSource = allBluetooths;
+                 SetColumnHeaders();
+             };
         }
 
         private DataTable GetAllBluetooths()
@@ -52,9 +60,14 @@ namespace jenya_lab_7
                 editBluetooth editForm = new editBluetooth(bluetooth);
                 editForm.Show();
 
-                allBluetooths = GetAllBluetooths();
-                dataGridView1.DataSource = allBluetooths;
-                SetColumnHeaders();
+                editForm.FormClosed += (s, args) =>
+                {
+                    allBluetooths = GetAllBluetooths();
+                    dataGridView1.DataSource = allBluetooths;
+                    SetColumnHeaders();
+                };
+
+
             }
         }
 
@@ -75,6 +88,9 @@ namespace jenya_lab_7
 
         private void bluetoothManageCtrl_Load(object sender, EventArgs e)
         {
+            if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
+
             allBluetooths = GetAllBluetooths();
             dataGridView1.DataSource = allBluetooths;
             SetColumnHeaders();

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
@@ -31,8 +32,11 @@ namespace jenya_lab_7
                 editWaterCooling editForm = new editWaterCooling(wc);
                 editForm.Show();
 
-                fullWaterCoolingTable = GetAllWaterCoolings();
-                ApplySearchFilter();
+                editForm.FormClosed += (s, arg) =>
+                 {
+                     fullWaterCoolingTable = GetAllWaterCoolings();
+                     ApplySearchFilter();
+                 };
             }
         }
 
@@ -46,6 +50,12 @@ namespace jenya_lab_7
         {
             addWaterCooling addForm = new addWaterCooling();
             addForm.Show();
+
+            addForm.FormClosed += (s, arg) =>
+            {
+                fullWaterCoolingTable = GetAllWaterCoolings();
+                ApplySearchFilter();
+            };
         }
 
         private DataTable GetAllWaterCoolings()
@@ -74,6 +84,10 @@ namespace jenya_lab_7
 
         private void wateCoolingManageCtrl_Load(object sender, EventArgs e)
         {
+            if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
+
+
             fullWaterCoolingTable = GetAllWaterCoolings();
             ApplySearchFilter();
         }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
@@ -74,6 +75,10 @@ namespace jenya_lab_7
 
         private void powerSupplyManageCtrl_Load(object sender, EventArgs e)
         {
+            if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
+
+
             fullPowerSupplyTable = GetAllPowerSupplies();
             ApplySearchFilter();
         }

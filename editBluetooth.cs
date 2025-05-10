@@ -47,7 +47,7 @@ namespace jenya_lab_7
 
                     command.Parameters.AddWithValue("@Bluetooth_ID", bluetooth.Bluetooth_ID);
                     command.Parameters.AddWithValue("@Title", titleTB.Text);
-                    command.Parameters.AddWithValue("@Version", generationTB.Text);
+                    command.Parameters.AddWithValue("@Generation", generationTB.Text);
                     command.Parameters.AddWithValue("@Cost", costTB.Text);
 
                     command.ExecuteNonQuery();

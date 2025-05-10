@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
@@ -18,6 +19,12 @@ namespace jenya_lab_7
         {
             addMotherboard addMotherboard = new addMotherboard();
             addMotherboard.Show();
+
+            addMotherboard.FormClosed += (s, arg) =>
+            {
+                fullMotherboardTable = GetAllMotherboards();
+                ApplySearchFilter();
+            };
         }
 
         private DataTable GetAllMotherboards()
@@ -53,8 +60,13 @@ namespace jenya_lab_7
                 editMotherBoard editForm = new editMotherBoard(motherboard);
                 editForm.Show();
 
-                fullMotherboardTable = GetAllMotherboards();
-                ApplySearchFilter();
+                editForm.FormClosed += (s, arg) =>
+                 {
+                     fullMotherboardTable = GetAllMotherboards();
+                     ApplySearchFilter();
+                 };
+
+
             }
         }
 
@@ -70,6 +82,9 @@ namespace jenya_lab_7
 
         private void motherboardManageCtrl_Load(object sender, EventArgs e)
         {
+            if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
+
             fullMotherboardTable = GetAllMotherboards();
             ApplySearchFilter();
         }

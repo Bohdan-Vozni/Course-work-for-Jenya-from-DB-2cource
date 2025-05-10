@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
@@ -44,7 +45,7 @@ namespace jenya_lab_7
                 {
                     FanCooling_ID = row.Cells["FanCooling_ID"].Value.ToString(),
                     Title = row.Cells["Title"].Value.ToString(),
-                    TypeSize = row.Cells["Type"].Value.ToString(),
+                    TypeSize = row.Cells["TypeSize"].Value.ToString(),
                     HeatRemoval = row.Cells["HeatRemoval"].Value.ToString(),
                     Cost = float.Parse(row.Cells["Cost"].Value.ToString())
                 };
@@ -64,7 +65,7 @@ namespace jenya_lab_7
         {
             dataGridView1.Columns["FanCooling_ID"].Visible = false;
             dataGridView1.Columns["Title"].HeaderText = "Назва";
-            dataGridView1.Columns["Type"].HeaderText = "Розмір";
+            dataGridView1.Columns["TypeSize"].HeaderText = "Розмір";
             dataGridView1.Columns["HeatRemoval"].HeaderText = "Індекс відведення тепла";
             dataGridView1.Columns["Cost"].HeaderText = "Ціна";
         }
@@ -83,6 +84,10 @@ namespace jenya_lab_7
 
         private void fanCoolingManageCtrl_Load(object sender, EventArgs e)
         {
+            if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
+
+
             fullFanCoolingTable = GetAllFanCooling();
             ApplySearchFilter();
         }

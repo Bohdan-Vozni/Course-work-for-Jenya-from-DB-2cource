@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
@@ -83,6 +84,10 @@ namespace jenya_lab_7
 
         private void cpuManageCtrl_Load(object sender, EventArgs e)
         {
+            if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
+
+
             fullCPUTable = GetAllCPUs();
             ApplySearchFilter();
         }

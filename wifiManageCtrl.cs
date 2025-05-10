@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
@@ -29,9 +30,11 @@ namespace jenya_lab_7
 
                 editWifi editForm = new editWifi(wifi);
                 editForm.Show();
-
-                fullWifiTable = GetAllWifis();
-                ApplySearchFilter();
+                editForm.FormClosed += (s, args) =>
+ {
+     fullWifiTable = GetAllWifis();
+     ApplySearchFilter();
+ };
             }
         }
 
@@ -68,10 +71,20 @@ namespace jenya_lab_7
         {
             addWifi addForm = new addWifi();
             addForm.Show();
+
+            addForm.FormClosed += (s, args) =>
+            {
+                fullWifiTable = GetAllWifis();
+                ApplySearchFilter();
+            };
         }
 
         private void wifiManageCtrl_Load(object sender, EventArgs e)
         {
+            if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
+
+
             fullWifiTable = GetAllWifis();
             ApplySearchFilter();
         }

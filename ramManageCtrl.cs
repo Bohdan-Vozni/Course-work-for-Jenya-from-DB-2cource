@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
@@ -18,6 +19,12 @@ namespace jenya_lab_7
         {
             addRam addRam = new addRam();
             addRam.Show();
+
+            addRam.FormClosed += (s, args) =>
+            {
+                fullRamTable = GetAllRams();
+                ApplySearchFilter();
+            };
         }
 
         private DataTable GetAllRams()
@@ -53,8 +60,13 @@ namespace jenya_lab_7
                 edirRam editForm = new edirRam(ram);
                 editForm.Show();
 
-                fullRamTable = GetAllRams();
-                ApplySearchFilter();
+                editForm.FormClosed += (s, args) =>
+                {
+                    fullRamTable = GetAllRams();
+                    ApplySearchFilter();
+                };
+
+
             }
         }
 
@@ -70,6 +82,10 @@ namespace jenya_lab_7
 
         private void ramManageCtrl_Load(object sender, EventArgs e)
         {
+            if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
+
+
             fullRamTable = GetAllRams();
             ApplySearchFilter();
         }

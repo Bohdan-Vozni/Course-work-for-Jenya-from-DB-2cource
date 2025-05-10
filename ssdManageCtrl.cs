@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
@@ -17,6 +18,12 @@ namespace jenya_lab_7
         {
             addSsd addSsd = new addSsd();
             addSsd.Show();
+
+            addSsd.FormClosed += (s, args) =>
+            {
+                fullSsdTable = GetAllSsds();
+                ApplySearchFilter();
+            };
         }
 
         private DataTable GetAllSsds()
@@ -53,8 +60,11 @@ namespace jenya_lab_7
                 editSsd editForm = new editSsd(ssd);
                 editForm.Show();
 
-                fullSsdTable = GetAllSsds();
-                ApplySearchFilter();
+                editForm.FormClosed += (s, args) =>
+                 {
+                     fullSsdTable = GetAllSsds();
+                     ApplySearchFilter();
+                 };
             }
         }
 
@@ -71,6 +81,10 @@ namespace jenya_lab_7
 
         private void ssdManageCtrl_Load(object sender, System.EventArgs e)
         {
+            if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
+
+
             fullSsdTable = GetAllSsds();
             ApplySearchFilter();
         }

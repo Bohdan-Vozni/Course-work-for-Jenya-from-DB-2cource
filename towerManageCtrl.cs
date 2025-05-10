@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
@@ -18,6 +19,12 @@ namespace jenya_lab_7
         {
             addTower addTower = new addTower();
             addTower.Show();
+
+            addTower.FormClosed += (s, arg) =>
+             {
+                 fullTowerTable = GetAllTowers();
+                 ApplySearchFilter();
+             };
         }
 
         private DataTable GetAllTowers()
@@ -53,8 +60,11 @@ namespace jenya_lab_7
                 editTower editForm = new editTower(tower);
                 editForm.Show();
 
-                fullTowerTable = GetAllTowers();
-                ApplySearchFilter();
+                editForm.FormClosed += (s, arg) =>
+                {
+                    fullTowerTable = GetAllTowers();
+                    ApplySearchFilter();
+                };
             }
         }
 
@@ -70,6 +80,10 @@ namespace jenya_lab_7
 
         private void towerManageCtrl_Load(object sender, EventArgs e)
         {
+            if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
+
+
             fullTowerTable = GetAllTowers();
             ApplySearchFilter();
         }
@@ -101,6 +115,11 @@ namespace jenya_lab_7
 
             dataGridView1.DataSource = view;
             SetColumnHeaders();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
