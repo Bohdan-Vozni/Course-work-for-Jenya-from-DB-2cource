@@ -11,33 +11,10 @@ namespace jenya_lab_7
         public PCBuilder()
         {
             InitializeComponent();
-            InitializeControls();
+ 
             this.cleanView();
         }
 
-        private void InitializeControls()
-        {
-            cpuManageCtrl1 = new cpuManageCtrl();
-            hddManageCtrl1 = new hddManageCtrl();
-            ramManageCtrl1 = new ramManageCtrl();
-            motherboardManageCtrl1 = new motherboardManageCtrl();
-            gpuManageCtrl1 = new gpuManageCtrl();
-            ssdManageCtrl1 = new ssdManageCtrl();
-            towerManageCtrl1 = new towerManageCtrl();
-            configurationCtrl1 = new ConfigurationCtrl();
-            catalogCtrl1 = new CatalogCtrl();
-
-            this.Controls.Add(cpuManageCtrl1);
-            this.Controls.Add(hddManageCtrl1);
-            this.Controls.Add(ramManageCtrl1);
-            this.Controls.Add(motherboardManageCtrl1);
-            this.Controls.Add(gpuManageCtrl1);
-            this.Controls.Add(ssdManageCtrl1);
-            this.Controls.Add(towerManageCtrl1);
-            this.Controls.Add(configurationCtrl1);
-            this.Controls.Add(catalogCtrl1);
-
-        }
 
         private void cleanView()
         {
@@ -60,7 +37,7 @@ namespace jenya_lab_7
         private void configBTN_Click(object sender, System.EventArgs e)
         {
             this.cleanView();
-            configurationCtrl1.Visible = true;
+            configurationCtrl2.Visible = true;
         }
 
         private void catalogTL_Click(object sender, System.EventArgs e)

@@ -1,14 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\",
+  "WorkspaceRootPath": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\wifimanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:wifimanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\addpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:addpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\wifimanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:wifimanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\configurationctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:configurationctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\addpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:addpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\classforcombobox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:classforcombobox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\configurationctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:configurationctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\pcbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:pcbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\pcbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:pcbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +38,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 233,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "addPurchase.cs",
+              "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\addPurchase.cs",
+              "RelativeDocumentMoniker": "addPurchase.cs",
+              "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\addPurchase.cs*",
+              "RelativeToolTip": "addPurchase.cs*",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAcwIkAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:08:18.74Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
@@ -34,28 +68,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "wifiManageCtrl.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\wifiManageCtrl.cs",
-              "RelativeDocumentMoniker": "wifiManageCtrl.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\wifiManageCtrl.cs",
-              "RelativeToolTip": "wifiManageCtrl.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAgwF8AAAANAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ClassForComboBox.cs",
+              "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ClassForComboBox.cs",
+              "RelativeDocumentMoniker": "ClassForComboBox.cs",
+              "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ClassForComboBox.cs",
+              "RelativeToolTip": "ClassForComboBox.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T11:17:01.417Z",
+              "WhenOpened": "2025-05-10T18:29:49.829Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "wifiManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\wifiManageCtrl.cs",
-              "RelativeDocumentMoniker": "wifiManageCtrl.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\wifiManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "wifiManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentIndex": 2,
+              "Title": "addPurchase.cs [Design]",
+              "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\addPurchase.cs",
+              "RelativeDocumentMoniker": "addPurchase.cs",
+              "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\addPurchase.cs [Design]*",
+              "RelativeToolTip": "addPurchase.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T11:16:57.535Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-05-10T18:07:18.914Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConfigurationCtrl.cs",
+              "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationCtrl.cs",
+              "RelativeDocumentMoniker": "ConfigurationCtrl.cs",
+              "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationCtrl.cs",
+              "RelativeToolTip": "ConfigurationCtrl.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAWwIIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:05:26.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConfigurationCtrl.cs [Design]",
+              "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationCtrl.cs",
+              "RelativeDocumentMoniker": "ConfigurationCtrl.cs",
+              "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationCtrl.cs [Design]",
+              "RelativeToolTip": "ConfigurationCtrl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T17:57:12.871Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PCBuilder.cs",
+              "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\PCBuilder.cs",
+              "RelativeDocumentMoniker": "PCBuilder.cs",
+              "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\PCBuilder.cs",
+              "RelativeToolTip": "PCBuilder.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAnwA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T17:53:47.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PCBuilder.cs [Design]",
+              "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\PCBuilder.cs",
+              "RelativeDocumentMoniker": "PCBuilder.cs",
+              "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\PCBuilder.cs [Design]",
+              "RelativeToolTip": "PCBuilder.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T17:49:12.478Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },

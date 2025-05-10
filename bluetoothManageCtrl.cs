@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
@@ -75,9 +76,13 @@ namespace jenya_lab_7
 
         private void bluetoothManageCtrl_Load(object sender, EventArgs e)
         {
+            if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
+
             allBluetooths = GetAllBluetooths();
             dataGridView1.DataSource = allBluetooths;
             SetColumnHeaders();
+
         }
 
         private void searchTB_TextChanged(object sender, EventArgs e)
@@ -96,6 +101,11 @@ namespace jenya_lab_7
                 dataGridView1.DataSource = dv;
             }
             SetColumnHeaders();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
