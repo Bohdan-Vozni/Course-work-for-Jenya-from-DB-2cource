@@ -59,5 +59,11 @@ namespace jenya_lab_7
         {
             dataGridView1.DataSource = GetAllSsds();
         }
+
+        private void reloadBTN_Click(object sender, System.EventArgs e)
+        {
+            dataGridView1.DataSource = GetAllSsds();
+
+        }
     }
 }

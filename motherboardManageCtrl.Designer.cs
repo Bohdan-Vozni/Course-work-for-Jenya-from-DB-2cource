@@ -31,15 +31,17 @@
             openAddMthrBtn = new System.Windows.Forms.Button();
             dataGridView1 = new System.Windows.Forms.DataGridView();
             reloadBTN = new System.Windows.Forms.Button();
+            label2 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // openAddMthrBtn
             // 
-            openAddMthrBtn.Location = new System.Drawing.Point(6, 472);
+            openAddMthrBtn.Location = new System.Drawing.Point(387, 473);
             openAddMthrBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             openAddMthrBtn.Name = "openAddMthrBtn";
-            openAddMthrBtn.Size = new System.Drawing.Size(108, 29);
+            openAddMthrBtn.Size = new System.Drawing.Size(219, 29);
             openAddMthrBtn.TabIndex = 6;
             openAddMthrBtn.Text = "Додати";
             openAddMthrBtn.UseVisualStyleBackColor = true;
@@ -50,30 +52,52 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new System.Drawing.Point(0, 39);
+            dataGridView1.Location = new System.Drawing.Point(0, 41);
             dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new System.Drawing.Size(1014, 426);
+            dataGridView1.Size = new System.Drawing.Size(1014, 424);
             dataGridView1.TabIndex = 5;
             dataGridView1.CellContentDoubleClick += dataGridView1_CellContentDoubleClick;
             // 
             // reloadBTN
             // 
-            reloadBTN.Location = new System.Drawing.Point(891, 3);
+            reloadBTN.Location = new System.Drawing.Point(831, 3);
             reloadBTN.Name = "reloadBTN";
-            reloadBTN.Size = new System.Drawing.Size(99, 29);
+            reloadBTN.Size = new System.Drawing.Size(159, 29);
             reloadBTN.TabIndex = 7;
             reloadBTN.Text = "Оновити";
             reloadBTN.UseVisualStyleBackColor = true;
             reloadBTN.Click += reloadBTN_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label2.Location = new System.Drawing.Point(367, 17);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(431, 20);
+            label2.TabIndex = 19;
+            label2.Text = "Для редагування даних зробіть двойний клік по рядку";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
+            label1.Location = new System.Drawing.Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(361, 28);
+            label1.TabIndex = 18;
+            label1.Text = "Управління материнськими платами";
+            // 
             // motherboardManageCtrl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(reloadBTN);
             Controls.Add(openAddMthrBtn);
             Controls.Add(dataGridView1);
@@ -83,6 +107,7 @@
             Load += motherboardManageCtrl_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -90,5 +115,7 @@
         private System.Windows.Forms.Button openAddMthrBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button reloadBTN;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
