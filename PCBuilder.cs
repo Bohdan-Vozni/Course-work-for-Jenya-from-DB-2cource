@@ -43,7 +43,7 @@ namespace jenya_lab_7
         private void catalogTL_Click(object sender, System.EventArgs e)
         {
             this.cleanView();
-            catalogCtrl1.Visible = true;
+            catalogCtrl2.Visible = true;
         }
 
         private void mainTL_Click(object sender, System.EventArgs e)

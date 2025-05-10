@@ -50,6 +50,7 @@
             powerSupplyMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ssdMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             configurationCtrl2 = new ConfigurationCtrl();
+            catalogCtrl2 = new CatalogCtrl();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -200,16 +201,25 @@
             // configurationCtrl2
             // 
             configurationCtrl2.BackColor = System.Drawing.SystemColors.GrayText;
-            configurationCtrl2.Location = new System.Drawing.Point(12, 67);
+            configurationCtrl2.Location = new System.Drawing.Point(12, 53);
             configurationCtrl2.Name = "configurationCtrl2";
             configurationCtrl2.Size = new System.Drawing.Size(887, 395);
             configurationCtrl2.TabIndex = 1;
+            // 
+            // catalogCtrl2
+            // 
+            catalogCtrl2.BackColor = System.Drawing.SystemColors.GrayText;
+            catalogCtrl2.Location = new System.Drawing.Point(25, 36);
+            catalogCtrl2.Name = "catalogCtrl2";
+            catalogCtrl2.Size = new System.Drawing.Size(887, 412);
+            catalogCtrl2.TabIndex = 2;
             // 
             // PCBuilder
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(967, 485);
+            Controls.Add(catalogCtrl2);
             Controls.Add(configurationCtrl2);
             Controls.Add(menuStrip1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -259,5 +269,6 @@
         private towerManageCtrl towerManageCtrl1;
         private System.Windows.Forms.ToolStripMenuItem ssdMenuItem;
         private ConfigurationCtrl configurationCtrl2;
+        private CatalogCtrl catalogCtrl2;
     }
 }
