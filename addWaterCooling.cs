@@ -5,16 +5,11 @@ using System.Windows.Forms;
 
 namespace jenya_lab_7
 {
-    public partial class addFanCooling : Form
+    public partial class addWaterCooling : Form
     {
-        public addFanCooling()
+        public addWaterCooling()
         {
             InitializeComponent();
-        }
-
-        private void addFanCooling_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void emptyTB()
@@ -26,6 +21,11 @@ namespace jenya_lab_7
                     textBox.Text = string.Empty;
                 }
             }
+        }
+
+        private void closeBTN_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
         }
 
         private void saveBTN_Click(object sender, EventArgs e)
@@ -46,18 +46,18 @@ namespace jenya_lab_7
                 using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
                 {
                     connection.Open();
-                    SqlCommand command = new SqlCommand("AddFanCooling", connection);
+                    SqlCommand command = new SqlCommand("AddWaterCooling", connection);
                     command.CommandType = CommandType.StoredProcedure;
                     string idUnic = Guid.NewGuid().ToString();
 
-                    command.Parameters.AddWithValue("@FanCooling_ID", idUnic);
+                    command.Parameters.AddWithValue("@WaterCooling_ID", idUnic);
                     command.Parameters.AddWithValue("@Title", title);
                     command.Parameters.AddWithValue("@TypeSize", typeSize);
                     command.Parameters.AddWithValue("@HeatRemoval", heatRemoval);
                     command.Parameters.AddWithValue("@Cost", cost);
 
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Башенне охолодження успішно додано!");
+                    MessageBox.Show("Водянне охолодження успішно додано!");
 
                     emptyTB();
                     this.Close();
@@ -65,17 +65,12 @@ namespace jenya_lab_7
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message, "Помилка SQL при додаванні башенного охолодження");
+                MessageBox.Show(ex.Message, "Помилка SQL при додаванні водянне охолодження");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Неочікувана помилка");
             }
-        }
-
-        private void closeBTN_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

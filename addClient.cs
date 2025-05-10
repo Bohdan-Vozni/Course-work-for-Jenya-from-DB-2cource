@@ -5,16 +5,16 @@ using System.Windows.Forms;
 
 namespace jenya_lab_7
 {
-    public partial class addFanCooling : Form
+    public partial class addClient : Form
     {
-        public addFanCooling()
+        public addClient()
         {
             InitializeComponent();
         }
 
-        private void addFanCooling_Load(object sender, EventArgs e)
+        private void closeBTN_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void emptyTB()
@@ -32,12 +32,11 @@ namespace jenya_lab_7
         {
             try
             {
-                string title = titleTB.Text.Trim();
-                string typeSize = typeSizeTB.Text.Trim();
-                string heatRemoval = heatRemovalTB.Text.Trim();
-                string cost = costTB.Text.Trim();
+                string name = clientNameTB.Text.Trim();
+                string phone = phoneTB.Text.Trim();
+                string address = homeAddressTB.Text.Trim();
 
-                if (title == "" || heatRemoval == "" || typeSize == "" || cost == "")
+                if (name == "" || phone == "" || address == "")
                 {
                     MessageBox.Show("Будь ласка, заповніть усі поля.");
                     return;
@@ -46,18 +45,17 @@ namespace jenya_lab_7
                 using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
                 {
                     connection.Open();
-                    SqlCommand command = new SqlCommand("AddFanCooling", connection);
+                    SqlCommand command = new SqlCommand("AddClient", connection);
                     command.CommandType = CommandType.StoredProcedure;
-                    string idUnic = Guid.NewGuid().ToString();
 
-                    command.Parameters.AddWithValue("@FanCooling_ID", idUnic);
-                    command.Parameters.AddWithValue("@Title", title);
-                    command.Parameters.AddWithValue("@TypeSize", typeSize);
-                    command.Parameters.AddWithValue("@HeatRemoval", heatRemoval);
-                    command.Parameters.AddWithValue("@Cost", cost);
+                    string id = Guid.NewGuid().ToString();
+                    command.Parameters.AddWithValue("@Client_ID", id);
+                    command.Parameters.AddWithValue("@ClientName", name);
+                    command.Parameters.AddWithValue("@Phone", phone);
+                    command.Parameters.AddWithValue("@HomeAddress", address);
 
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Башенне охолодження успішно додано!");
+                    MessageBox.Show("Клієнта успішно додано!");
 
                     emptyTB();
                     this.Close();
@@ -65,17 +63,12 @@ namespace jenya_lab_7
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message, "Помилка SQL при додаванні башенного охолодження");
+                MessageBox.Show(ex.Message, "Помилка SQL при додаванні клієнта");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Неочікувана помилка");
             }
-        }
-
-        private void closeBTN_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
