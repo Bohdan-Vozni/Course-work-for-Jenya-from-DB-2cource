@@ -31,10 +31,10 @@ namespace jenya_lab_7
                 editWifi editForm = new editWifi(wifi);
                 editForm.Show();
                 editForm.FormClosed += (s, args) =>
- {
-     fullWifiTable = GetAllWifis();
-     ApplySearchFilter();
- };
+                {
+                    fullWifiTable = GetAllWifis();
+                    ApplySearchFilter();
+                };
             }
         }
 

@@ -94,6 +94,7 @@ namespace jenya_lab_7
             allBluetooths = GetAllBluetooths();
             dataGridView1.DataSource = allBluetooths;
             SetColumnHeaders();
+
         }
 
         private void searchTB_TextChanged(object sender, EventArgs e)
@@ -112,6 +113,11 @@ namespace jenya_lab_7
                 dataGridView1.DataSource = dv;
             }
             SetColumnHeaders();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -11,7 +11,7 @@ namespace jenya_lab_7
         public PCBuilder()
         {
             InitializeComponent();
-            InitializeControls();
+
             this.cleanView();
         }
 
@@ -60,13 +60,13 @@ namespace jenya_lab_7
         private void configBTN_Click(object sender, System.EventArgs e)
         {
             this.cleanView();
-            configurationCtrl1.Visible = true;
+            configurationCtrl2.Visible = true;
         }
 
         private void catalogTL_Click(object sender, System.EventArgs e)
         {
             this.cleanView();
-            catalogCtrl1.Visible = true;
+            catalogCtrl2.Visible = true;
         }
 
         private void mainTL_Click(object sender, System.EventArgs e)

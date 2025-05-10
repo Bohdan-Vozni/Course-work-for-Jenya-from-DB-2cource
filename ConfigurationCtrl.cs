@@ -111,6 +111,8 @@ namespace jenya_lab_7
 
         private void savePcBTN_Click(object sender, EventArgs e)
         {
+            var unicId = Guid.NewGuid().ToString();
+
             if (string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idCpu) ||
                 string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idGpu) ||
                 string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idMotherboard) ||
@@ -133,7 +135,7 @@ namespace jenya_lab_7
                 SqlCommand command = new SqlCommand("InsertPC", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
-                var unicId = Guid.NewGuid().ToString();
+
 
                 command.Parameters.AddWithValue("@PC_ID", unicId);
 
@@ -156,6 +158,9 @@ namespace jenya_lab_7
                     connection.Open();
                     command.ExecuteNonQuery();
                     MessageBox.Show("ПК успішно збережено!");
+
+                    var form = new addPurchase(unicId);
+                    form.ShowDialog();
                 }
                 catch (SqlException ex)
                 {
