@@ -7,6 +7,8 @@ namespace jenya_lab_7
 {
     public partial class hddManageCtrl : UserControl
     {
+        private DataTable fullHddTable;
+
         public hddManageCtrl()
         {
             InitializeComponent();
@@ -33,7 +35,6 @@ namespace jenya_lab_7
             }
         }
 
-
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -52,19 +53,53 @@ namespace jenya_lab_7
                 editHdd editForm = new editHdd(hdd);
                 editForm.Show();
 
-                dataGridView1.DataSource = GetAllHDDs();
+                fullHddTable = GetAllHDDs();
+                ApplySearchFilter();
             }
+        }
+
+        private void SetColumnHeaders()
+        {
+            dataGridView1.Columns["HDD_ID"].Visible = false;
+            dataGridView1.Columns["Title"].HeaderText = "Назва";
+            dataGridView1.Columns["MemoryQuantity"].HeaderText = "Кількість пам'яті";
+            dataGridView1.Columns["ReadingSpeed"].HeaderText = "Швидкість зчитування";
+            dataGridView1.Columns["WriteSpeed"].HeaderText = "Швидкість запису";
+            dataGridView1.Columns["Cost"].HeaderText = "Ціна";
         }
 
         private void hddManageCtrl_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllHDDs();
-
+            fullHddTable = GetAllHDDs();
+            ApplySearchFilter();
         }
 
         private void reloadBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllHDDs();
+            fullHddTable = GetAllHDDs();
+            ApplySearchFilter();
+        }
+
+        private void searchTB_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearchFilter();
+        }
+
+
+        private void ApplySearchFilter()
+        {
+            if (fullHddTable == null) return;
+
+            string filterText = searchTB.Text.Trim().Replace("'", "''");
+            DataView view = new DataView(fullHddTable);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+                view.RowFilter = $"Title LIKE '%{filterText}%'";
+            }
+
+            dataGridView1.DataSource = view;
+            SetColumnHeaders();
         }
     }
 }

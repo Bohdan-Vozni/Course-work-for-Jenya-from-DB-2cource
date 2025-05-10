@@ -81,5 +81,10 @@ namespace jenya_lab_7
         {
             this.Close();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

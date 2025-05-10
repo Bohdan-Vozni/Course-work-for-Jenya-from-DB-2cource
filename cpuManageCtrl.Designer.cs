@@ -33,12 +33,14 @@
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             reloadBTN = new System.Windows.Forms.Button();
+            searchTB = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // openAddCpuBtn
             // 
-            openAddCpuBtn.Location = new System.Drawing.Point(425, 472);
+            openAddCpuBtn.Location = new System.Drawing.Point(624, 472);
             openAddCpuBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             openAddCpuBtn.Name = "openAddCpuBtn";
             openAddCpuBtn.Size = new System.Drawing.Size(197, 29);
@@ -65,12 +67,11 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.Location = new System.Drawing.Point(288, 19);
+            label2.Location = new System.Drawing.Point(3, 481);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(431, 20);
             label2.TabIndex = 22;
             label2.Text = "Для редагування даних зробіть двойний клік по рядку";
-            label2.Click += label2_Click;
             // 
             // label1
             // 
@@ -92,10 +93,29 @@
             reloadBTN.UseVisualStyleBackColor = true;
             reloadBTN.Click += reloadBTN_Click;
             // 
+            // searchTB
+            // 
+            searchTB.Location = new System.Drawing.Point(421, 9);
+            searchTB.Name = "searchTB";
+            searchTB.Size = new System.Drawing.Size(157, 27);
+            searchTB.TabIndex = 26;
+            searchTB.TextChanged += searchTB_TextChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(353, 12);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(62, 20);
+            label3.TabIndex = 25;
+            label3.Text = "Пошук: ";
+            // 
             // cpuManageCtrl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(searchTB);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(reloadBTN);
@@ -117,5 +137,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button reloadBTN;
+        private System.Windows.Forms.TextBox searchTB;
+        private System.Windows.Forms.Label label3;
     }
 }

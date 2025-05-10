@@ -7,12 +7,12 @@ namespace jenya_lab_7
 {
     public partial class cpuManageCtrl : UserControl
     {
+        private DataTable fullCPUTable;
+
         public cpuManageCtrl()
         {
             InitializeComponent();
         }
-
-
 
         private DataTable GetAllCPUs()
         {
@@ -29,11 +29,16 @@ namespace jenya_lab_7
             }
         }
 
-
         private void openAddCpuBtn_Click(object sender, EventArgs e)
         {
             addCpu addingCpu = new addCpu();
             addingCpu.Show();
+
+            addingCpu.FormClosed += (s, args) =>
+            {
+                fullCPUTable = GetAllCPUs();
+                ApplySearchFilter();
+            };
         }
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -56,24 +61,59 @@ namespace jenya_lab_7
                 editCPU editForm = new editCPU(cpu);
                 editForm.Show();
 
-                dataGridView1.DataSource = GetAllCPUs();
+                editForm.FormClosed += (s, args) =>
+                {
+                    fullCPUTable = GetAllCPUs();
+                    ApplySearchFilter();
+                };
             }
+        }
+
+        private void SetColumnHeaders()
+        {
+            dataGridView1.Columns["CPU_ID"].Visible = false;
+            dataGridView1.Columns["Title"].HeaderText = "Назва";
+            dataGridView1.Columns["Cores"].HeaderText = "Ядра";
+            dataGridView1.Columns["Threads"].HeaderText = "Потоки";
+            dataGridView1.Columns["Cache"].HeaderText = "Кеш";
+            dataGridView1.Columns["Clock"].HeaderText = "Таймінги";
+            dataGridView1.Columns["Architecture"].HeaderText = "Архітектура";
+            dataGridView1.Columns["Cost"].HeaderText = "Ціна";
         }
 
         private void cpuManageCtrl_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllCPUs();
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            fullCPUTable = GetAllCPUs();
+            ApplySearchFilter();
         }
 
         private void reloadBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllCPUs();
+            fullCPUTable = GetAllCPUs();
+            ApplySearchFilter();
         }
+
+        private void searchTB_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearchFilter();
+        }
+
+        private void ApplySearchFilter()
+        {
+            if (fullCPUTable == null) return;
+
+            string filterText = searchTB.Text.Trim().Replace("'", "''");
+            DataView view = new DataView(fullCPUTable);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+                view.RowFilter = $"Title LIKE '%{filterText}%'";
+            }
+
+            dataGridView1.DataSource = view;
+            SetColumnHeaders();
+        }
+
+
     }
 }

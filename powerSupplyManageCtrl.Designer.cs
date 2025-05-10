@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             reloadBTN = new System.Windows.Forms.Button();
-            label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             openAddRamBtn = new System.Windows.Forms.Button();
             dataGridView1 = new System.Windows.Forms.DataGridView();
+            searchTB = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -46,30 +47,20 @@
             reloadBTN.UseVisualStyleBackColor = true;
             reloadBTN.Click += reloadBTN_Click;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.Location = new System.Drawing.Point(289, 25);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(431, 20);
-            label2.TabIndex = 24;
-            label2.Text = "Для редагування даних зробіть двойний клік по рядку";
-            label2.Click += label2_Click;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
-            label1.Location = new System.Drawing.Point(0, 6);
+            label1.Location = new System.Drawing.Point(3, 9);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(273, 28);
             label1.TabIndex = 23;
             label1.Text = "Управління блок живлення";
+            label1.Click += label1_Click;
             // 
             // openAddRamBtn
             // 
-            openAddRamBtn.Location = new System.Drawing.Point(405, 479);
+            openAddRamBtn.Location = new System.Drawing.Point(538, 479);
             openAddRamBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             openAddRamBtn.Name = "openAddRamBtn";
             openAddRamBtn.Size = new System.Drawing.Size(201, 29);
@@ -91,12 +82,30 @@
             dataGridView1.TabIndex = 21;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
+            // searchTB
+            // 
+            searchTB.Location = new System.Drawing.Point(447, 15);
+            searchTB.Name = "searchTB";
+            searchTB.Size = new System.Drawing.Size(157, 27);
+            searchTB.TabIndex = 36;
+            searchTB.TextChanged += searchTB_TextChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(379, 18);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(62, 20);
+            label3.TabIndex = 35;
+            label3.Text = "Пошук: ";
+            // 
             // powerSupplyManageCtrl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(searchTB);
+            Controls.Add(label3);
             Controls.Add(reloadBTN);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(openAddRamBtn);
             Controls.Add(dataGridView1);
@@ -111,9 +120,10 @@
         #endregion
 
         private System.Windows.Forms.Button reloadBTN;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button openAddRamBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox searchTB;
+        private System.Windows.Forms.Label label3;
     }
 }

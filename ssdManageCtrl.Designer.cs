@@ -33,12 +33,14 @@
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             reloadBTN = new System.Windows.Forms.Button();
+            searchTB = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // openAddSsdBtn
             // 
-            openAddSsdBtn.Location = new System.Drawing.Point(406, 473);
+            openAddSsdBtn.Location = new System.Drawing.Point(544, 469);
             openAddSsdBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             openAddSsdBtn.Name = "openAddSsdBtn";
             openAddSsdBtn.Size = new System.Drawing.Size(199, 29);
@@ -65,7 +67,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.Location = new System.Drawing.Point(347, 18);
+            label2.Location = new System.Drawing.Point(3, 475);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(431, 20);
             label2.TabIndex = 20;
@@ -91,10 +93,29 @@
             reloadBTN.UseVisualStyleBackColor = true;
             reloadBTN.Click += reloadBTN_Click;
             // 
+            // searchTB
+            // 
+            searchTB.Location = new System.Drawing.Point(458, 9);
+            searchTB.Name = "searchTB";
+            searchTB.Size = new System.Drawing.Size(157, 27);
+            searchTB.TabIndex = 40;
+            searchTB.TextChanged += searchTB_TextChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(390, 12);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(62, 20);
+            label3.TabIndex = 39;
+            label3.Text = "Пошук: ";
+            // 
             // ssdManageCtrl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(searchTB);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(reloadBTN);
@@ -116,5 +137,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button reloadBTN;
+        private System.Windows.Forms.TextBox searchTB;
+        private System.Windows.Forms.Label label3;
     }
 }

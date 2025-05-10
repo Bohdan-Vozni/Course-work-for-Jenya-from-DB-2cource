@@ -33,6 +33,8 @@
             dataGridView1 = new System.Windows.Forms.DataGridView();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
+            searchTB = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             // 
             // openAddMthrBtn
             // 
-            openAddMthrBtn.Location = new System.Drawing.Point(384, 478);
+            openAddMthrBtn.Location = new System.Drawing.Point(570, 478);
             openAddMthrBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             openAddMthrBtn.Name = "openAddMthrBtn";
             openAddMthrBtn.Size = new System.Drawing.Size(220, 29);
@@ -76,7 +78,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.Location = new System.Drawing.Point(384, 17);
+            label2.Location = new System.Drawing.Point(20, 484);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(431, 20);
             label2.TabIndex = 19;
@@ -92,10 +94,29 @@
             label1.TabIndex = 18;
             label1.Text = "Управління башенним охолодженням";
             // 
+            // searchTB
+            // 
+            searchTB.Location = new System.Drawing.Point(522, 8);
+            searchTB.Name = "searchTB";
+            searchTB.Size = new System.Drawing.Size(157, 27);
+            searchTB.TabIndex = 28;
+            searchTB.TextChanged += searchTB_TextChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(454, 11);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(62, 20);
+            label3.TabIndex = 27;
+            label3.Text = "Пошук: ";
+            // 
             // fanCoolingManageCtrl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(searchTB);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(reloadBTN);
@@ -116,5 +137,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox searchTB;
+        private System.Windows.Forms.Label label3;
     }
 }

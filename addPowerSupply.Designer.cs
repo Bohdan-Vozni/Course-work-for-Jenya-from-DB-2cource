@@ -72,9 +72,9 @@
             label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label3.Location = new System.Drawing.Point(254, 164);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(60, 31);
+            label3.Size = new System.Drawing.Size(64, 31);
             label3.TabIndex = 69;
-            label3.Text = "Cost";
+            label3.Text = "Ціна";
             // 
             // costTB
             // 
@@ -91,9 +91,9 @@
             label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label8.Location = new System.Drawing.Point(38, 164);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(120, 31);
+            label8.Size = new System.Drawing.Size(135, 31);
             label8.TabIndex = 67;
-            label8.Text = "Sertificate";
+            label8.Text = "Сертифікат";
             // 
             // label6
             // 
@@ -101,9 +101,9 @@
             label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label6.Location = new System.Drawing.Point(249, 76);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(103, 31);
+            label6.Size = new System.Drawing.Size(138, 31);
             label6.TabIndex = 66;
-            label6.Text = "Strength";
+            label6.Text = "Потужність";
             // 
             // label2
             // 
@@ -111,9 +111,9 @@
             label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label2.Location = new System.Drawing.Point(38, 73);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(59, 31);
+            label2.Size = new System.Drawing.Size(79, 31);
             label2.TabIndex = 65;
-            label2.Text = "Title";
+            label2.Text = "Назва";
             // 
             // strengthTB
             // 

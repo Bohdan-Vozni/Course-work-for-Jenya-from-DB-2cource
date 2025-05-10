@@ -7,6 +7,8 @@ namespace jenya_lab_7
 {
     public partial class wateCoolingManageCtrl : UserControl
     {
+        private DataTable fullWaterCoolingTable;
+
         public wateCoolingManageCtrl()
         {
             InitializeComponent();
@@ -29,23 +31,23 @@ namespace jenya_lab_7
                 editWaterCooling editForm = new editWaterCooling(wc);
                 editForm.Show();
 
-                dataGridView1.DataSource = GetAllWaterCoolings();
+                fullWaterCoolingTable = GetAllWaterCoolings();
+                ApplySearchFilter();
             }
-
         }
 
         private void reloadBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllWaterCoolings();
-
+            fullWaterCoolingTable = GetAllWaterCoolings();
+            ApplySearchFilter();
         }
 
         private void openAddMthrBtn_Click(object sender, EventArgs e)
         {
             addWaterCooling addForm = new addWaterCooling();
             addForm.Show();
-
         }
+
         private DataTable GetAllWaterCoolings()
         {
             using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
@@ -60,10 +62,43 @@ namespace jenya_lab_7
                 return table;
             }
         }
+
+        private void SetColumnHeaders()
+        {
+            dataGridView1.Columns["WaterCooling_ID"].Visible = false;
+            dataGridView1.Columns["Title"].HeaderText = "Назва";
+            dataGridView1.Columns["TypeSize"].HeaderText = "Розмір";
+            dataGridView1.Columns["HeatRemoval"].HeaderText = "Індекс відведення тепла";
+            dataGridView1.Columns["Cost"].HeaderText = "Ціна";
+        }
+
         private void wateCoolingManageCtrl_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllWaterCoolings();
+            fullWaterCoolingTable = GetAllWaterCoolings();
+            ApplySearchFilter();
+        }
 
+        private void searchTB_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearchFilter();
+        }
+
+
+        private void ApplySearchFilter()
+        {
+            if (fullWaterCoolingTable == null) return;
+
+            string filterText = searchTB.Text.Trim().Replace("'", "''");
+            DataView view = new DataView(fullWaterCoolingTable);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+
+                view.RowFilter = $"Title LIKE '%{filterText}%'";
+            }
+
+            dataGridView1.DataSource = view;
+            SetColumnHeaders();
         }
     }
 }

@@ -30,16 +30,17 @@
         {
             openAddTowerBtn = new System.Windows.Forms.Button();
             dataGridView1 = new System.Windows.Forms.DataGridView();
-            label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             reloadBTN = new System.Windows.Forms.Button();
             label3 = new System.Windows.Forms.Label();
+            searchTB = new System.Windows.Forms.TextBox();
+            label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // openAddTowerBtn
             // 
-            openAddTowerBtn.Location = new System.Drawing.Point(390, 473);
+            openAddTowerBtn.Location = new System.Drawing.Point(583, 473);
             openAddTowerBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             openAddTowerBtn.Name = "openAddTowerBtn";
             openAddTowerBtn.Size = new System.Drawing.Size(194, 29);
@@ -61,16 +62,6 @@
             dataGridView1.Size = new System.Drawing.Size(1014, 423);
             dataGridView1.TabIndex = 9;
             dataGridView1.CellContentDoubleClick += dataGridView1_CellContentDoubleClick;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.Location = new System.Drawing.Point(346, 17);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(431, 20);
-            label2.TabIndex = 23;
-            label2.Text = "Для редагування даних зробіть двойний клік по рядку";
             // 
             // label1
             // 
@@ -96,18 +87,36 @@
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label3.Location = new System.Drawing.Point(280, 17);
+            label3.Location = new System.Drawing.Point(26, 479);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(431, 20);
             label3.TabIndex = 23;
             label3.Text = "Для редагування даних зробіть двойний клік по рядку";
             // 
+            // searchTB
+            // 
+            searchTB.Location = new System.Drawing.Point(437, 8);
+            searchTB.Name = "searchTB";
+            searchTB.Size = new System.Drawing.Size(157, 27);
+            searchTB.TabIndex = 40;
+            searchTB.TextChanged += searchTB_TextChanged;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(369, 11);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(62, 20);
+            label2.TabIndex = 39;
+            label2.Text = "Пошук: ";
+            // 
             // towerManageCtrl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            Controls.Add(label3);
+            Controls.Add(searchTB);
             Controls.Add(label2);
+            Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(reloadBTN);
             Controls.Add(openAddTowerBtn);
@@ -125,9 +134,10 @@
         #endregion
         private System.Windows.Forms.Button openAddTowerBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button reloadBTN;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox searchTB;
+        private System.Windows.Forms.Label label2;
     }
 }

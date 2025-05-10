@@ -75,9 +75,9 @@
             label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label3.Location = new System.Drawing.Point(248, 153);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(60, 31);
+            label3.Size = new System.Drawing.Size(64, 31);
             label3.TabIndex = 58;
-            label3.Text = "Cost";
+            label3.Text = "Ціна";
             // 
             // costTB
             // 
@@ -94,9 +94,9 @@
             label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label8.Location = new System.Drawing.Point(32, 153);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(195, 31);
+            label8.Size = new System.Drawing.Size(193, 31);
             label8.TabIndex = 56;
-            label8.Text = "Memory quantity";
+            label8.Text = "Кількість пам'яті";
             // 
             // label7
             // 
@@ -104,9 +104,9 @@
             label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label7.Location = new System.Drawing.Point(32, 249);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(166, 31);
+            label7.Size = new System.Drawing.Size(139, 62);
             label7.TabIndex = 55;
-            label7.Text = "Reading speed";
+            label7.Text = "Швидкість \r\nзчитування";
             // 
             // label6
             // 
@@ -114,9 +114,9 @@
             label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label6.Location = new System.Drawing.Point(243, 65);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(139, 31);
+            label6.Size = new System.Drawing.Size(207, 31);
             label6.TabIndex = 54;
-            label6.Text = "Write speed";
+            label6.Text = "Швидкість запису";
             // 
             // label2
             // 
@@ -124,14 +124,14 @@
             label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label2.Location = new System.Drawing.Point(32, 62);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(59, 31);
+            label2.Size = new System.Drawing.Size(79, 31);
             label2.TabIndex = 53;
-            label2.Text = "Title";
+            label2.Text = "Назва";
             // 
             // readingSpeedTB
             // 
             readingSpeedTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            readingSpeedTB.Location = new System.Drawing.Point(38, 286);
+            readingSpeedTB.Location = new System.Drawing.Point(38, 315);
             readingSpeedTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             readingSpeedTB.Name = "readingSpeedTB";
             readingSpeedTB.Size = new System.Drawing.Size(176, 31);

@@ -7,6 +7,9 @@ namespace jenya_lab_7
 {
     public partial class bluetoothManageCtrl : UserControl
     {
+
+        private DataTable allBluetooths;
+
         public bluetoothManageCtrl()
         {
             InitializeComponent();
@@ -49,18 +52,50 @@ namespace jenya_lab_7
                 editBluetooth editForm = new editBluetooth(bluetooth);
                 editForm.Show();
 
-                dataGridView1.DataSource = GetAllBluetooths();
+                allBluetooths = GetAllBluetooths();
+                dataGridView1.DataSource = allBluetooths;
+                SetColumnHeaders();
             }
+        }
+
+        private void SetColumnHeaders()
+        {
+            dataGridView1.Columns["Bluetooth_ID"].Visible = false;
+            dataGridView1.Columns["Title"].HeaderText = "Назва";
+            dataGridView1.Columns["Generation"].HeaderText = "Покоління";
+            dataGridView1.Columns["Cost"].HeaderText = "Ціна";
         }
 
         private void reloadBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllBluetooths();
+            allBluetooths = GetAllBluetooths();
+            dataGridView1.DataSource = allBluetooths;
+            SetColumnHeaders();
         }
 
         private void bluetoothManageCtrl_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllBluetooths();
+            allBluetooths = GetAllBluetooths();
+            dataGridView1.DataSource = allBluetooths;
+            SetColumnHeaders();
+        }
+
+        private void searchTB_TextChanged(object sender, EventArgs e)
+        {
+            if (allBluetooths == null) return;
+
+            string filter = searchTB.Text.Trim().Replace("'", "''");
+            if (string.IsNullOrEmpty(filter))
+            {
+                dataGridView1.DataSource = allBluetooths;
+            }
+            else
+            {
+                DataView dv = allBluetooths.DefaultView;
+                dv.RowFilter = $"Title LIKE '%{filter}%'";
+                dataGridView1.DataSource = dv;
+            }
+            SetColumnHeaders();
         }
     }
 }

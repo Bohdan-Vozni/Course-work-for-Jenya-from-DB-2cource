@@ -54,16 +54,16 @@
             // 
             label9.AutoSize = true;
             label9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label9.Location = new System.Drawing.Point(235, 243);
+            label9.Location = new System.Drawing.Point(237, 231);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(171, 31);
+            label9.Size = new System.Drawing.Size(149, 62);
             label9.TabIndex = 86;
-            label9.Text = "VRAM quantity";
+            label9.Text = "Кількість\r\nвідеопам'яті";
             // 
             // vramQuantTB
             // 
             vramQuantTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            vramQuantTB.Location = new System.Drawing.Point(241, 286);
+            vramQuantTB.Location = new System.Drawing.Point(237, 297);
             vramQuantTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             vramQuantTB.Name = "vramQuantTB";
             vramQuantTB.Size = new System.Drawing.Size(176, 31);
@@ -85,7 +85,7 @@
             // 
             // editBTN
             // 
-            editBTN.Location = new System.Drawing.Point(109, 428);
+            editBTN.Location = new System.Drawing.Point(72, 428);
             editBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             editBTN.Name = "editBTN";
             editBTN.Size = new System.Drawing.Size(129, 55);
@@ -98,16 +98,16 @@
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label3.Location = new System.Drawing.Point(34, 328);
+            label3.Location = new System.Drawing.Point(34, 335);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(71, 31);
+            label3.Size = new System.Drawing.Size(111, 31);
             label3.TabIndex = 82;
-            label3.Text = "Clock";
+            label3.Text = "Таймінги";
             // 
             // clockTB
             // 
             clockTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            clockTB.Location = new System.Drawing.Point(40, 366);
+            clockTB.Location = new System.Drawing.Point(40, 373);
             clockTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             clockTB.Name = "clockTB";
             clockTB.Size = new System.Drawing.Size(176, 31);
@@ -119,19 +119,19 @@
             label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label8.Location = new System.Drawing.Point(34, 153);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(73, 31);
+            label8.Size = new System.Drawing.Size(67, 31);
             label8.TabIndex = 80;
-            label8.Text = "Cores";
+            label8.Text = "Ядра";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label7.Location = new System.Drawing.Point(34, 248);
+            label7.Location = new System.Drawing.Point(34, 258);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(97, 31);
+            label7.Size = new System.Drawing.Size(95, 31);
             label7.TabIndex = 79;
-            label7.Text = "Threads";
+            label7.Text = "Потоки";
             // 
             // label6
             // 
@@ -139,9 +139,9 @@
             label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label6.Location = new System.Drawing.Point(235, 64);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(76, 31);
+            label6.Size = new System.Drawing.Size(59, 31);
             label6.TabIndex = 78;
-            label6.Text = "Cache";
+            label6.Text = "Кеш";
             // 
             // label5
             // 
@@ -149,19 +149,19 @@
             label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label5.Location = new System.Drawing.Point(235, 153);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(131, 31);
+            label5.Size = new System.Drawing.Size(194, 31);
             label5.TabIndex = 77;
-            label5.Text = "VRAM type";
+            label5.Text = "Тип відеопам'яті";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label4.Location = new System.Drawing.Point(235, 323);
+            label4.Location = new System.Drawing.Point(235, 330);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(60, 31);
+            label4.Size = new System.Drawing.Size(64, 31);
             label4.TabIndex = 76;
-            label4.Text = "Cost";
+            label4.Text = "Ціна";
             // 
             // label2
             // 
@@ -169,14 +169,14 @@
             label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label2.Location = new System.Drawing.Point(34, 62);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(59, 31);
+            label2.Size = new System.Drawing.Size(79, 31);
             label2.TabIndex = 75;
-            label2.Text = "Title";
+            label2.Text = "Назва";
             // 
             // threadsTB
             // 
             threadsTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            threadsTB.Location = new System.Drawing.Point(40, 286);
+            threadsTB.Location = new System.Drawing.Point(40, 293);
             threadsTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             threadsTB.Name = "threadsTB";
             threadsTB.Size = new System.Drawing.Size(176, 31);
@@ -221,7 +221,7 @@
             // costTB
             // 
             costTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            costTB.Location = new System.Drawing.Point(241, 366);
+            costTB.Location = new System.Drawing.Point(241, 373);
             costTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             costTB.Name = "costTB";
             costTB.Size = new System.Drawing.Size(176, 31);
@@ -239,7 +239,7 @@
             // 
             // button1
             // 
-            button1.Location = new System.Drawing.Point(257, 428);
+            button1.Location = new System.Drawing.Point(241, 428);
             button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(129, 55);

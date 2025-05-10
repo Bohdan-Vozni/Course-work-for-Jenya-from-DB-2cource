@@ -33,6 +33,8 @@
             dataGridView1 = new System.Windows.Forms.DataGridView();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
+            searchTB = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             // 
             // openAddWifiBtn
             // 
-            openAddWifiBtn.Location = new System.Drawing.Point(366, 478);
+            openAddWifiBtn.Location = new System.Drawing.Point(518, 478);
             openAddWifiBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             openAddWifiBtn.Name = "openAddWifiBtn";
             openAddWifiBtn.Size = new System.Drawing.Size(237, 29);
@@ -86,16 +88,35 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.Location = new System.Drawing.Point(290, 20);
+            label2.Location = new System.Drawing.Point(15, 484);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(431, 20);
             label2.TabIndex = 15;
             label2.Text = "Для редагування даних зробіть двойний клік по рядку";
             // 
+            // searchTB
+            // 
+            searchTB.Location = new System.Drawing.Point(437, 8);
+            searchTB.Name = "searchTB";
+            searchTB.Size = new System.Drawing.Size(157, 27);
+            searchTB.TabIndex = 44;
+            searchTB.TextChanged += searchTB_TextChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(369, 11);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(62, 20);
+            label3.TabIndex = 43;
+            label3.Text = "Пошук: ";
+            // 
             // wifiManageCtrl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(searchTB);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(reloadBTN);
@@ -116,5 +137,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox searchTB;
+        private System.Windows.Forms.Label label3;
     }
 }

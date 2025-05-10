@@ -7,6 +7,8 @@ namespace jenya_lab_7
 {
     public partial class wifiManageCtrl : UserControl
     {
+        private DataTable fullWifiTable;
+
         public wifiManageCtrl()
         {
             InitializeComponent();
@@ -28,7 +30,8 @@ namespace jenya_lab_7
                 editWifi editForm = new editWifi(wifi);
                 editForm.Show();
 
-                dataGridView1.DataSource = GetAllWifis();
+                fullWifiTable = GetAllWifis();
+                ApplySearchFilter();
             }
         }
 
@@ -47,9 +50,18 @@ namespace jenya_lab_7
             }
         }
 
+        private void SetColumnHeaders()
+        {
+            dataGridView1.Columns["Wifi_ID"].Visible = false;
+            dataGridView1.Columns["Title"].HeaderText = "Назва";
+            dataGridView1.Columns["Generation"].HeaderText = "Покоління";
+            dataGridView1.Columns["Cost"].HeaderText = "Ціна";
+        }
+
         private void reloadBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllWifis();
+            fullWifiTable = GetAllWifis();
+            ApplySearchFilter();
         }
 
         private void openAddWifiBtn_Click(object sender, EventArgs e)
@@ -60,7 +72,31 @@ namespace jenya_lab_7
 
         private void wifiManageCtrl_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllWifis();
+            fullWifiTable = GetAllWifis();
+            ApplySearchFilter();
+        }
+
+        private void searchTB_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearchFilter();
+        }
+
+
+        private void ApplySearchFilter()
+        {
+            if (fullWifiTable == null) return;
+
+            string filterText = searchTB.Text.Trim().Replace("'", "''");
+            DataView view = new DataView(fullWifiTable);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+
+                view.RowFilter = $"Title LIKE '%{filterText}%'";
+            }
+
+            dataGridView1.DataSource = view;
+            SetColumnHeaders();
         }
     }
 }

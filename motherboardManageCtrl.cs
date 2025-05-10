@@ -7,6 +7,8 @@ namespace jenya_lab_7
 {
     public partial class motherboardManageCtrl : UserControl
     {
+        private DataTable fullMotherboardTable;
+
         public motherboardManageCtrl()
         {
             InitializeComponent();
@@ -51,19 +53,53 @@ namespace jenya_lab_7
                 editMotherBoard editForm = new editMotherBoard(motherboard);
                 editForm.Show();
 
-                dataGridView1.DataSource = GetAllMotherboards();
+                fullMotherboardTable = GetAllMotherboards();
+                ApplySearchFilter();
             }
+        }
+
+        private void SetColumnHeaders()
+        {
+            dataGridView1.Columns["Motherboard_ID"].Visible = false;
+            dataGridView1.Columns["Title"].HeaderText = "Назва";
+            dataGridView1.Columns["Socket"].HeaderText = "Сокет";
+            dataGridView1.Columns["TypeSize"].HeaderText = "Розмір";
+            dataGridView1.Columns["Chipset"].HeaderText = "Чіпсет";
+            dataGridView1.Columns["Cost"].HeaderText = "Ціна";
         }
 
         private void motherboardManageCtrl_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllMotherboards();
-
+            fullMotherboardTable = GetAllMotherboards();
+            ApplySearchFilter();
         }
 
         private void reloadBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllMotherboards();
+            fullMotherboardTable = GetAllMotherboards();
+            ApplySearchFilter();
+        }
+
+        private void searchTB_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearchFilter();
+        }
+
+
+        private void ApplySearchFilter()
+        {
+            if (fullMotherboardTable == null) return;
+
+            string filterText = searchTB.Text.Trim().Replace("'", "''");
+            DataView view = new DataView(fullMotherboardTable);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+                view.RowFilter = $"Title LIKE '%{filterText}%'";
+            }
+
+            dataGridView1.DataSource = view;
+            SetColumnHeaders();
         }
     }
 }

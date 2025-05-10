@@ -7,6 +7,8 @@ namespace jenya_lab_7
 {
     public partial class fanCoolingManageCtrl : UserControl
     {
+        private DataTable fullFanCoolingTable;
+
         public fanCoolingManageCtrl()
         {
             InitializeComponent();
@@ -29,40 +31,81 @@ namespace jenya_lab_7
 
         private void reloadBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllFanCooling();
+            fullFanCoolingTable = GetAllFanCooling();
+            ApplySearchFilter();
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
             {
-                if (e.RowIndex >= 0)
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                FanCooling fan = new FanCooling
                 {
-                    DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                    FanCooling fan = new FanCooling
-                    {
-                        FanCooling_ID = row.Cells["FanCooling_ID"].Value.ToString(),
-                        Title = row.Cells["Title"].Value.ToString(),
-                        TypeSize = row.Cells["Type"].Value.ToString(),
-                        HeatRemoval = row.Cells["HeatRemoval"].Value.ToString(),
-                        Cost = float.Parse(row.Cells["Cost"].Value.ToString())
-                    };
+                    FanCooling_ID = row.Cells["FanCooling_ID"].Value.ToString(),
+                    Title = row.Cells["Title"].Value.ToString(),
+                    TypeSize = row.Cells["Type"].Value.ToString(),
+                    HeatRemoval = row.Cells["HeatRemoval"].Value.ToString(),
+                    Cost = float.Parse(row.Cells["Cost"].Value.ToString())
+                };
 
-                    editFanCooling editForm = new editFanCooling(fan);
-                    editForm.Show();
+                editFanCooling editForm = new editFanCooling(fan);
+                editForm.Show();
 
-                    dataGridView1.DataSource = GetAllFanCooling();
-                }
+                editForm.FormClosed += (s, args) =>
+                {
+                    fullFanCoolingTable = GetAllFanCooling();
+                    ApplySearchFilter();
+                };
             }
+        }
+
+        private void SetColumnHeaders()
+        {
+            dataGridView1.Columns["FanCooling_ID"].Visible = false;
+            dataGridView1.Columns["Title"].HeaderText = "Назва";
+            dataGridView1.Columns["Type"].HeaderText = "Розмір";
+            dataGridView1.Columns["HeatRemoval"].HeaderText = "Індекс відведення тепла";
+            dataGridView1.Columns["Cost"].HeaderText = "Ціна";
         }
 
         private void openAddMthrBtn_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllFanCooling();
+            addFanCooling addForm = new addFanCooling();
+            addForm.Show();
+
+            addForm.FormClosed += (s, args) =>
+            {
+                fullFanCoolingTable = GetAllFanCooling();
+                ApplySearchFilter();
+            };
         }
 
         private void fanCoolingManageCtrl_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllFanCooling();
+            fullFanCoolingTable = GetAllFanCooling();
+            ApplySearchFilter();
+        }
+
+        private void searchTB_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearchFilter();
+        }
+
+        private void ApplySearchFilter()
+        {
+            if (fullFanCoolingTable == null) return;
+
+            string filterText = searchTB.Text.Trim().Replace("'", "''");
+            DataView view = new DataView(fullFanCoolingTable);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+                view.RowFilter = $"Title LIKE '%{filterText}%'";
+            }
+
+            dataGridView1.DataSource = view;
+            SetColumnHeaders();
         }
     }
 }

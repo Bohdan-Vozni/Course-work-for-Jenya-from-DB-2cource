@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -6,11 +7,12 @@ namespace jenya_lab_7
 {
     public partial class gpuManageCtrl : UserControl
     {
+        private DataTable fullGpuTable;
+
         public gpuManageCtrl()
         {
             InitializeComponent();
         }
-
 
         private DataTable GetAllGPUs()
         {
@@ -49,24 +51,67 @@ namespace jenya_lab_7
                 editGpu editGpuForm = new editGpu(GPU);
                 editGpuForm.Show();
 
-                dataGridView1.DataSource = GetAllGPUs();
+                fullGpuTable = GetAllGPUs();
+                ApplySearchFilter();
             }
         }
 
-        private void gpuManageCtrl_Load(object sender, System.EventArgs e)
+        private void SetColumnHeaders()
         {
-            dataGridView1.DataSource = GetAllGPUs();
+            dataGridView1.Columns["GPU_ID"].Visible = false;
+            dataGridView1.Columns["Title"].HeaderText = "Назва";
+            dataGridView1.Columns["Cores"].HeaderText = "Ядра";
+            dataGridView1.Columns["Threads"].HeaderText = "Потоки";
+            dataGridView1.Columns["VRAMType"].HeaderText = "Тип відеопам'яті";
+            dataGridView1.Columns["VRAMQuantity"].HeaderText = "Кількість відеопам'яті";
+            dataGridView1.Columns["Cache"].HeaderText = "Кеш";
+            dataGridView1.Columns["Clock"].HeaderText = "Таймінги";
+            dataGridView1.Columns["Cost"].HeaderText = "Ціна";
         }
 
-        private void openAddGpuBtn_Click(object sender, System.EventArgs e)
+        private void gpuManageCtrl_Load(object sender, EventArgs e)
+        {
+            fullGpuTable = GetAllGPUs();
+            ApplySearchFilter();
+        }
+
+        private void openAddGpuBtn_Click(object sender, EventArgs e)
         {
             addGpu addGpu = new addGpu();
             addGpu.Show();
+
+            addGpu.FormClosed += (s, args) =>
+            {
+                fullGpuTable = GetAllGPUs();
+                ApplySearchFilter();
+            };
         }
 
-        private void reloadBTN_Click(object sender, System.EventArgs e)
+        private void reloadBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllGPUs();
+            fullGpuTable = GetAllGPUs();
+            ApplySearchFilter();
+        }
+
+        private void searchTB_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearchFilter();
+        }
+
+        private void ApplySearchFilter()
+        {
+            if (fullGpuTable == null) return;
+
+            string filterText = searchTB.Text.Trim().Replace("'", "''");
+            DataView view = new DataView(fullGpuTable);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+                view.RowFilter = $"Title LIKE '%{filterText}%'";
+            }
+
+            dataGridView1.DataSource = view;
+            SetColumnHeaders();
         }
     }
 }

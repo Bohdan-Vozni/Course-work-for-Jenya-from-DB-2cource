@@ -33,6 +33,8 @@
             label1 = new System.Windows.Forms.Label();
             reloadBTN = new System.Windows.Forms.Button();
             openAddGpuBtn = new System.Windows.Forms.Button();
+            searchTB = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.Location = new System.Drawing.Point(279, 25);
+            label2.Location = new System.Drawing.Point(14, 478);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(431, 20);
             label2.TabIndex = 17;
@@ -82,17 +84,36 @@
             // 
             // openAddGpuBtn
             // 
-            openAddGpuBtn.Location = new System.Drawing.Point(394, 472);
+            openAddGpuBtn.Location = new System.Drawing.Point(518, 472);
             openAddGpuBtn.Name = "openAddGpuBtn";
             openAddGpuBtn.Size = new System.Drawing.Size(246, 28);
             openAddGpuBtn.TabIndex = 0;
             openAddGpuBtn.Text = "Додати";
             openAddGpuBtn.Click += openAddGpuBtn_Click;
             // 
+            // searchTB
+            // 
+            searchTB.Location = new System.Drawing.Point(464, 13);
+            searchTB.Name = "searchTB";
+            searchTB.Size = new System.Drawing.Size(157, 27);
+            searchTB.TabIndex = 30;
+            searchTB.TextChanged += searchTB_TextChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(396, 16);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(62, 20);
+            label3.TabIndex = 29;
+            label3.Text = "Пошук: ";
+            // 
             // gpuManageCtrl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(searchTB);
+            Controls.Add(label3);
             Controls.Add(reloadBTN);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -113,5 +134,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button reloadBTN;
         private System.Windows.Forms.Button openAddGpuBtn;
+        private System.Windows.Forms.TextBox searchTB;
+        private System.Windows.Forms.Label label3;
     }
 }

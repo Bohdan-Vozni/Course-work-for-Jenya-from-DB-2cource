@@ -60,7 +60,7 @@
             // 
             // editBTN
             // 
-            editBTN.Location = new System.Drawing.Point(104, 374);
+            editBTN.Location = new System.Drawing.Point(89, 360);
             editBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             editBTN.Name = "editBTN";
             editBTN.Size = new System.Drawing.Size(129, 55);
@@ -75,9 +75,9 @@
             label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label3.Location = new System.Drawing.Point(252, 170);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(60, 31);
+            label3.Size = new System.Drawing.Size(64, 31);
             label3.TabIndex = 57;
-            label3.Text = "Cost";
+            label3.Text = "Ціна";
             // 
             // costTB
             // 
@@ -94,9 +94,9 @@
             label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label8.Location = new System.Drawing.Point(36, 170);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(155, 31);
+            label8.Size = new System.Drawing.Size(142, 31);
             label8.TabIndex = 55;
-            label8.Text = "Memory type";
+            label8.Text = "Тип  пам'яті";
             // 
             // label7
             // 
@@ -104,9 +104,9 @@
             label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label7.Location = new System.Drawing.Point(36, 266);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(155, 31);
+            label7.Size = new System.Drawing.Size(166, 31);
             label7.TabIndex = 54;
-            label7.Text = "Radiator type";
+            label7.Text = "Тип радіатора";
             // 
             // label6
             // 
@@ -114,9 +114,9 @@
             label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label6.Location = new System.Drawing.Point(247, 82);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(195, 31);
+            label6.Size = new System.Drawing.Size(193, 31);
             label6.TabIndex = 53;
-            label6.Text = "Memory quantity";
+            label6.Text = "Кількість пам'яті";
             // 
             // label2
             // 
@@ -124,9 +124,9 @@
             label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label2.Location = new System.Drawing.Point(36, 79);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(59, 31);
+            label2.Size = new System.Drawing.Size(79, 31);
             label2.TabIndex = 52;
-            label2.Text = "Title";
+            label2.Text = "Назва";
             // 
             // radiatorTypeTB
             // 

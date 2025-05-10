@@ -70,9 +70,9 @@
             label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label8.Location = new System.Drawing.Point(28, 150);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(167, 31);
+            label8.Size = new System.Drawing.Size(199, 31);
             label8.TabIndex = 67;
-            label8.Text = "Home Address";
+            label8.Text = "Домашня адреса";
             // 
             // label6
             // 
@@ -80,9 +80,9 @@
             label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label6.Location = new System.Drawing.Point(239, 62);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(79, 31);
+            label6.Size = new System.Drawing.Size(198, 31);
             label6.TabIndex = 66;
-            label6.Text = "Phone";
+            label6.Text = "Номер телефону";
             // 
             // label2
             // 
@@ -90,9 +90,9 @@
             label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label2.Location = new System.Drawing.Point(28, 59);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(136, 31);
+            label2.Size = new System.Drawing.Size(131, 31);
             label2.TabIndex = 65;
-            label2.Text = "Client name";
+            label2.Text = "Повне ім'я";
             // 
             // phoneTB
             // 

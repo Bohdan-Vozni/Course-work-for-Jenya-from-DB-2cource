@@ -47,7 +47,7 @@
             // 
             // saveBTN
             // 
-            saveBTN.Location = new System.Drawing.Point(176, 366);
+            saveBTN.Location = new System.Drawing.Point(170, 374);
             saveBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             saveBTN.Name = "saveBTN";
             saveBTN.Size = new System.Drawing.Size(129, 55);
@@ -60,7 +60,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label3.Location = new System.Drawing.Point(245, 258);
+            label3.Location = new System.Drawing.Point(239, 287);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(60, 31);
             label3.TabIndex = 44;
@@ -69,7 +69,7 @@
             // costTB
             // 
             costTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            costTB.Location = new System.Drawing.Point(251, 295);
+            costTB.Location = new System.Drawing.Point(245, 324);
             costTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             costTB.Name = "costTB";
             costTB.Size = new System.Drawing.Size(176, 31);
@@ -81,9 +81,9 @@
             label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label8.Location = new System.Drawing.Point(34, 162);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(195, 31);
+            label8.Size = new System.Drawing.Size(193, 31);
             label8.TabIndex = 42;
-            label8.Text = "Memory quantity";
+            label8.Text = "Кількість пам'яті";
             // 
             // label7
             // 
@@ -91,9 +91,9 @@
             label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label7.Location = new System.Drawing.Point(34, 258);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(166, 31);
+            label7.Size = new System.Drawing.Size(139, 62);
             label7.TabIndex = 41;
-            label7.Text = "Reading speed";
+            label7.Text = "Швидкість \r\nзчитування";
             // 
             // label6
             // 
@@ -101,9 +101,9 @@
             label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label6.Location = new System.Drawing.Point(245, 74);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(139, 31);
+            label6.Size = new System.Drawing.Size(207, 31);
             label6.TabIndex = 40;
-            label6.Text = "Write speed";
+            label6.Text = "Швидкість запису";
             // 
             // label2
             // 
@@ -111,14 +111,14 @@
             label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label2.Location = new System.Drawing.Point(34, 71);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(59, 31);
+            label2.Size = new System.Drawing.Size(79, 31);
             label2.TabIndex = 39;
-            label2.Text = "Title";
+            label2.Text = "Назва";
             // 
             // readingSpeedTB
             // 
             readingSpeedTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            readingSpeedTB.Location = new System.Drawing.Point(40, 295);
+            readingSpeedTB.Location = new System.Drawing.Point(34, 324);
             readingSpeedTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             readingSpeedTB.Name = "readingSpeedTB";
             readingSpeedTB.Size = new System.Drawing.Size(176, 31);
@@ -181,9 +181,9 @@
             label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label4.Location = new System.Drawing.Point(245, 165);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(155, 31);
+            label4.Size = new System.Drawing.Size(166, 31);
             label4.TabIndex = 50;
-            label4.Text = "Radiator type";
+            label4.Text = "Тип радіатора";
             // 
             // radiatorTypeTB
             // 

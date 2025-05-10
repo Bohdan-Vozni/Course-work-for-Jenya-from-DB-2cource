@@ -70,16 +70,16 @@
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label3.Location = new System.Drawing.Point(247, 152);
+            label3.Location = new System.Drawing.Point(248, 180);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(60, 31);
+            label3.Size = new System.Drawing.Size(64, 31);
             label3.TabIndex = 58;
-            label3.Text = "Cost";
+            label3.Text = "Ціна";
             // 
             // costTB
             // 
             costTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            costTB.Location = new System.Drawing.Point(253, 190);
+            costTB.Location = new System.Drawing.Point(254, 218);
             costTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             costTB.Name = "costTB";
             costTB.Size = new System.Drawing.Size(176, 31);
@@ -91,9 +91,9 @@
             label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label8.Location = new System.Drawing.Point(31, 152);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(154, 31);
+            label8.Size = new System.Drawing.Size(217, 62);
             label8.TabIndex = 56;
-            label8.Text = "Heat removal";
+            label8.Text = "Індекс відведення \r\nтепла";
             // 
             // label6
             // 
@@ -101,9 +101,9 @@
             label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label6.Location = new System.Drawing.Point(242, 64);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(112, 31);
+            label6.Size = new System.Drawing.Size(88, 31);
             label6.TabIndex = 54;
-            label6.Text = "Type Size";
+            label6.Text = "Розмір";
             // 
             // label2
             // 
@@ -111,9 +111,9 @@
             label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label2.Location = new System.Drawing.Point(31, 61);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(59, 31);
+            label2.Size = new System.Drawing.Size(79, 31);
             label2.TabIndex = 53;
-            label2.Text = "Title";
+            label2.Text = "Назва";
             // 
             // typeSizeTB
             // 
@@ -136,7 +136,7 @@
             // heatRemovalTB
             // 
             heatRemovalTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            heatRemovalTB.Location = new System.Drawing.Point(37, 195);
+            heatRemovalTB.Location = new System.Drawing.Point(37, 218);
             heatRemovalTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             heatRemovalTB.Name = "heatRemovalTB";
             heatRemovalTB.Size = new System.Drawing.Size(176, 31);

@@ -7,6 +7,8 @@ namespace jenya_lab_7
 {
     public partial class clientManageCtrl : UserControl
     {
+        private DataTable fullClientTable;
+
         public clientManageCtrl()
         {
             InitializeComponent();
@@ -45,15 +47,16 @@ namespace jenya_lab_7
 
                 editForm.FormClosed += (s, args) =>
                 {
-                    dataGridView1.DataSource = GetAllClients();
+                    fullClientTable = GetAllClients();
+                    ApplySearchFilter();
                 };
             }
         }
 
         private void reloadBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllClients();
-
+            fullClientTable = GetAllClients();
+            ApplySearchFilter();
         }
 
         private void openAddMthrBtn_Click(object sender, EventArgs e)
@@ -63,14 +66,48 @@ namespace jenya_lab_7
 
             addForm.FormClosed += (s, args) =>
             {
-                dataGridView1.DataSource = GetAllClients();
+                fullClientTable = GetAllClients();
+                ApplySearchFilter();
             };
+        }
+
+        private void SetColumnHeaders()
+        {
+            dataGridView1.Columns["Client_ID"].Visible = false;
+            dataGridView1.Columns["ClientName"].HeaderText = "Повне ім'я";
+            dataGridView1.Columns["Phone"].HeaderText = "Номер телефону";
+            dataGridView1.Columns["HomeAddress"].HeaderText = "Домашня адреса";
         }
 
         private void clientManageCtrl_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllClients();
+            fullClientTable = GetAllClients();
+            ApplySearchFilter();
+        }
 
+        private void searchTB_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearchFilter();
+        }
+
+        private void ApplySearchFilter()
+        {
+            if (fullClientTable == null) return;
+
+            string filterText = searchTB.Text.Trim().Replace("'", "''");
+            DataView view = new DataView(fullClientTable);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+                view.RowFilter = $"ClientName LIKE '%{filterText}%'";
+            }
+
+            dataGridView1.DataSource = view;
+            SetColumnHeaders();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
         }
     }
 }

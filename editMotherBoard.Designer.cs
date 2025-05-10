@@ -75,9 +75,9 @@
             label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label3.Location = new System.Drawing.Point(238, 170);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(60, 31);
+            label3.Size = new System.Drawing.Size(64, 31);
             label3.TabIndex = 71;
-            label3.Text = "Cost";
+            label3.Text = "Ціна";
             // 
             // costTB
             // 
@@ -94,9 +94,9 @@
             label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label8.Location = new System.Drawing.Point(14, 170);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(91, 31);
+            label8.Size = new System.Drawing.Size(83, 31);
             label8.TabIndex = 69;
-            label8.Text = "Chipset";
+            label8.Text = "Чіпсет";
             // 
             // label7
             // 
@@ -104,9 +104,9 @@
             label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label7.Location = new System.Drawing.Point(14, 265);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(109, 31);
+            label7.Size = new System.Drawing.Size(88, 31);
             label7.TabIndex = 68;
-            label7.Text = "Type size";
+            label7.Text = "Розмір";
             // 
             // label6
             // 
@@ -114,9 +114,9 @@
             label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label6.Location = new System.Drawing.Point(233, 81);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(84, 31);
+            label6.Size = new System.Drawing.Size(76, 31);
             label6.TabIndex = 67;
-            label6.Text = "Socket";
+            label6.Text = "Сокет";
             // 
             // label2
             // 
@@ -124,9 +124,9 @@
             label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label2.Location = new System.Drawing.Point(14, 79);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(59, 31);
+            label2.Size = new System.Drawing.Size(64, 31);
             label2.TabIndex = 66;
-            label2.Text = "Title";
+            label2.Text = "Ціна";
             // 
             // typeSizeTB
             // 

@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\clientmanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:clientmanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\wifimanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:wifimanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\clientmanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:clientmanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\bluetoothmanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:bluetoothmanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\bluetoothmanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:bluetoothmanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\wifimanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:wifimanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 233,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,52 +34,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "bluetoothManageCtrl.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\bluetoothManageCtrl.cs",
-              "RelativeDocumentMoniker": "bluetoothManageCtrl.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\bluetoothManageCtrl.cs",
-              "RelativeToolTip": "bluetoothManageCtrl.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T09:05:47.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "clientManageCtrl.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\clientManageCtrl.cs",
-              "RelativeDocumentMoniker": "clientManageCtrl.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\clientManageCtrl.cs",
-              "RelativeToolTip": "clientManageCtrl.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEIAAAAOAAAAAAAAAA==",
+              "Title": "wifiManageCtrl.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\wifiManageCtrl.cs",
+              "RelativeDocumentMoniker": "wifiManageCtrl.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\wifiManageCtrl.cs",
+              "RelativeToolTip": "wifiManageCtrl.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAgwF8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T09:05:43.963Z",
+              "WhenOpened": "2025-05-10T11:17:01.417Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "bluetoothManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\bluetoothManageCtrl.cs",
-              "RelativeDocumentMoniker": "bluetoothManageCtrl.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\bluetoothManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "bluetoothManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T09:04:48.31Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "clientManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\clientManageCtrl.cs",
-              "RelativeDocumentMoniker": "clientManageCtrl.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\clientManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "clientManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Title": "wifiManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\wifiManageCtrl.cs",
+              "RelativeDocumentMoniker": "wifiManageCtrl.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\wifiManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "wifiManageCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T09:04:20.37Z",
+              "WhenOpened": "2025-05-10T11:16:57.535Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             }
           ]

@@ -7,6 +7,8 @@ namespace jenya_lab_7
 {
     public partial class ramManageCtrl : UserControl
     {
+        private DataTable fullRamTable;
+
         public ramManageCtrl()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace jenya_lab_7
             using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand("GetAllRAM", connection); // Название процедуры должно совпадать
+                SqlCommand command = new SqlCommand("GetAllRAM", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -32,7 +34,6 @@ namespace jenya_lab_7
                 return table;
             }
         }
-
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -52,19 +53,54 @@ namespace jenya_lab_7
                 edirRam editForm = new edirRam(ram);
                 editForm.Show();
 
-                dataGridView1.DataSource = GetAllRams();
+                fullRamTable = GetAllRams();
+                ApplySearchFilter();
             }
+        }
+
+        private void SetColumnHeaders()
+        {
+            dataGridView1.Columns["RAM_ID"].Visible = false;
+            dataGridView1.Columns["Title"].HeaderText = "Назва";
+            dataGridView1.Columns["MemoryType"].HeaderText = "Тип пам'яті";
+            dataGridView1.Columns["MemoryQuantity"].HeaderText = "Кількість пам'яті";
+            dataGridView1.Columns["RadiatorType"].HeaderText = "Тип радіатора";
+            dataGridView1.Columns["Cost"].HeaderText = "Ціна";
         }
 
         private void ramManageCtrl_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllRams();
-
+            fullRamTable = GetAllRams();
+            ApplySearchFilter();
         }
 
         private void reloadBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllRams();
+            fullRamTable = GetAllRams();
+            ApplySearchFilter();
+        }
+
+        private void searchTB_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearchFilter();
+        }
+
+
+        private void ApplySearchFilter()
+        {
+            if (fullRamTable == null) return;
+
+            string filterText = searchTB.Text.Trim().Replace("'", "''");
+            DataView view = new DataView(fullRamTable);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+
+                view.RowFilter = $"Title LIKE '%{filterText}%'";
+            }
+
+            dataGridView1.DataSource = view;
+            SetColumnHeaders();
         }
     }
 }

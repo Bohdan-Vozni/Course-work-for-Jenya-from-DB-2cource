@@ -33,6 +33,8 @@
             dataGridView1 = new System.Windows.Forms.DataGridView();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            searchTB = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             // 
             // openAddMthrBtn
             // 
-            openAddMthrBtn.Location = new System.Drawing.Point(388, 475);
+            openAddMthrBtn.Location = new System.Drawing.Point(582, 475);
             openAddMthrBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             openAddMthrBtn.Name = "openAddMthrBtn";
             openAddMthrBtn.Size = new System.Drawing.Size(208, 29);
@@ -76,7 +78,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.Location = new System.Drawing.Point(339, 17);
+            label2.Location = new System.Drawing.Point(3, 484);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(431, 20);
             label2.TabIndex = 17;
@@ -92,10 +94,29 @@
             label1.TabIndex = 16;
             label1.Text = "Управління bluetooth-адатарами";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(370, 8);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(62, 20);
+            label3.TabIndex = 18;
+            label3.Text = "Пошук: ";
+            // 
+            // searchTB
+            // 
+            searchTB.Location = new System.Drawing.Point(438, 5);
+            searchTB.Name = "searchTB";
+            searchTB.Size = new System.Drawing.Size(157, 27);
+            searchTB.TabIndex = 19;
+            searchTB.TextChanged += searchTB_TextChanged;
+            // 
             // bluetoothManageCtrl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(searchTB);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(reloadBTN);
@@ -116,5 +137,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox searchTB;
     }
 }

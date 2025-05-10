@@ -7,6 +7,8 @@ namespace jenya_lab_7
 {
     public partial class towerManageCtrl : UserControl
     {
+        private DataTable fullTowerTable;
+
         public towerManageCtrl()
         {
             InitializeComponent();
@@ -17,6 +19,7 @@ namespace jenya_lab_7
             addTower addTower = new addTower();
             addTower.Show();
         }
+
         private DataTable GetAllTowers()
         {
             using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
@@ -50,18 +53,54 @@ namespace jenya_lab_7
                 editTower editForm = new editTower(tower);
                 editForm.Show();
 
-                dataGridView1.DataSource = GetAllTowers();
+                fullTowerTable = GetAllTowers();
+                ApplySearchFilter();
             }
+        }
+
+        private void SetColumnHeaders()
+        {
+            dataGridView1.Columns["Tower_ID"].Visible = false;
+            dataGridView1.Columns["Title"].HeaderText = "Назва";
+            dataGridView1.Columns["TypeSize"].HeaderText = "Розмір";
+            dataGridView1.Columns["FanIncluded"].HeaderText = "Наявність кулера";
+            dataGridView1.Columns["FanType"].HeaderText = "Тип кулера";
+            dataGridView1.Columns["Cost"].HeaderText = "Ціна";
         }
 
         private void towerManageCtrl_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllTowers();
+            fullTowerTable = GetAllTowers();
+            ApplySearchFilter();
         }
 
         private void reloadBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllTowers();
+            fullTowerTable = GetAllTowers();
+            ApplySearchFilter();
+        }
+
+        private void searchTB_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearchFilter();
+        }
+
+
+        private void ApplySearchFilter()
+        {
+            if (fullTowerTable == null) return;
+
+            string filterText = searchTB.Text.Trim().Replace("'", "''");
+            DataView view = new DataView(fullTowerTable);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+
+                view.RowFilter = $"Title LIKE '%{filterText}%'";
+            }
+
+            dataGridView1.DataSource = view;
+            SetColumnHeaders();
         }
     }
 }

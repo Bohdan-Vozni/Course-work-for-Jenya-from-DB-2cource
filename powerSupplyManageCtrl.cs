@@ -7,14 +7,11 @@ namespace jenya_lab_7
 {
     public partial class powerSupplyManageCtrl : UserControl
     {
+        private DataTable fullPowerSupplyTable;
+
         public powerSupplyManageCtrl()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private DataTable GetAllPowerSupplies()
@@ -34,7 +31,8 @@ namespace jenya_lab_7
 
         private void reloadBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllPowerSupplies();
+            fullPowerSupplyTable = GetAllPowerSupplies();
+            ApplySearchFilter();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -54,8 +52,18 @@ namespace jenya_lab_7
                 editPowerSupply editForm = new editPowerSupply(psu);
                 editForm.Show();
 
-                dataGridView1.DataSource = GetAllPowerSupplies();
+                fullPowerSupplyTable = GetAllPowerSupplies();
+                ApplySearchFilter();
             }
+        }
+
+        private void SetColumnHeaders()
+        {
+            dataGridView1.Columns["PowerSupply_ID"].Visible = false;
+            dataGridView1.Columns["Title"].HeaderText = "Назва";
+            dataGridView1.Columns["Strength"].HeaderText = "Потужність";
+            dataGridView1.Columns["Sertificate"].HeaderText = "Сертифікат";
+            dataGridView1.Columns["Cost"].HeaderText = "Ціна";
         }
 
         private void openAddRamBtn_Click(object sender, EventArgs e)
@@ -66,7 +74,36 @@ namespace jenya_lab_7
 
         private void powerSupplyManageCtrl_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = GetAllPowerSupplies();
+            fullPowerSupplyTable = GetAllPowerSupplies();
+            ApplySearchFilter();
+        }
+
+        private void searchTB_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearchFilter();
+        }
+
+
+        private void ApplySearchFilter()
+        {
+            if (fullPowerSupplyTable == null) return;
+
+            string filterText = searchTB.Text.Trim().Replace("'", "''");
+            DataView view = new DataView(fullPowerSupplyTable);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+
+                view.RowFilter = $"Title LIKE '%{filterText}%'";
+            }
+
+            dataGridView1.DataSource = view;
+            SetColumnHeaders();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
