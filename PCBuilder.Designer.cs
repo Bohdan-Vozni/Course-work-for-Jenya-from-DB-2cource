@@ -74,7 +74,7 @@
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            menuStrip1.Size = new System.Drawing.Size(1011, 30);
+            menuStrip1.Size = new System.Drawing.Size(967, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -135,91 +135,91 @@
             // cpuMenuItem
             // 
             cpuMenuItem.Name = "cpuMenuItem";
-            cpuMenuItem.Size = new System.Drawing.Size(224, 26);
+            cpuMenuItem.Size = new System.Drawing.Size(185, 26);
             cpuMenuItem.Text = "CPU";
             cpuMenuItem.Click += cpuMenuItem_Click;
             // 
             // hddMenuItem
             // 
             hddMenuItem.Name = "hddMenuItem";
-            hddMenuItem.Size = new System.Drawing.Size(224, 26);
+            hddMenuItem.Size = new System.Drawing.Size(185, 26);
             hddMenuItem.Text = "HDD";
             hddMenuItem.Click += hddMenuItem_Click;
             // 
             // ramMenuItem
             // 
             ramMenuItem.Name = "ramMenuItem";
-            ramMenuItem.Size = new System.Drawing.Size(224, 26);
+            ramMenuItem.Size = new System.Drawing.Size(185, 26);
             ramMenuItem.Text = "RAM";
             ramMenuItem.Click += ramMenuItem_Click;
             // 
             // gpuMenuItem
             // 
             gpuMenuItem.Name = "gpuMenuItem";
-            gpuMenuItem.Size = new System.Drawing.Size(224, 26);
+            gpuMenuItem.Size = new System.Drawing.Size(185, 26);
             gpuMenuItem.Text = "GPU";
             gpuMenuItem.Click += gpuMenuItem_Click;
             // 
             // motherboardMenuItem
             // 
             motherboardMenuItem.Name = "motherboardMenuItem";
-            motherboardMenuItem.Size = new System.Drawing.Size(224, 26);
+            motherboardMenuItem.Size = new System.Drawing.Size(185, 26);
             motherboardMenuItem.Text = "Motherboard";
             motherboardMenuItem.Click += motherboardMenuItem_Click;
             // 
             // waterCoolingMenuItem
             // 
             waterCoolingMenuItem.Name = "waterCoolingMenuItem";
-            waterCoolingMenuItem.Size = new System.Drawing.Size(224, 26);
+            waterCoolingMenuItem.Size = new System.Drawing.Size(185, 26);
             waterCoolingMenuItem.Text = "Water cooling";
             waterCoolingMenuItem.Click += waterCoolingMenuItem_Click;
             // 
             // fanCoolingMenuItem
             // 
             fanCoolingMenuItem.Name = "fanCoolingMenuItem";
-            fanCoolingMenuItem.Size = new System.Drawing.Size(224, 26);
+            fanCoolingMenuItem.Size = new System.Drawing.Size(185, 26);
             fanCoolingMenuItem.Text = "Fan cooling";
             fanCoolingMenuItem.Click += fanCoolingMenuItem_Click;
             // 
             // towerMenuItem
             // 
             towerMenuItem.Name = "towerMenuItem";
-            towerMenuItem.Size = new System.Drawing.Size(224, 26);
+            towerMenuItem.Size = new System.Drawing.Size(185, 26);
             towerMenuItem.Text = "Tower";
             towerMenuItem.Click += towerMenuItem_Click;
             // 
             // blutoothMenuItem
             // 
             blutoothMenuItem.Name = "blutoothMenuItem";
-            blutoothMenuItem.Size = new System.Drawing.Size(224, 26);
+            blutoothMenuItem.Size = new System.Drawing.Size(185, 26);
             blutoothMenuItem.Text = "Blutooth";
             blutoothMenuItem.Click += blutoothMenuItem_Click;
             // 
             // wifiMenuItem
             // 
             wifiMenuItem.Name = "wifiMenuItem";
-            wifiMenuItem.Size = new System.Drawing.Size(224, 26);
+            wifiMenuItem.Size = new System.Drawing.Size(185, 26);
             wifiMenuItem.Text = "Wifi";
             wifiMenuItem.Click += wifiMenuItem_Click;
             // 
             // powerSupplyMenuItem
             // 
             powerSupplyMenuItem.Name = "powerSupplyMenuItem";
-            powerSupplyMenuItem.Size = new System.Drawing.Size(224, 26);
+            powerSupplyMenuItem.Size = new System.Drawing.Size(185, 26);
             powerSupplyMenuItem.Text = "Power supply";
             powerSupplyMenuItem.Click += powerSupplyMenuItem_Click;
             // 
             // ssdMenuItem
             // 
             ssdMenuItem.Name = "ssdMenuItem";
-            ssdMenuItem.Size = new System.Drawing.Size(224, 26);
+            ssdMenuItem.Size = new System.Drawing.Size(185, 26);
             ssdMenuItem.Text = "SSD";
             ssdMenuItem.Click += ssdMenuItem_Click;
             // 
             // configurationCtrl2
             // 
             configurationCtrl2.BackColor = System.Drawing.SystemColors.GrayText;
-            configurationCtrl2.Location = new System.Drawing.Point(14, 89);
+            configurationCtrl2.Location = new System.Drawing.Point(12, 53);
             configurationCtrl2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             configurationCtrl2.Name = "configurationCtrl2";
             configurationCtrl2.Size = new System.Drawing.Size(1014, 527);
@@ -332,18 +332,17 @@
             // catalogCtrl2
             // 
             catalogCtrl2.BackColor = System.Drawing.SystemColors.GrayText;
-            catalogCtrl2.Location = new System.Drawing.Point(0, 41);
+            catalogCtrl2.Location = new System.Drawing.Point(25, 36);
             catalogCtrl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             catalogCtrl2.Name = "catalogCtrl2";
-            catalogCtrl2.Size = new System.Drawing.Size(1268, 686);
-            catalogCtrl2.TabIndex = 15;
+            catalogCtrl2.Size = new System.Drawing.Size(887, 412);
+            catalogCtrl2.TabIndex = 2;
             // 
             // PCBuilder
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1011, 647);
-            Controls.Add(catalogCtrl2);
+            ClientSize = new System.Drawing.Size(967, 576);
             Controls.Add(wifiManageCtrl1);
             Controls.Add(wateCoolingManageCtrl1);
             Controls.Add(towerManageCtrl1);
@@ -357,6 +356,7 @@
             Controls.Add(cpuManageCtrl1);
             Controls.Add(clientManageCtrl1);
             Controls.Add(bluetoothManageCtrl1);
+            Controls.Add(catalogCtrl2);
             Controls.Add(configurationCtrl2);
             Controls.Add(menuStrip1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

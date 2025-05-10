@@ -12,7 +12,7 @@ AS
 BEGIN
     SELECT 
         Client_ID,
-        ClientName AS 'Client Name'
+        ClientName 
     FROM 
         Client
     WHERE 
