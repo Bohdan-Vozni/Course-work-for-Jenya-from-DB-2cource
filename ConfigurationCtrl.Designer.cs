@@ -55,6 +55,7 @@
             motherboard_textBox = new System.Windows.Forms.TextBox();
             label13 = new System.Windows.Forms.Label();
             listBox1 = new System.Windows.Forms.ListBox();
+            update_button = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // cpu_textBox
@@ -215,7 +216,7 @@
             // savePcBTN
             // 
             savePcBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            savePcBTN.Location = new System.Drawing.Point(262, 330);
+            savePcBTN.Location = new System.Drawing.Point(371, 328);
             savePcBTN.Name = "savePcBTN";
             savePcBTN.Size = new System.Drawing.Size(144, 44);
             savePcBTN.TabIndex = 41;
@@ -352,11 +353,23 @@
             listBox1.Size = new System.Drawing.Size(155, 34);
             listBox1.TabIndex = 56;
             // 
+            // update_button
+            // 
+            update_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            update_button.Location = new System.Drawing.Point(198, 328);
+            update_button.Name = "update_button";
+            update_button.Size = new System.Drawing.Size(144, 44);
+            update_button.TabIndex = 57;
+            update_button.Text = "Оновити";
+            update_button.UseVisualStyleBackColor = true;
+            update_button.Click += update_button_Click;
+            // 
             // ConfigurationCtrl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.SystemColors.GrayText;
+            Controls.Add(update_button);
             Controls.Add(listBox1);
             Controls.Add(label13);
             Controls.Add(cpu_textBox);
@@ -420,5 +433,6 @@
         private System.Windows.Forms.TextBox motherboard_textBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button update_button;
     }
 }
