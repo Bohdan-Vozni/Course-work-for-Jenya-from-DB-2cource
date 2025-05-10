@@ -37,7 +37,7 @@ namespace jenya_lab_7
                 string heatRemoval = heatRemovalTB.Text.Trim();
                 string cost = costTB.Text.Trim();
 
-                if (title == "" || cost == "")
+                if (title == "" || heatRemoval == "" || typeSize == "" || cost == "")
                 {
                     MessageBox.Show("Будь ласка, заповніть усі поля.");
                     return;

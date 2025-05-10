@@ -1,0 +1,76 @@
+﻿using Microsoft.Data.SqlClient;
+using System;
+using System.Data;
+using System.Windows.Forms;
+
+namespace jenya_lab_7
+{
+    public partial class clientManageCtrl : UserControl
+    {
+        public clientManageCtrl()
+        {
+            InitializeComponent();
+        }
+
+        private DataTable GetAllClients()
+        {
+            using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("GetAllClients", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                Client client = new Client
+                {
+                    Client_ID = row.Cells["Client_ID"].Value.ToString(),
+                    ClientName = row.Cells["ClientName"].Value.ToString(),
+                    Phone = row.Cells["Phone"].Value.ToString(),
+                    HomeAddress = row.Cells["HomeAddress"].Value.ToString()
+                };
+
+                editClient editForm = new editClient(client);
+                editForm.Show();
+
+                editForm.FormClosed += (s, args) =>
+                {
+                    dataGridView1.DataSource = GetAllClients();
+                };
+            }
+        }
+
+        private void reloadBTN_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = GetAllClients();
+
+        }
+
+        private void openAddMthrBtn_Click(object sender, EventArgs e)
+        {
+            addClient addForm = new addClient();
+            addForm.Show();
+
+            addForm.FormClosed += (s, args) =>
+            {
+                dataGridView1.DataSource = GetAllClients();
+            };
+        }
+
+        private void clientManageCtrl_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = GetAllClients();
+
+        }
+    }
+}
