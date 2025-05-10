@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:pcbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\pcbuilder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:pcbuilder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|d:\\visual_studio_project\\2_course\\2_term\\db\\jenya_lab_7\\configurationctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:configurationctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -38,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 233,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "addPurchase.cs",
               "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\addPurchase.cs",
               "RelativeDocumentMoniker": "addPurchase.cs",
@@ -68,7 +72,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "PCBuilder.Designer.cs",
+              "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\PCBuilder.Designer.cs",
+              "RelativeDocumentMoniker": "PCBuilder.Designer.cs",
+              "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\PCBuilder.Designer.cs",
+              "RelativeToolTip": "PCBuilder.Designer.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T19:38:14.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ConfigurationCtrl.cs",
               "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationCtrl.cs",
               "RelativeDocumentMoniker": "ConfigurationCtrl.cs",
@@ -81,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ConfigurationCtrl.cs [Design]",
               "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ConfigurationCtrl.cs",
               "RelativeDocumentMoniker": "ConfigurationCtrl.cs",
@@ -99,7 +116,7 @@
               "RelativeDocumentMoniker": "PCBuilder.cs",
               "ToolTip": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\PCBuilder.cs",
               "RelativeToolTip": "PCBuilder.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAUwC0AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T17:53:47.19Z",
               "EditorCaption": ""
@@ -118,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "addPurchase.cs [Design]",
               "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\addPurchase.cs",
               "RelativeDocumentMoniker": "addPurchase.cs",
@@ -130,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ClassForComboBox.cs",
               "DocumentMoniker": "D:\\visual_studio_project\\2_course\\2_term\\DB\\jenya_lab_7\\ClassForComboBox.cs",
               "RelativeDocumentMoniker": "ClassForComboBox.cs",
