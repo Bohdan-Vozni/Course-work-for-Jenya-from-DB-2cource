@@ -61,5 +61,10 @@ namespace jenya_lab_7
             dataGridView1.DataSource = GetAllHDDs();
 
         }
+
+        private void reloadBTN_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = GetAllHDDs();
+        }
     }
 }

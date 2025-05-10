@@ -125,11 +125,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(86, 12);
+            label1.Location = new System.Drawing.Point(72, 9);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(277, 31);
+            label1.Size = new System.Drawing.Size(310, 31);
             label1.TabIndex = 48;
-            label1.Text = "Додайте блютуз модуль";
+            label1.Text = "Додайте bluetooth-адаптер";
             // 
             // addBluetooth
             // 

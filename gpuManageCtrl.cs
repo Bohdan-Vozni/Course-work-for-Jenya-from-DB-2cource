@@ -63,5 +63,10 @@ namespace jenya_lab_7
             addGpu addGpu = new addGpu();
             addGpu.Show();
         }
+
+        private void reloadBTN_Click(object sender, System.EventArgs e)
+        {
+            dataGridView1.DataSource = GetAllGPUs();
+        }
     }
 }

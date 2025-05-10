@@ -163,5 +163,10 @@ namespace jenya_lab_7
                 }
             }
         }
+
+        private void update_button_Click(object sender, EventArgs e)
+        {
+            updateAllFielAfterSelectItem();
+        }
     }
 }
