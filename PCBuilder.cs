@@ -124,6 +124,7 @@ namespace jenya_lab_7
 
         private void PCBuilder_Load(object sender, System.EventArgs e)
         {
+
         }
 
         private void waterCoolingMenuItem_Click(object sender, System.EventArgs e)
@@ -155,6 +156,12 @@ namespace jenya_lab_7
         {
             this.cleanView();
             powerSupplyManageCtrl1.Visible = true;
+        }
+
+        private void clientsMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.cleanView();
+            clientManageCtrl1.Visible = true;
         }
     }
 }

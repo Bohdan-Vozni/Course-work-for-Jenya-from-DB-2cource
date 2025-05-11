@@ -20,7 +20,7 @@ namespace jenya_lab_7
             using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand("GetAllClients", connection);
+                SqlCommand command = new SqlCommand("GetAllClient", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);

@@ -74,7 +74,7 @@
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            menuStrip1.Size = new System.Drawing.Size(967, 30);
+            menuStrip1.Size = new System.Drawing.Size(1013, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -124,6 +124,7 @@
             clientsMenuItem.Name = "clientsMenuItem";
             clientsMenuItem.Size = new System.Drawing.Size(75, 24);
             clientsMenuItem.Text = "Клієнти";
+            clientsMenuItem.Click += clientsMenuItem_Click;
             // 
             // componentManageMenuItem
             // 
@@ -342,7 +343,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(967, 576);
+            ClientSize = new System.Drawing.Size(1013, 576);
             Controls.Add(wifiManageCtrl1);
             Controls.Add(wateCoolingManageCtrl1);
             Controls.Add(towerManageCtrl1);
