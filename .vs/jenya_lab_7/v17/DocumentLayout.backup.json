@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\pcbuilder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:pcbuilder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\pcbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:pcbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\catalogctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:catalogctrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\pcbuilder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|solutionrelative:pcbuilder.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EEDD33D2-2CA9-4A1E-B017-99DC107BFA87}|jenya_lab_7.csproj|c:\\users\\lenovo\\university\\db\\jenya_proj\\bluetoothmanagectrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 233,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CatalogCtrl.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\CatalogCtrl.cs",
               "RelativeDocumentMoniker": "CatalogCtrl.cs",
@@ -110,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PCBuilder.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\PCBuilder.cs",
               "RelativeDocumentMoniker": "PCBuilder.cs",
@@ -122,26 +122,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PCBuilder.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\PCBuilder.cs",
               "RelativeDocumentMoniker": "PCBuilder.cs",
               "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\PCBuilder.cs",
               "RelativeToolTip": "PCBuilder.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAMwD0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAkwD0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T16:31:18.962Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "PCBuilder.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\PCBuilder.Designer.cs",
               "RelativeDocumentMoniker": "PCBuilder.Designer.cs",
               "ToolTip": "C:\\Users\\Lenovo\\university\\DB\\jenya_proj\\PCBuilder.Designer.cs",
               "RelativeToolTip": "PCBuilder.Designer.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAkwF0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAJoBAAAAAAAAAAAlwKMBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T16:28:56.315Z",
               "EditorCaption": ""
