@@ -82,6 +82,7 @@ namespace jenya_lab_7
 
         private void clientManageCtrl_Load(object sender, EventArgs e)
         {
+
             if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
                 return;
 
