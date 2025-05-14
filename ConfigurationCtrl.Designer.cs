@@ -61,7 +61,7 @@
             // 
             cpu_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             cpu_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            cpu_textBox.Location = new System.Drawing.Point(32, 37);
+            cpu_textBox.Location = new System.Drawing.Point(186, 74);
             cpu_textBox.Multiline = true;
             cpu_textBox.Name = "cpu_textBox";
             cpu_textBox.Size = new System.Drawing.Size(176, 37);
@@ -73,7 +73,7 @@
             label12.Cursor = System.Windows.Forms.Cursors.IBeam;
             label12.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             label12.ForeColor = System.Drawing.SystemColors.HighlightText;
-            label12.Location = new System.Drawing.Point(455, 10);
+            label12.Location = new System.Drawing.Point(609, 47);
             label12.Name = "label12";
             label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
             label12.Size = new System.Drawing.Size(118, 20);
@@ -86,7 +86,7 @@
             label11.Cursor = System.Windows.Forms.Cursors.IBeam;
             label11.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             label11.ForeColor = System.Drawing.SystemColors.HighlightText;
-            label11.Location = new System.Drawing.Point(455, 85);
+            label11.Location = new System.Drawing.Point(609, 122);
             label11.Name = "label11";
             label11.Size = new System.Drawing.Size(76, 20);
             label11.TabIndex = 52;
@@ -98,7 +98,7 @@
             label10.Cursor = System.Windows.Forms.Cursors.IBeam;
             label10.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             label10.ForeColor = System.Drawing.SystemColors.HighlightText;
-            label10.Location = new System.Drawing.Point(455, 164);
+            label10.Location = new System.Drawing.Point(609, 201);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(36, 20);
             label10.TabIndex = 51;
@@ -110,7 +110,7 @@
             label9.Cursor = System.Windows.Forms.Cursors.IBeam;
             label9.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             label9.ForeColor = System.Drawing.SystemColors.HighlightText;
-            label9.Location = new System.Drawing.Point(455, 239);
+            label9.Location = new System.Drawing.Point(609, 276);
             label9.Name = "label9";
             label9.Size = new System.Drawing.Size(60, 20);
             label9.TabIndex = 50;
@@ -122,7 +122,7 @@
             label8.Cursor = System.Windows.Forms.Cursors.IBeam;
             label8.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             label8.ForeColor = System.Drawing.SystemColors.HighlightText;
-            label8.Location = new System.Drawing.Point(240, 10);
+            label8.Location = new System.Drawing.Point(394, 47);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(117, 20);
             label8.TabIndex = 49;
@@ -134,7 +134,7 @@
             label7.Cursor = System.Windows.Forms.Cursors.IBeam;
             label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             label7.ForeColor = System.Drawing.SystemColors.HighlightText;
-            label7.Location = new System.Drawing.Point(240, 85);
+            label7.Location = new System.Drawing.Point(394, 122);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(133, 20);
             label7.TabIndex = 48;
@@ -146,7 +146,7 @@
             label6.Cursor = System.Windows.Forms.Cursors.IBeam;
             label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             label6.ForeColor = System.Drawing.SystemColors.HighlightText;
-            label6.Location = new System.Drawing.Point(240, 164);
+            label6.Location = new System.Drawing.Point(394, 201);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(174, 20);
             label6.TabIndex = 47;
@@ -158,7 +158,7 @@
             label5.Cursor = System.Windows.Forms.Cursors.IBeam;
             label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             label5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            label5.Location = new System.Drawing.Point(240, 239);
+            label5.Location = new System.Drawing.Point(394, 276);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(163, 20);
             label5.TabIndex = 46;
@@ -170,7 +170,7 @@
             label4.Cursor = System.Windows.Forms.Cursors.IBeam;
             label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             label4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            label4.Location = new System.Drawing.Point(27, 239);
+            label4.Location = new System.Drawing.Point(181, 276);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(146, 20);
             label4.TabIndex = 45;
@@ -182,7 +182,7 @@
             label3.Cursor = System.Windows.Forms.Cursors.IBeam;
             label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             label3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            label3.Location = new System.Drawing.Point(27, 164);
+            label3.Location = new System.Drawing.Point(181, 201);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(87, 20);
             label3.TabIndex = 44;
@@ -194,7 +194,7 @@
             label2.Cursor = System.Windows.Forms.Cursors.IBeam;
             label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            label2.Location = new System.Drawing.Point(27, 85);
+            label2.Location = new System.Drawing.Point(181, 122);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(152, 20);
             label2.TabIndex = 43;
@@ -206,7 +206,7 @@
             label1.Cursor = System.Windows.Forms.Cursors.IBeam;
             label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            label1.Location = new System.Drawing.Point(27, 10);
+            label1.Location = new System.Drawing.Point(181, 47);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(80, 20);
             label1.TabIndex = 42;
@@ -215,7 +215,7 @@
             // savePcBTN
             // 
             savePcBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            savePcBTN.Location = new System.Drawing.Point(429, 325);
+            savePcBTN.Location = new System.Drawing.Point(583, 362);
             savePcBTN.Name = "savePcBTN";
             savePcBTN.Size = new System.Drawing.Size(144, 44);
             savePcBTN.TabIndex = 41;
@@ -227,7 +227,7 @@
             // 
             bluetooth_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             bluetooth_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            bluetooth_textBox.Location = new System.Drawing.Point(459, 112);
+            bluetooth_textBox.Location = new System.Drawing.Point(613, 149);
             bluetooth_textBox.Multiline = true;
             bluetooth_textBox.Name = "bluetooth_textBox";
             bluetooth_textBox.Size = new System.Drawing.Size(176, 37);
@@ -237,7 +237,7 @@
             // 
             wifi_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             wifi_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            wifi_textBox.Location = new System.Drawing.Point(459, 190);
+            wifi_textBox.Location = new System.Drawing.Point(613, 227);
             wifi_textBox.Multiline = true;
             wifi_textBox.Name = "wifi_textBox";
             wifi_textBox.Size = new System.Drawing.Size(176, 37);
@@ -247,7 +247,7 @@
             // 
             tower_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             tower_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            tower_textBox.Location = new System.Drawing.Point(459, 265);
+            tower_textBox.Location = new System.Drawing.Point(613, 302);
             tower_textBox.Multiline = true;
             tower_textBox.Name = "tower_textBox";
             tower_textBox.Size = new System.Drawing.Size(176, 37);
@@ -257,7 +257,7 @@
             // 
             powerSupply_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             powerSupply_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            powerSupply_textBox.Location = new System.Drawing.Point(459, 37);
+            powerSupply_textBox.Location = new System.Drawing.Point(613, 74);
             powerSupply_textBox.Multiline = true;
             powerSupply_textBox.Name = "powerSupply_textBox";
             powerSupply_textBox.Size = new System.Drawing.Size(176, 37);
@@ -267,7 +267,7 @@
             // 
             HDD_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             HDD_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            HDD_textBox.Location = new System.Drawing.Point(244, 37);
+            HDD_textBox.Location = new System.Drawing.Point(398, 74);
             HDD_textBox.Multiline = true;
             HDD_textBox.Name = "HDD_textBox";
             HDD_textBox.Size = new System.Drawing.Size(176, 37);
@@ -277,7 +277,7 @@
             // 
             ssd_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             ssd_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            ssd_textBox.Location = new System.Drawing.Point(244, 112);
+            ssd_textBox.Location = new System.Drawing.Point(398, 149);
             ssd_textBox.Multiline = true;
             ssd_textBox.Name = "ssd_textBox";
             ssd_textBox.Size = new System.Drawing.Size(176, 37);
@@ -287,7 +287,7 @@
             // 
             fanCooling_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             fanCooling_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            fanCooling_textBox.Location = new System.Drawing.Point(244, 190);
+            fanCooling_textBox.Location = new System.Drawing.Point(398, 227);
             fanCooling_textBox.Multiline = true;
             fanCooling_textBox.Name = "fanCooling_textBox";
             fanCooling_textBox.Size = new System.Drawing.Size(176, 37);
@@ -297,7 +297,7 @@
             // 
             waterCooling_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             waterCooling_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            waterCooling_textBox.Location = new System.Drawing.Point(244, 265);
+            waterCooling_textBox.Location = new System.Drawing.Point(398, 302);
             waterCooling_textBox.Multiline = true;
             waterCooling_textBox.Name = "waterCooling_textBox";
             waterCooling_textBox.Size = new System.Drawing.Size(176, 37);
@@ -307,7 +307,7 @@
             // 
             gpu_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             gpu_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            gpu_textBox.Location = new System.Drawing.Point(32, 190);
+            gpu_textBox.Location = new System.Drawing.Point(186, 227);
             gpu_textBox.Multiline = true;
             gpu_textBox.Name = "gpu_textBox";
             gpu_textBox.Size = new System.Drawing.Size(176, 37);
@@ -317,7 +317,7 @@
             // 
             ram_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             ram_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            ram_textBox.Location = new System.Drawing.Point(32, 112);
+            ram_textBox.Location = new System.Drawing.Point(186, 149);
             ram_textBox.Multiline = true;
             ram_textBox.Name = "ram_textBox";
             ram_textBox.Size = new System.Drawing.Size(176, 37);
@@ -327,7 +327,7 @@
             // 
             motherboard_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             motherboard_textBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            motherboard_textBox.Location = new System.Drawing.Point(32, 265);
+            motherboard_textBox.Location = new System.Drawing.Point(186, 302);
             motherboard_textBox.Multiline = true;
             motherboard_textBox.Name = "motherboard_textBox";
             motherboard_textBox.Size = new System.Drawing.Size(176, 37);
@@ -336,7 +336,7 @@
             // update_button
             // 
             update_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            update_button.Location = new System.Drawing.Point(256, 325);
+            update_button.Location = new System.Drawing.Point(410, 362);
             update_button.Name = "update_button";
             update_button.Size = new System.Drawing.Size(144, 44);
             update_button.TabIndex = 57;
@@ -347,7 +347,7 @@
             // cleanData_button
             // 
             cleanData_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            cleanData_button.Location = new System.Drawing.Point(93, 325);
+            cleanData_button.Location = new System.Drawing.Point(247, 362);
             cleanData_button.Name = "cleanData_button";
             cleanData_button.Size = new System.Drawing.Size(144, 44);
             cleanData_button.TabIndex = 58;
@@ -388,7 +388,7 @@
             Controls.Add(ram_textBox);
             Controls.Add(motherboard_textBox);
             Name = "ConfigurationCtrl";
-            Size = new System.Drawing.Size(665, 395);
+            Size = new System.Drawing.Size(868, 519);
             Load += ConfigurationCtrl_Load;
             ResumeLayout(false);
             PerformLayout();
