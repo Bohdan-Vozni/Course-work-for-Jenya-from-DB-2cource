@@ -178,5 +178,10 @@ namespace jenya_lab_7
             this.cleanView();
             asistentForUpdateAndDelete_UserControl1.Visible = true;
         }
+
+        private void powerSupplyManageCtrl1_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

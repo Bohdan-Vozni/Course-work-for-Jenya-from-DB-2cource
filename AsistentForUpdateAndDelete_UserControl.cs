@@ -81,7 +81,7 @@ namespace jenya_lab_7
 
         private void update_button_Click(object sender, EventArgs e)
         {
-          
+
             DialogResult result = MessageBox.Show(
                 "Ви впевнені, що хочете оновити дані?",
                 "Підтвердження дії",
@@ -94,7 +94,7 @@ namespace jenya_lab_7
                 return;
             }
 
-            
+
 
             using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
             {
@@ -110,7 +110,7 @@ namespace jenya_lab_7
                 command.Parameters.AddWithValue("@Specialist_ID", idAsistent);
                 command.Parameters.AddWithValue("@SpecialistName", name_TextBox.Text);
                 command.Parameters.AddWithValue("@Phone", phone_textBox.Text);
-               
+
 
                 connection.Open();
 
@@ -167,7 +167,7 @@ namespace jenya_lab_7
 
                 //додати параметри
                 command.Parameters.AddWithValue("@Specialist_ID", idAsistent);
-               
+
 
                 connection.Open();
 
@@ -192,6 +192,11 @@ namespace jenya_lab_7
 
 
             }
+            ShowDataToGrit();
+        }
+
+        private void updeteData_button_Click(object sender, EventArgs e)
+        {
             ShowDataToGrit();
         }
     }

@@ -35,6 +35,7 @@
             label2 = new System.Windows.Forms.Label();
             update_button = new System.Windows.Forms.Button();
             delete_buttoan = new System.Windows.Forms.Button();
+            updeteData_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -103,10 +104,22 @@
             delete_buttoan.UseVisualStyleBackColor = true;
             delete_buttoan.Click += delete_buttoan_Click;
             // 
+            // updeteData_button
+            // 
+            updeteData_button.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
+            updeteData_button.Location = new System.Drawing.Point(73, 297);
+            updeteData_button.Name = "updeteData_button";
+            updeteData_button.Size = new System.Drawing.Size(185, 35);
+            updeteData_button.TabIndex = 7;
+            updeteData_button.Text = "Оновити дані ";
+            updeteData_button.UseVisualStyleBackColor = true;
+            updeteData_button.Click += updeteData_button_Click;
+            // 
             // AsistentForUpdateAndDelete_UserControl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(updeteData_button);
             Controls.Add(delete_buttoan);
             Controls.Add(update_button);
             Controls.Add(label2);
@@ -131,5 +144,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button update_button;
         private System.Windows.Forms.Button delete_buttoan;
+        private System.Windows.Forms.Button updeteData_button;
     }
 }
