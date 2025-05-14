@@ -32,10 +32,8 @@ namespace jenya_lab_7
 
             if (!File.Exists(pathToConectionString))
             {
-                using (FileStream file = new FileStream(pathToConectionString, FileMode.Create))
-                {
-                    JsonSerializer.Serialize(file, GetContectionString.getstr, options);
-                }
+                MessageBox.Show("Згенеруйте файл підключеня через нашу програму");
+                return;
             }
             else
             {
