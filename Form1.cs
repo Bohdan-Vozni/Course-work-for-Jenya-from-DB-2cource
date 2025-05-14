@@ -42,6 +42,7 @@ namespace jenya_lab_7
                 using (FileStream file = new FileStream(pathToConectionString, FileMode.Open))
                 {
                     GetContectionString.getstr = JsonSerializer.Deserialize<string>(file);
+                    GetContectionString.getstr += $"User ID = {userName};" + $"Password= {password};";
                 }
             }
 
