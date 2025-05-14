@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System.ComponentModel;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace jenya_lab_7
@@ -125,7 +126,8 @@ namespace jenya_lab_7
 
         private void PCBuilder_Load(object sender, System.EventArgs e)
         {
-
+            if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
         }
 
         private void waterCoolingMenuItem_Click(object sender, System.EventArgs e)
@@ -169,6 +171,12 @@ namespace jenya_lab_7
         {
             var form = new addAsistent();
             form.ShowDialog();
+        }
+
+        private void managementAsistent_ToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.cleanView();
+            asistentForUpdateAndDelete_UserControl1.Visible = true;
         }
     }
 }
