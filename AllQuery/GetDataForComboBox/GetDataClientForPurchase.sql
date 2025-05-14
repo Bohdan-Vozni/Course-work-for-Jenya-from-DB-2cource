@@ -21,3 +21,20 @@ BEGIN
         (@name IS NULL OR ClientName LIKE '%' + @name + '%');
 END
 GO
+
+
+IF EXISTS (SELECT name FROM sys.objects WHERE name = 'GetDataClientForComboBox')
+  DROP PROCEDURE GetDataClientForComboBox;
+GO
+
+CREATE PROCEDURE GetDataClientForComboBox
+AS
+BEGIN
+    SELECT 
+        Client_ID,
+        ClientName 
+    FROM 
+        Client
+   
+END
+GO
