@@ -70,5 +70,10 @@ namespace jenya_lab_7
                 MessageBox.Show(ex.Message, "Неочікувана помилка");
             }
         }
+
+        private void addClient_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

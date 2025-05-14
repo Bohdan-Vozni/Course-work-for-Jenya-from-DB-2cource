@@ -44,10 +44,9 @@
             closeBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             closeBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
             closeBTN.ForeColor = System.Drawing.Color.FromArgb(255, 128, 128);
-            closeBTN.Location = new System.Drawing.Point(422, -3);
-            closeBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            closeBTN.Location = new System.Drawing.Point(369, -2);
             closeBTN.Name = "closeBTN";
-            closeBTN.Size = new System.Drawing.Size(48, 52);
+            closeBTN.Size = new System.Drawing.Size(42, 39);
             closeBTN.TabIndex = 71;
             closeBTN.Text = "X";
             closeBTN.UseVisualStyleBackColor = true;
@@ -55,10 +54,9 @@
             // 
             // saveBTN
             // 
-            saveBTN.Location = new System.Drawing.Point(160, 254);
-            saveBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            saveBTN.Location = new System.Drawing.Point(140, 190);
             saveBTN.Name = "saveBTN";
-            saveBTN.Size = new System.Drawing.Size(129, 55);
+            saveBTN.Size = new System.Drawing.Size(113, 41);
             saveBTN.TabIndex = 70;
             saveBTN.Text = "Зберегти";
             saveBTN.UseVisualStyleBackColor = true;
@@ -68,9 +66,9 @@
             // 
             label8.AutoSize = true;
             label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label8.Location = new System.Drawing.Point(28, 150);
+            label8.Location = new System.Drawing.Point(24, 112);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(199, 31);
+            label8.Size = new System.Drawing.Size(164, 25);
             label8.TabIndex = 67;
             label8.Text = "Домашня адреса";
             // 
@@ -78,9 +76,9 @@
             // 
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label6.Location = new System.Drawing.Point(239, 62);
+            label6.Location = new System.Drawing.Point(209, 46);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(198, 31);
+            label6.Size = new System.Drawing.Size(162, 25);
             label6.TabIndex = 66;
             label6.Text = "Номер телефону";
             // 
@@ -88,54 +86,51 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label2.Location = new System.Drawing.Point(28, 59);
+            label2.Location = new System.Drawing.Point(24, 44);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(131, 31);
+            label2.Size = new System.Drawing.Size(108, 25);
             label2.TabIndex = 65;
             label2.Text = "Повне ім'я";
             // 
             // phoneTB
             // 
             phoneTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            phoneTB.Location = new System.Drawing.Point(245, 102);
-            phoneTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            phoneTB.Location = new System.Drawing.Point(214, 76);
             phoneTB.Name = "phoneTB";
-            phoneTB.Size = new System.Drawing.Size(176, 31);
+            phoneTB.Size = new System.Drawing.Size(154, 27);
             phoneTB.TabIndex = 64;
             // 
             // clientNameTB
             // 
             clientNameTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            clientNameTB.Location = new System.Drawing.Point(34, 102);
-            clientNameTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            clientNameTB.Location = new System.Drawing.Point(30, 76);
             clientNameTB.Name = "clientNameTB";
-            clientNameTB.Size = new System.Drawing.Size(176, 31);
+            clientNameTB.Size = new System.Drawing.Size(154, 27);
             clientNameTB.TabIndex = 63;
             // 
             // homeAddressTB
             // 
             homeAddressTB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-            homeAddressTB.Location = new System.Drawing.Point(34, 193);
-            homeAddressTB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            homeAddressTB.Location = new System.Drawing.Point(30, 145);
             homeAddressTB.Name = "homeAddressTB";
-            homeAddressTB.Size = new System.Drawing.Size(176, 31);
+            homeAddressTB.Size = new System.Drawing.Size(154, 27);
             homeAddressTB.TabIndex = 62;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(125, 9);
+            label1.Location = new System.Drawing.Point(109, 7);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(193, 31);
+            label1.Size = new System.Drawing.Size(159, 25);
             label1.TabIndex = 61;
             label1.Text = "Додайте Клієнта";
             // 
             // addClient
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(467, 326);
+            ClientSize = new System.Drawing.Size(409, 244);
             Controls.Add(closeBTN);
             Controls.Add(saveBTN);
             Controls.Add(label8);
@@ -146,9 +141,11 @@
             Controls.Add(homeAddressTB);
             Controls.Add(label1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "addClient";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "addClient";
+            Load += addClient_Load;
             ResumeLayout(false);
             PerformLayout();
         }

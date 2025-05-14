@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace jenya_lab_7
 {
@@ -124,7 +125,8 @@ namespace jenya_lab_7
 
         private void PCBuilder_Load(object sender, System.EventArgs e)
         {
-
+            if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
+                return;
         }
 
         private void waterCoolingMenuItem_Click(object sender, System.EventArgs e)
@@ -162,6 +164,47 @@ namespace jenya_lab_7
         {
             this.cleanView();
             clientManageCtrl1.Visible = true;
+        }
+
+        private void addAsistent_ToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            var form = new addAsistent();
+            form.ShowDialog();
+        }
+
+        private void managementAsistent_ToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.cleanView();
+            asistentForUpdateAndDelete_UserControl1.Visible = true;
+        }
+
+        private void powerSupplyManageCtrl1_Load(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void збToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            Configurations configurations = new Configurations();
+            configurations.Show();
+        }
+
+        private void кількістьПродажівСпеціалістівToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            specialistsSales specialistsSales = new specialistsSales();
+            specialistsSales.Show();
+        }
+
+        private void клієнтськіЗамовленняToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            ClientPurcheses purcheses = new ClientPurcheses();
+            purcheses.Show();
+        }
+
+        private void повнаІнформаціяПроКлієнтаToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            AllClientInfo allClientInfo = new AllClientInfo();
+            allClientInfo.Show();
         }
     }
 }
