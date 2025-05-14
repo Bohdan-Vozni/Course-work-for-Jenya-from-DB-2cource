@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Security.Cryptography;
+using System.Windows.Forms;
 
 namespace jenya_lab_7
 {
@@ -162,6 +163,12 @@ namespace jenya_lab_7
         {
             this.cleanView();
             clientManageCtrl1.Visible = true;
+        }
+
+        private void addAsistent_ToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            var form = new addAsistent();
+            form.ShowDialog();
         }
     }
 }

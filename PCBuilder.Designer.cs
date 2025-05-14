@@ -49,6 +49,9 @@
             wifiMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             powerSupplyMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ssdMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            асистентToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            addAsistent_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            deleteAsistentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             configurationCtrl2 = new ConfigurationCtrl();
             bluetoothManageCtrl1 = new bluetoothManageCtrl();
             clientManageCtrl1 = new clientManageCtrl();
@@ -70,11 +73,11 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripMenuItem1, configTL, catalogTL, clientsMenuItem, componentManageMenuItem });
+            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripMenuItem1, configTL, catalogTL, clientsMenuItem, componentManageMenuItem, асистентToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            menuStrip1.Size = new System.Drawing.Size(1013, 30);
+            menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            menuStrip1.Size = new System.Drawing.Size(886, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -82,47 +85,47 @@
             // 
             toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { mainTL, toolStripMenuItem2, exitTL });
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new System.Drawing.Size(65, 24);
+            toolStripMenuItem1.Size = new System.Drawing.Size(53, 20);
             toolStripMenuItem1.Text = "Меню";
             // 
             // mainTL
             // 
             mainTL.Name = "mainTL";
-            mainTL.Size = new System.Drawing.Size(151, 26);
+            mainTL.Size = new System.Drawing.Size(122, 22);
             mainTL.Text = "Головна";
             mainTL.Click += mainTL_Click;
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new System.Drawing.Size(151, 26);
+            toolStripMenuItem2.Size = new System.Drawing.Size(122, 22);
             toolStripMenuItem2.Text = "Профіль";
             // 
             // exitTL
             // 
             exitTL.Name = "exitTL";
-            exitTL.Size = new System.Drawing.Size(151, 26);
+            exitTL.Size = new System.Drawing.Size(122, 22);
             exitTL.Text = "Вийти";
             exitTL.Click += exitTL_Click;
             // 
             // configTL
             // 
             configTL.Name = "configTL";
-            configTL.Size = new System.Drawing.Size(118, 24);
+            configTL.Size = new System.Drawing.Size(95, 20);
             configTL.Text = "Конфігуратор";
             configTL.Click += configBTN_Click;
             // 
             // catalogTL
             // 
             catalogTL.Name = "catalogTL";
-            catalogTL.Size = new System.Drawing.Size(77, 24);
+            catalogTL.Size = new System.Drawing.Size(62, 20);
             catalogTL.Text = "Каталог";
             catalogTL.Click += catalogTL_Click;
             // 
             // clientsMenuItem
             // 
             clientsMenuItem.Name = "clientsMenuItem";
-            clientsMenuItem.Size = new System.Drawing.Size(75, 24);
+            clientsMenuItem.Size = new System.Drawing.Size(61, 20);
             clientsMenuItem.Text = "Клієнти";
             clientsMenuItem.Click += clientsMenuItem_Click;
             // 
@@ -130,220 +133,239 @@
             // 
             componentManageMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { cpuMenuItem, hddMenuItem, ramMenuItem, gpuMenuItem, motherboardMenuItem, waterCoolingMenuItem, fanCoolingMenuItem, towerMenuItem, blutoothMenuItem, wifiMenuItem, powerSupplyMenuItem, ssdMenuItem });
             componentManageMenuItem.Name = "componentManageMenuItem";
-            componentManageMenuItem.Size = new System.Drawing.Size(231, 24);
+            componentManageMenuItem.Size = new System.Drawing.Size(186, 20);
             componentManageMenuItem.Text = "Управління комплекчуючими";
             // 
             // cpuMenuItem
             // 
             cpuMenuItem.Name = "cpuMenuItem";
-            cpuMenuItem.Size = new System.Drawing.Size(185, 26);
+            cpuMenuItem.Size = new System.Drawing.Size(148, 22);
             cpuMenuItem.Text = "CPU";
             cpuMenuItem.Click += cpuMenuItem_Click;
             // 
             // hddMenuItem
             // 
             hddMenuItem.Name = "hddMenuItem";
-            hddMenuItem.Size = new System.Drawing.Size(185, 26);
+            hddMenuItem.Size = new System.Drawing.Size(148, 22);
             hddMenuItem.Text = "HDD";
             hddMenuItem.Click += hddMenuItem_Click;
             // 
             // ramMenuItem
             // 
             ramMenuItem.Name = "ramMenuItem";
-            ramMenuItem.Size = new System.Drawing.Size(185, 26);
+            ramMenuItem.Size = new System.Drawing.Size(148, 22);
             ramMenuItem.Text = "RAM";
             ramMenuItem.Click += ramMenuItem_Click;
             // 
             // gpuMenuItem
             // 
             gpuMenuItem.Name = "gpuMenuItem";
-            gpuMenuItem.Size = new System.Drawing.Size(185, 26);
+            gpuMenuItem.Size = new System.Drawing.Size(148, 22);
             gpuMenuItem.Text = "GPU";
             gpuMenuItem.Click += gpuMenuItem_Click;
             // 
             // motherboardMenuItem
             // 
             motherboardMenuItem.Name = "motherboardMenuItem";
-            motherboardMenuItem.Size = new System.Drawing.Size(185, 26);
+            motherboardMenuItem.Size = new System.Drawing.Size(148, 22);
             motherboardMenuItem.Text = "Motherboard";
             motherboardMenuItem.Click += motherboardMenuItem_Click;
             // 
             // waterCoolingMenuItem
             // 
             waterCoolingMenuItem.Name = "waterCoolingMenuItem";
-            waterCoolingMenuItem.Size = new System.Drawing.Size(185, 26);
+            waterCoolingMenuItem.Size = new System.Drawing.Size(148, 22);
             waterCoolingMenuItem.Text = "Water cooling";
             waterCoolingMenuItem.Click += waterCoolingMenuItem_Click;
             // 
             // fanCoolingMenuItem
             // 
             fanCoolingMenuItem.Name = "fanCoolingMenuItem";
-            fanCoolingMenuItem.Size = new System.Drawing.Size(185, 26);
+            fanCoolingMenuItem.Size = new System.Drawing.Size(148, 22);
             fanCoolingMenuItem.Text = "Fan cooling";
             fanCoolingMenuItem.Click += fanCoolingMenuItem_Click;
             // 
             // towerMenuItem
             // 
             towerMenuItem.Name = "towerMenuItem";
-            towerMenuItem.Size = new System.Drawing.Size(185, 26);
+            towerMenuItem.Size = new System.Drawing.Size(148, 22);
             towerMenuItem.Text = "Tower";
             towerMenuItem.Click += towerMenuItem_Click;
             // 
             // blutoothMenuItem
             // 
             blutoothMenuItem.Name = "blutoothMenuItem";
-            blutoothMenuItem.Size = new System.Drawing.Size(185, 26);
+            blutoothMenuItem.Size = new System.Drawing.Size(148, 22);
             blutoothMenuItem.Text = "Blutooth";
             blutoothMenuItem.Click += blutoothMenuItem_Click;
             // 
             // wifiMenuItem
             // 
             wifiMenuItem.Name = "wifiMenuItem";
-            wifiMenuItem.Size = new System.Drawing.Size(185, 26);
+            wifiMenuItem.Size = new System.Drawing.Size(148, 22);
             wifiMenuItem.Text = "Wifi";
             wifiMenuItem.Click += wifiMenuItem_Click;
             // 
             // powerSupplyMenuItem
             // 
             powerSupplyMenuItem.Name = "powerSupplyMenuItem";
-            powerSupplyMenuItem.Size = new System.Drawing.Size(185, 26);
+            powerSupplyMenuItem.Size = new System.Drawing.Size(148, 22);
             powerSupplyMenuItem.Text = "Power supply";
             powerSupplyMenuItem.Click += powerSupplyMenuItem_Click;
             // 
             // ssdMenuItem
             // 
             ssdMenuItem.Name = "ssdMenuItem";
-            ssdMenuItem.Size = new System.Drawing.Size(185, 26);
+            ssdMenuItem.Size = new System.Drawing.Size(148, 22);
             ssdMenuItem.Text = "SSD";
             ssdMenuItem.Click += ssdMenuItem_Click;
+            // 
+            // асистентToolStripMenuItem
+            // 
+            асистентToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { addAsistent_ToolStripMenuItem, deleteAsistentToolStripMenuItem });
+            асистентToolStripMenuItem.Name = "асистентToolStripMenuItem";
+            асистентToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            асистентToolStripMenuItem.Text = " Асистент";
+            // 
+            // addAsistent_ToolStripMenuItem
+            // 
+            addAsistent_ToolStripMenuItem.Name = "addAsistent_ToolStripMenuItem";
+            addAsistent_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            addAsistent_ToolStripMenuItem.Text = "додати";
+            addAsistent_ToolStripMenuItem.Click += addAsistent_ToolStripMenuItem_Click;
+            // 
+            // deleteAsistentToolStripMenuItem
+            // 
+            deleteAsistentToolStripMenuItem.Name = "deleteAsistentToolStripMenuItem";
+            deleteAsistentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            deleteAsistentToolStripMenuItem.Text = "видалити";
             // 
             // configurationCtrl2
             // 
             configurationCtrl2.BackColor = System.Drawing.SystemColors.GrayText;
-            configurationCtrl2.Location = new System.Drawing.Point(12, 53);
-            configurationCtrl2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            configurationCtrl2.Location = new System.Drawing.Point(10, 40);
+            configurationCtrl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             configurationCtrl2.Name = "configurationCtrl2";
-            configurationCtrl2.Size = new System.Drawing.Size(1014, 527);
+            configurationCtrl2.Size = new System.Drawing.Size(887, 395);
             configurationCtrl2.TabIndex = 1;
             // 
             // bluetoothManageCtrl1
             // 
-            bluetoothManageCtrl1.Location = new System.Drawing.Point(0, 59);
-            bluetoothManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            bluetoothManageCtrl1.Location = new System.Drawing.Point(0, 44);
+            bluetoothManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             bluetoothManageCtrl1.Name = "bluetoothManageCtrl1";
-            bluetoothManageCtrl1.Size = new System.Drawing.Size(1275, 859);
+            bluetoothManageCtrl1.Size = new System.Drawing.Size(1116, 644);
             bluetoothManageCtrl1.TabIndex = 2;
             // 
             // clientManageCtrl1
             // 
-            clientManageCtrl1.Location = new System.Drawing.Point(0, 59);
-            clientManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            clientManageCtrl1.Location = new System.Drawing.Point(0, 44);
+            clientManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             clientManageCtrl1.Name = "clientManageCtrl1";
-            clientManageCtrl1.Size = new System.Drawing.Size(1449, 859);
+            clientManageCtrl1.Size = new System.Drawing.Size(1268, 644);
             clientManageCtrl1.TabIndex = 3;
             // 
             // cpuManageCtrl1
             // 
-            cpuManageCtrl1.Location = new System.Drawing.Point(0, 59);
-            cpuManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            cpuManageCtrl1.Location = new System.Drawing.Point(0, 44);
+            cpuManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             cpuManageCtrl1.Name = "cpuManageCtrl1";
-            cpuManageCtrl1.Size = new System.Drawing.Size(1449, 859);
+            cpuManageCtrl1.Size = new System.Drawing.Size(1268, 644);
             cpuManageCtrl1.TabIndex = 4;
             // 
             // fanCoolingManageCtrl1
             // 
-            fanCoolingManageCtrl1.Location = new System.Drawing.Point(0, 41);
-            fanCoolingManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            fanCoolingManageCtrl1.Location = new System.Drawing.Point(0, 31);
+            fanCoolingManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             fanCoolingManageCtrl1.Name = "fanCoolingManageCtrl1";
-            fanCoolingManageCtrl1.Size = new System.Drawing.Size(1449, 859);
+            fanCoolingManageCtrl1.Size = new System.Drawing.Size(1268, 644);
             fanCoolingManageCtrl1.TabIndex = 5;
             // 
             // gpuManageCtrl1
             // 
-            gpuManageCtrl1.Location = new System.Drawing.Point(0, 43);
-            gpuManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            gpuManageCtrl1.Location = new System.Drawing.Point(0, 32);
+            gpuManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             gpuManageCtrl1.Name = "gpuManageCtrl1";
-            gpuManageCtrl1.Size = new System.Drawing.Size(1449, 859);
+            gpuManageCtrl1.Size = new System.Drawing.Size(1268, 644);
             gpuManageCtrl1.TabIndex = 6;
             // 
             // hddManageCtrl1
             // 
-            hddManageCtrl1.Location = new System.Drawing.Point(0, 47);
-            hddManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            hddManageCtrl1.Location = new System.Drawing.Point(0, 35);
+            hddManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             hddManageCtrl1.Name = "hddManageCtrl1";
-            hddManageCtrl1.Size = new System.Drawing.Size(1449, 855);
+            hddManageCtrl1.Size = new System.Drawing.Size(1268, 641);
             hddManageCtrl1.TabIndex = 7;
             // 
             // motherboardManageCtrl1
             // 
-            motherboardManageCtrl1.Location = new System.Drawing.Point(0, 41);
-            motherboardManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            motherboardManageCtrl1.Location = new System.Drawing.Point(0, 31);
+            motherboardManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             motherboardManageCtrl1.Name = "motherboardManageCtrl1";
-            motherboardManageCtrl1.Size = new System.Drawing.Size(1449, 859);
+            motherboardManageCtrl1.Size = new System.Drawing.Size(1268, 644);
             motherboardManageCtrl1.TabIndex = 8;
             // 
             // powerSupplyManageCtrl1
             // 
-            powerSupplyManageCtrl1.Location = new System.Drawing.Point(0, 41);
-            powerSupplyManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            powerSupplyManageCtrl1.Location = new System.Drawing.Point(0, 31);
+            powerSupplyManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             powerSupplyManageCtrl1.Name = "powerSupplyManageCtrl1";
-            powerSupplyManageCtrl1.Size = new System.Drawing.Size(1449, 859);
+            powerSupplyManageCtrl1.Size = new System.Drawing.Size(1268, 644);
             powerSupplyManageCtrl1.TabIndex = 9;
             // 
             // ramManageCtrl1
             // 
-            ramManageCtrl1.Location = new System.Drawing.Point(0, 59);
-            ramManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            ramManageCtrl1.Location = new System.Drawing.Point(0, 44);
+            ramManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             ramManageCtrl1.Name = "ramManageCtrl1";
-            ramManageCtrl1.Size = new System.Drawing.Size(1449, 859);
+            ramManageCtrl1.Size = new System.Drawing.Size(1268, 644);
             ramManageCtrl1.TabIndex = 10;
             // 
             // ssdManageCtrl1
             // 
-            ssdManageCtrl1.Location = new System.Drawing.Point(0, 47);
-            ssdManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            ssdManageCtrl1.Location = new System.Drawing.Point(0, 35);
+            ssdManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             ssdManageCtrl1.Name = "ssdManageCtrl1";
-            ssdManageCtrl1.Size = new System.Drawing.Size(1449, 843);
+            ssdManageCtrl1.Size = new System.Drawing.Size(1268, 632);
             ssdManageCtrl1.TabIndex = 11;
             // 
             // towerManageCtrl1
             // 
-            towerManageCtrl1.Location = new System.Drawing.Point(0, 59);
-            towerManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            towerManageCtrl1.Location = new System.Drawing.Point(0, 44);
+            towerManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             towerManageCtrl1.Name = "towerManageCtrl1";
-            towerManageCtrl1.Size = new System.Drawing.Size(1449, 859);
+            towerManageCtrl1.Size = new System.Drawing.Size(1268, 644);
             towerManageCtrl1.TabIndex = 12;
             // 
             // wateCoolingManageCtrl1
             // 
-            wateCoolingManageCtrl1.Location = new System.Drawing.Point(0, 47);
-            wateCoolingManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            wateCoolingManageCtrl1.Location = new System.Drawing.Point(0, 35);
+            wateCoolingManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             wateCoolingManageCtrl1.Name = "wateCoolingManageCtrl1";
-            wateCoolingManageCtrl1.Size = new System.Drawing.Size(1449, 859);
+            wateCoolingManageCtrl1.Size = new System.Drawing.Size(1268, 644);
             wateCoolingManageCtrl1.TabIndex = 13;
             // 
             // wifiManageCtrl1
             // 
-            wifiManageCtrl1.Location = new System.Drawing.Point(0, 59);
-            wifiManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            wifiManageCtrl1.Location = new System.Drawing.Point(0, 44);
+            wifiManageCtrl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             wifiManageCtrl1.Name = "wifiManageCtrl1";
-            wifiManageCtrl1.Size = new System.Drawing.Size(1449, 859);
+            wifiManageCtrl1.Size = new System.Drawing.Size(1268, 644);
             wifiManageCtrl1.TabIndex = 14;
             // 
             // catalogCtrl2
             // 
             catalogCtrl2.BackColor = System.Drawing.SystemColors.GrayText;
-            catalogCtrl2.Location = new System.Drawing.Point(25, 36);
-            catalogCtrl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            catalogCtrl2.Location = new System.Drawing.Point(22, 27);
             catalogCtrl2.Name = "catalogCtrl2";
-            catalogCtrl2.Size = new System.Drawing.Size(887, 412);
+            catalogCtrl2.Size = new System.Drawing.Size(776, 309);
             catalogCtrl2.TabIndex = 2;
             // 
             // PCBuilder
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1013, 576);
+            ClientSize = new System.Drawing.Size(886, 432);
             Controls.Add(wifiManageCtrl1);
             Controls.Add(wateCoolingManageCtrl1);
             Controls.Add(towerManageCtrl1);
@@ -362,7 +384,6 @@
             Controls.Add(menuStrip1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
-            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "PCBuilder";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "PCBuilder";
@@ -415,5 +436,8 @@
         private wateCoolingManageCtrl wateCoolingManageCtrl1;
         private wifiManageCtrl wifiManageCtrl1;
         private CatalogCtrl catalogCtrl2;
+        private System.Windows.Forms.ToolStripMenuItem асистентToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addAsistent_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteAsistentToolStripMenuItem;
     }
 }
