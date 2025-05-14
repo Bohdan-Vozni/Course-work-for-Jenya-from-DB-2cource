@@ -53,9 +53,8 @@
             gpu_textBox = new System.Windows.Forms.TextBox();
             ram_textBox = new System.Windows.Forms.TextBox();
             motherboard_textBox = new System.Windows.Forms.TextBox();
-            label13 = new System.Windows.Forms.Label();
-            listBox1 = new System.Windows.Forms.ListBox();
             update_button = new System.Windows.Forms.Button();
+            cleanData_button = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // cpu_textBox
@@ -216,7 +215,7 @@
             // savePcBTN
             // 
             savePcBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            savePcBTN.Location = new System.Drawing.Point(371, 328);
+            savePcBTN.Location = new System.Drawing.Point(429, 325);
             savePcBTN.Name = "savePcBTN";
             savePcBTN.Size = new System.Drawing.Size(144, 44);
             savePcBTN.TabIndex = 41;
@@ -334,29 +333,10 @@
             motherboard_textBox.Size = new System.Drawing.Size(176, 37);
             motherboard_textBox.TabIndex = 30;
             // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
-            label13.ForeColor = System.Drawing.SystemColors.Control;
-            label13.Location = new System.Drawing.Point(701, 10);
-            label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(103, 20);
-            label13.TabIndex = 55;
-            label13.Text = "Вибір клієнта";
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new System.Drawing.Point(690, 37);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new System.Drawing.Size(155, 34);
-            listBox1.TabIndex = 56;
-            // 
             // update_button
             // 
             update_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            update_button.Location = new System.Drawing.Point(198, 328);
+            update_button.Location = new System.Drawing.Point(256, 325);
             update_button.Name = "update_button";
             update_button.Size = new System.Drawing.Size(144, 44);
             update_button.TabIndex = 57;
@@ -364,14 +344,24 @@
             update_button.UseVisualStyleBackColor = true;
             update_button.Click += update_button_Click;
             // 
+            // cleanData_button
+            // 
+            cleanData_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            cleanData_button.Location = new System.Drawing.Point(93, 325);
+            cleanData_button.Name = "cleanData_button";
+            cleanData_button.Size = new System.Drawing.Size(144, 44);
+            cleanData_button.TabIndex = 58;
+            cleanData_button.Text = "Очистити дані";
+            cleanData_button.UseVisualStyleBackColor = true;
+            cleanData_button.Click += cleanData_button_Click;
+            // 
             // ConfigurationCtrl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.SystemColors.GrayText;
+            Controls.Add(cleanData_button);
             Controls.Add(update_button);
-            Controls.Add(listBox1);
-            Controls.Add(label13);
             Controls.Add(cpu_textBox);
             Controls.Add(label12);
             Controls.Add(label11);
@@ -398,7 +388,7 @@
             Controls.Add(ram_textBox);
             Controls.Add(motherboard_textBox);
             Name = "ConfigurationCtrl";
-            Size = new System.Drawing.Size(887, 395);
+            Size = new System.Drawing.Size(665, 395);
             Load += ConfigurationCtrl_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -431,8 +421,7 @@
         private System.Windows.Forms.TextBox gpu_textBox;
         private System.Windows.Forms.TextBox ram_textBox;
         private System.Windows.Forms.TextBox motherboard_textBox;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button update_button;
+        private System.Windows.Forms.Button cleanData_button;
     }
 }

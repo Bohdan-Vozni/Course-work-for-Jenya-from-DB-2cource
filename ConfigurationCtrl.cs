@@ -1,6 +1,8 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
+using System.ComponentModel;
 using System.Data;
+using System.Runtime.Intrinsics.X86;
 using System.Windows.Forms;
 
 namespace jenya_lab_7
@@ -111,17 +113,50 @@ namespace jenya_lab_7
 
         private void savePcBTN_Click(object sender, EventArgs e)
         {
+            if(fanCooling_textBox.Text != "" && waterCooling_textBox.Text != "")
+            {
+                MessageBox.Show("Виберіть один з методів охолодження вашого пк");
+                // Очищення вентиляторного охолодження
+                PcForSaveOrderForOneTime.idFanCooling = null;
+                PcForSaveOrderForOneTime.fanCooling = null;
+                waterCooling_textBox.Text = string.Empty;
+
+                // Очищення водяного охолодження
+                PcForSaveOrderForOneTime.idWaterCooling = null;
+                PcForSaveOrderForOneTime.waterCooling = null;
+                fanCooling_textBox.Text = string.Empty;
+                return;
+            }
+
+            if ((HDD_textBox.Text == "" && ssd_textBox.Text == ""))
+            {
+                MessageBox.Show("Виберіть один або два вида памяті");
+               
+                // Очищення HDD
+                PcForSaveOrderForOneTime.idHdd = null;
+                PcForSaveOrderForOneTime.Hdd = null;
+
+                HDD_textBox.Text = string.Empty;
+
+                // Очищення SSD
+                PcForSaveOrderForOneTime.idSsd = null;
+                PcForSaveOrderForOneTime.ssd = null;
+                ssd_textBox.Text = string.Empty;
+                return;
+            }
+
+
             var unicId = Guid.NewGuid().ToString();
 
             if (string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idCpu) ||
                 string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idGpu) ||
                 string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idMotherboard) ||
                 string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idRam) ||
-                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idHdd) ||
-                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idSsd) ||
+                //string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idHdd) ||
+                //string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idSsd) ||
                 string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idPopwerSupply) ||
-                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idWaterCooling) ||
-                string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idFanCooling) ||
+                //string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idWaterCooling) ||
+                //string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idFanCooling) ||
                 string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idWifi) ||
                 string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idBluetooth) ||
                 string.IsNullOrWhiteSpace(PcForSaveOrderForOneTime.idTower))
@@ -172,6 +207,19 @@ namespace jenya_lab_7
         private void update_button_Click(object sender, EventArgs e)
         {
             updateAllFielAfterSelectItem();
+        }
+
+        private void cleanData_button_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox)
+                {
+                    ((TextBox)control).Text = string.Empty;
+                }               
+            }
+
+            PcForSaveOrderForOneTime.ClearAll();
         }
     }
 }
