@@ -51,7 +51,6 @@
             ssdMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             асистентToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             addAsistent_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            deleteAsistentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             configurationCtrl2 = new ConfigurationCtrl();
             bluetoothManageCtrl1 = new bluetoothManageCtrl();
             clientManageCtrl1 = new clientManageCtrl();
@@ -222,7 +221,7 @@
             // 
             // асистентToolStripMenuItem
             // 
-            асистентToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { addAsistent_ToolStripMenuItem, deleteAsistentToolStripMenuItem });
+            асистентToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { addAsistent_ToolStripMenuItem });
             асистентToolStripMenuItem.Name = "асистентToolStripMenuItem";
             асистентToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             асистентToolStripMenuItem.Text = " Асистент";
@@ -233,12 +232,6 @@
             addAsistent_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             addAsistent_ToolStripMenuItem.Text = "додати";
             addAsistent_ToolStripMenuItem.Click += addAsistent_ToolStripMenuItem_Click;
-            // 
-            // deleteAsistentToolStripMenuItem
-            // 
-            deleteAsistentToolStripMenuItem.Name = "deleteAsistentToolStripMenuItem";
-            deleteAsistentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            deleteAsistentToolStripMenuItem.Text = "видалити";
             // 
             // configurationCtrl2
             // 
@@ -438,6 +431,5 @@
         private CatalogCtrl catalogCtrl2;
         private System.Windows.Forms.ToolStripMenuItem асистентToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addAsistent_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteAsistentToolStripMenuItem;
     }
 }
