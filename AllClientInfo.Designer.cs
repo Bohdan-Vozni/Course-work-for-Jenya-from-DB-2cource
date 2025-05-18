@@ -31,6 +31,7 @@
             dataGridView1 = new System.Windows.Forms.DataGridView();
             exitAppBTN = new System.Windows.Forms.Button();
             clients = new System.Windows.Forms.ComboBox();
+            btnExportPDF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -68,12 +69,24 @@
             clients.TabIndex = 9;
             clients.SelectedIndexChanged += clients_SelectedIndexChanged;
             // 
+            // btnExportPDF
+            // 
+            btnExportPDF.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
+            btnExportPDF.Location = new System.Drawing.Point(-1, 436);
+            btnExportPDF.Name = "btnExportPDF";
+            btnExportPDF.Size = new System.Drawing.Size(135, 37);
+            btnExportPDF.TabIndex = 11;
+            btnExportPDF.Text = "Зберегти в PDF";
+            btnExportPDF.UseVisualStyleBackColor = true;
+            btnExportPDF.Click += btnExportPDF_Click;
+            // 
             // AllClientInfo
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.SystemColors.ActiveCaption;
             ClientSize = new System.Drawing.Size(1281, 473);
+            Controls.Add(btnExportPDF);
             Controls.Add(clients);
             Controls.Add(exitAppBTN);
             Controls.Add(dataGridView1);
@@ -91,5 +104,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button exitAppBTN;
         private System.Windows.Forms.ComboBox clients;
+        private System.Windows.Forms.Button btnExportPDF;
     }
 }

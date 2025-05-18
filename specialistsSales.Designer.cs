@@ -31,6 +31,7 @@
             exitAppBTN = new System.Windows.Forms.Button();
             dataGridView1 = new System.Windows.Forms.DataGridView();
             specialists = new System.Windows.Forms.ComboBox();
+            btnExportPDF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new System.Drawing.Size(978, 404);
+            dataGridView1.Size = new System.Drawing.Size(978, 402);
             dataGridView1.TabIndex = 8;
             // 
             // specialists
@@ -68,12 +69,24 @@
             specialists.TabIndex = 9;
             specialists.SelectedIndexChanged += specialists_SelectedIndexChanged;
             // 
+            // btnExportPDF
+            // 
+            btnExportPDF.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
+            btnExportPDF.Location = new System.Drawing.Point(-1, 412);
+            btnExportPDF.Name = "btnExportPDF";
+            btnExportPDF.Size = new System.Drawing.Size(135, 37);
+            btnExportPDF.TabIndex = 10;
+            btnExportPDF.Text = "Зберегти в PDF";
+            btnExportPDF.UseVisualStyleBackColor = true;
+            btnExportPDF.Click += btnExportPDF_Click;
+            // 
             // specialistsSales
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.SystemColors.ActiveCaption;
             ClientSize = new System.Drawing.Size(976, 450);
+            Controls.Add(btnExportPDF);
             Controls.Add(specialists);
             Controls.Add(dataGridView1);
             Controls.Add(exitAppBTN);
@@ -91,5 +104,6 @@
         private System.Windows.Forms.Button exitAppBTN;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox specialists;
+        private System.Windows.Forms.Button btnExportPDF;
     }
 }

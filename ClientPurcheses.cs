@@ -1,6 +1,9 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using iTextSharp.text.pdf;
+using iTextSharp.text;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Data;
+using System.IO;
 using System.Windows.Forms;
 
 namespace jenya_lab_7
@@ -47,5 +50,61 @@ namespace jenya_lab_7
             SetColumnHeaders();
 
         }
+
+        private void ExportToPDF(DataGridView dgv, string filename)
+        {
+            try
+            {
+                Document doc = new Document(PageSize.A4, 10, 10, 10, 10);
+                PdfWriter.GetInstance(doc, new FileStream(filename, FileMode.Create));
+                doc.Open();
+
+                PdfPTable pdfTable = new PdfPTable(dgv.ColumnCount);
+                pdfTable.WidthPercentage = 100;
+
+                foreach (DataGridViewColumn column in dgv.Columns)
+                {
+                    PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                    cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                    pdfTable.AddCell(cell);
+                }
+
+                foreach (DataGridViewRow row in dgv.Rows)
+                {
+                    if (!row.IsNewRow)
+                    {
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            pdfTable.AddCell(cell.Value?.ToString() ?? "");
+                        }
+                    }
+                }
+
+                doc.Add(pdfTable);
+                doc.Close();
+
+                MessageBox.Show("Файл успішно збережено!", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Помилка при експорті PDF: " + ex.Message);
+            }
+        }
+
+        private void btnExportPDF_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog
+            {
+                Filter = "PDF files (*.pdf)|*.pdf",
+                FileName = "звіт.pdf"
+            };
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                ExportToPDF(dataGridView1, sfd.FileName);
+            }
+        }
     }
+
+
 }

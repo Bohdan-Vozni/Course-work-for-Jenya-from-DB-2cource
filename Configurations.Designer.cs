@@ -43,7 +43,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new System.Drawing.Size(1256, 490);
+            dataGridView1.Size = new System.Drawing.Size(1256, 479);
             dataGridView1.TabIndex = 1;
             // 
             // exitAppBTN
