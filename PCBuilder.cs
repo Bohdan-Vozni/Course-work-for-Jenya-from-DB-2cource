@@ -13,6 +13,13 @@ namespace jenya_lab_7
         {
             InitializeComponent();
 
+            if (givePermission.permission == "ASSISTANT")
+            {
+                асистентToolStripMenuItem.Visible = false;
+                componentManageMenuItem.Visible = false;
+            }
+
+
             this.cleanView();
         }
 
@@ -49,6 +56,8 @@ namespace jenya_lab_7
                     userControl.Visible = false;
                 }
             }
+
+            pictureBox1.Visible = false;
         }
 
         private void exitTL_Click(object sender, System.EventArgs e)
@@ -73,6 +82,9 @@ namespace jenya_lab_7
         private void mainTL_Click(object sender, System.EventArgs e)
         {
             this.cleanView();
+            pictureBox1.Visible = true;
+            pictureBox1.BringToFront();
+
         }
 
         private void cpuMenuItem_Click(object sender, System.EventArgs e)
@@ -127,6 +139,8 @@ namespace jenya_lab_7
         {
             if (DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime)
                 return;
+
+            pictureBox1.Visible = true;
         }
 
         private void waterCoolingMenuItem_Click(object sender, System.EventArgs e)
@@ -205,6 +219,16 @@ namespace jenya_lab_7
         {
             AllClientInfo allClientInfo = new AllClientInfo();
             allClientInfo.Show();
+        }
+
+        private void catalogCtrl2_Load(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void componentManageMenuItem_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

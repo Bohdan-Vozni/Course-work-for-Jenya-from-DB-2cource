@@ -27,21 +27,20 @@ namespace jenya_lab_7
 
             var options = new JsonSerializerOptions
             {
-                WriteIndented = true, // додає відступи для читаємості
+                WriteIndented = true,
             };
 
             if (!File.Exists(pathToConectionString))
             {
-                using (FileStream file = new FileStream(pathToConectionString, FileMode.Create))
-                {
-                    JsonSerializer.Serialize(file, GetContectionString.getstr, options);
-                }
+                MessageBox.Show("Згенеруйте файл підключеня через нашу програму");
+                return;
             }
             else
             {
                 using (FileStream file = new FileStream(pathToConectionString, FileMode.Open))
                 {
                     GetContectionString.getstr = JsonSerializer.Deserialize<string>(file);
+                    GetContectionString.getstr += $"User ID = {userName};" + $"Password= {password};";
                 }
             }
 
@@ -50,7 +49,25 @@ namespace jenya_lab_7
                 try
                 {
                     connection.Open();
-                    MessageBox.Show("Підключення успішне!");
+
+                    SqlCommand command = new SqlCommand("getPermission", connection);
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            string permission = reader[0].ToString();
+
+                            givePermission.permission = permission == "0" ? "ASSISTANT" : "MASTER";
+                        }
+                    }
+
+                    reader.Close();
+
+                    MessageBox.Show($"Підключення успішне!");
 
                     var PCForm = new PCBuilder();
                     PCForm.Show();

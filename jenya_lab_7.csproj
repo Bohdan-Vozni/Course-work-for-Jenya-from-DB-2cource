@@ -41,10 +41,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="iTextSharp" Version="5.5.13.4" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
     <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms" Version="150.1652.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Text.Json" Version="9.0.5" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Properties\Settings.settings">

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PCBuilder));
             menuStrip1 = new System.Windows.Forms.MenuStrip();
             toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             mainTL = new System.Windows.Forms.ToolStripMenuItem();
-            toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             exitTL = new System.Windows.Forms.ToolStripMenuItem();
             configTL = new System.Windows.Forms.ToolStripMenuItem();
             catalogTL = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +56,7 @@
             збToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             клієнтськіЗамовленняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             кількістьПродажівСпеціалістівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            повнаІнформаціяПроКлієнтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             configurationCtrl2 = new ConfigurationCtrl();
             bluetoothManageCtrl1 = new bluetoothManageCtrl();
             clientManageCtrl1 = new clientManageCtrl();
@@ -72,8 +73,9 @@
             wifiManageCtrl1 = new wifiManageCtrl();
             catalogCtrl2 = new CatalogCtrl();
             asistentForUpdateAndDelete_UserControl1 = new AsistentForUpdateAndDelete_UserControl();
-            повнаІнформаціяПроКлієнтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -89,7 +91,7 @@
             // 
             // toolStripMenuItem1
             // 
-            toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { mainTL, toolStripMenuItem2, exitTL });
+            toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { mainTL, exitTL });
             toolStripMenuItem1.Name = "toolStripMenuItem1";
             toolStripMenuItem1.Size = new System.Drawing.Size(65, 24);
             toolStripMenuItem1.Text = "Меню";
@@ -97,20 +99,14 @@
             // mainTL
             // 
             mainTL.Name = "mainTL";
-            mainTL.Size = new System.Drawing.Size(151, 26);
+            mainTL.Size = new System.Drawing.Size(150, 26);
             mainTL.Text = "Головна";
             mainTL.Click += mainTL_Click;
-            // 
-            // toolStripMenuItem2
-            // 
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new System.Drawing.Size(151, 26);
-            toolStripMenuItem2.Text = "Профіль";
             // 
             // exitTL
             // 
             exitTL.Name = "exitTL";
-            exitTL.Size = new System.Drawing.Size(151, 26);
+            exitTL.Size = new System.Drawing.Size(150, 26);
             exitTL.Text = "Вийти";
             exitTL.Click += exitTL_Click;
             // 
@@ -141,88 +137,89 @@
             componentManageMenuItem.Name = "componentManageMenuItem";
             componentManageMenuItem.Size = new System.Drawing.Size(231, 24);
             componentManageMenuItem.Text = "Управління комплекчуючими";
+            componentManageMenuItem.Click += componentManageMenuItem_Click;
             // 
             // cpuMenuItem
             // 
             cpuMenuItem.Name = "cpuMenuItem";
-            cpuMenuItem.Size = new System.Drawing.Size(185, 26);
+            cpuMenuItem.Size = new System.Drawing.Size(224, 26);
             cpuMenuItem.Text = "CPU";
             cpuMenuItem.Click += cpuMenuItem_Click;
             // 
             // hddMenuItem
             // 
             hddMenuItem.Name = "hddMenuItem";
-            hddMenuItem.Size = new System.Drawing.Size(185, 26);
+            hddMenuItem.Size = new System.Drawing.Size(224, 26);
             hddMenuItem.Text = "HDD";
             hddMenuItem.Click += hddMenuItem_Click;
             // 
             // ramMenuItem
             // 
             ramMenuItem.Name = "ramMenuItem";
-            ramMenuItem.Size = new System.Drawing.Size(185, 26);
+            ramMenuItem.Size = new System.Drawing.Size(224, 26);
             ramMenuItem.Text = "RAM";
             ramMenuItem.Click += ramMenuItem_Click;
             // 
             // gpuMenuItem
             // 
             gpuMenuItem.Name = "gpuMenuItem";
-            gpuMenuItem.Size = new System.Drawing.Size(185, 26);
+            gpuMenuItem.Size = new System.Drawing.Size(224, 26);
             gpuMenuItem.Text = "GPU";
             gpuMenuItem.Click += gpuMenuItem_Click;
             // 
             // motherboardMenuItem
             // 
             motherboardMenuItem.Name = "motherboardMenuItem";
-            motherboardMenuItem.Size = new System.Drawing.Size(185, 26);
+            motherboardMenuItem.Size = new System.Drawing.Size(224, 26);
             motherboardMenuItem.Text = "Motherboard";
             motherboardMenuItem.Click += motherboardMenuItem_Click;
             // 
             // waterCoolingMenuItem
             // 
             waterCoolingMenuItem.Name = "waterCoolingMenuItem";
-            waterCoolingMenuItem.Size = new System.Drawing.Size(185, 26);
+            waterCoolingMenuItem.Size = new System.Drawing.Size(224, 26);
             waterCoolingMenuItem.Text = "Water cooling";
             waterCoolingMenuItem.Click += waterCoolingMenuItem_Click;
             // 
             // fanCoolingMenuItem
             // 
             fanCoolingMenuItem.Name = "fanCoolingMenuItem";
-            fanCoolingMenuItem.Size = new System.Drawing.Size(185, 26);
+            fanCoolingMenuItem.Size = new System.Drawing.Size(224, 26);
             fanCoolingMenuItem.Text = "Fan cooling";
             fanCoolingMenuItem.Click += fanCoolingMenuItem_Click;
             // 
             // towerMenuItem
             // 
             towerMenuItem.Name = "towerMenuItem";
-            towerMenuItem.Size = new System.Drawing.Size(185, 26);
+            towerMenuItem.Size = new System.Drawing.Size(224, 26);
             towerMenuItem.Text = "Tower";
             towerMenuItem.Click += towerMenuItem_Click;
             // 
             // blutoothMenuItem
             // 
             blutoothMenuItem.Name = "blutoothMenuItem";
-            blutoothMenuItem.Size = new System.Drawing.Size(185, 26);
+            blutoothMenuItem.Size = new System.Drawing.Size(224, 26);
             blutoothMenuItem.Text = "Blutooth";
             blutoothMenuItem.Click += blutoothMenuItem_Click;
             // 
             // wifiMenuItem
             // 
             wifiMenuItem.Name = "wifiMenuItem";
-            wifiMenuItem.Size = new System.Drawing.Size(185, 26);
+            wifiMenuItem.Size = new System.Drawing.Size(224, 26);
             wifiMenuItem.Text = "Wifi";
             wifiMenuItem.Click += wifiMenuItem_Click;
             // 
             // powerSupplyMenuItem
             // 
             powerSupplyMenuItem.Name = "powerSupplyMenuItem";
-            powerSupplyMenuItem.Size = new System.Drawing.Size(185, 26);
+            powerSupplyMenuItem.Size = new System.Drawing.Size(224, 26);
             powerSupplyMenuItem.Text = "Power supply";
             powerSupplyMenuItem.Click += powerSupplyMenuItem_Click;
             // 
             // ssdMenuItem
             // 
             ssdMenuItem.Name = "ssdMenuItem";
-            ssdMenuItem.Size = new System.Drawing.Size(185, 26);
+            ssdMenuItem.Size = new System.Drawing.Size(224, 26);
             ssdMenuItem.Text = "SSD";
             ssdMenuItem.Click += ssdMenuItem_Click;
             // 
@@ -275,13 +272,20 @@
             кількістьПродажівСпеціалістівToolStripMenuItem.Text = "Кількість продажів спеціалістів";
             кількістьПродажівСпеціалістівToolStripMenuItem.Click += кількістьПродажівСпеціалістівToolStripMenuItem_Click;
             // 
+            // повнаІнформаціяПроКлієнтаToolStripMenuItem
+            // 
+            повнаІнформаціяПроКлієнтаToolStripMenuItem.Name = "повнаІнформаціяПроКлієнтаToolStripMenuItem";
+            повнаІнформаціяПроКлієнтаToolStripMenuItem.Size = new System.Drawing.Size(309, 26);
+            повнаІнформаціяПроКлієнтаToolStripMenuItem.Text = "Повна інформація про клієнта";
+            повнаІнформаціяПроКлієнтаToolStripMenuItem.Click += повнаІнформаціяПроКлієнтаToolStripMenuItem_Click;
+            // 
             // configurationCtrl2
             // 
             configurationCtrl2.BackColor = System.Drawing.SystemColors.GrayText;
             configurationCtrl2.Location = new System.Drawing.Point(0, 28);
             configurationCtrl2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             configurationCtrl2.Name = "configurationCtrl2";
-            configurationCtrl2.Size = new System.Drawing.Size(1137, 647);
+            configurationCtrl2.Size = new System.Drawing.Size(1085, 576);
             configurationCtrl2.TabIndex = 1;
             // 
             // bluetoothManageCtrl1
@@ -388,8 +392,9 @@
             catalogCtrl2.Location = new System.Drawing.Point(0, 33);
             catalogCtrl2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             catalogCtrl2.Name = "catalogCtrl2";
-            catalogCtrl2.Size = new System.Drawing.Size(1127, 633);
+            catalogCtrl2.Size = new System.Drawing.Size(1085, 571);
             catalogCtrl2.TabIndex = 2;
+            catalogCtrl2.Load += catalogCtrl2_Load;
             // 
             // asistentForUpdateAndDelete_UserControl1
             // 
@@ -399,18 +404,22 @@
             asistentForUpdateAndDelete_UserControl1.Size = new System.Drawing.Size(1013, 528);
             asistentForUpdateAndDelete_UserControl1.TabIndex = 15;
             // 
-            // повнаІнформаціяПроКлієнтаToolStripMenuItem
+            // pictureBox1
             // 
-            повнаІнформаціяПроКлієнтаToolStripMenuItem.Name = "повнаІнформаціяПроКлієнтаToolStripMenuItem";
-            повнаІнформаціяПроКлієнтаToolStripMenuItem.Size = new System.Drawing.Size(309, 26);
-            повнаІнформаціяПроКлієнтаToolStripMenuItem.Text = "Повна інформація про клієнта";
-            повнаІнформаціяПроКлієнтаToolStripMenuItem.Click += повнаІнформаціяПроКлієнтаToolStripMenuItem_Click;
+            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new System.Drawing.Point(0, 28);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(1092, 581);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 16;
+            pictureBox1.TabStop = false;
             // 
             // PCBuilder
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1087, 608);
+            ClientSize = new System.Drawing.Size(1087, 606);
+            Controls.Add(pictureBox1);
             Controls.Add(asistentForUpdateAndDelete_UserControl1);
             Controls.Add(wifiManageCtrl1);
             Controls.Add(wateCoolingManageCtrl1);
@@ -437,6 +446,7 @@
             Load += PCBuilder_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -446,7 +456,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem mainTL;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem exitTL;
         private System.Windows.Forms.ToolStripMenuItem catalogTL;
         private System.Windows.Forms.ToolStripMenuItem configTL;
@@ -492,5 +501,6 @@
         private System.Windows.Forms.ToolStripMenuItem клієнтськіЗамовленняToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem кількістьПродажівСпеціалістівToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem повнаІнформаціяПроКлієнтаToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

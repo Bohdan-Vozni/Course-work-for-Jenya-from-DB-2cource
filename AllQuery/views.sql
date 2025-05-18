@@ -48,17 +48,18 @@ JOIN CPU ON PC.CPU_ID = CPU.CPU_ID
 JOIN GPU ON PC.GPU_ID = GPU.GPU_ID
 JOIN Motherboard ON PC.Motherboard_ID = Motherboard.Motherboard_ID
 JOIN RAM ON PC.RAM_ID = RAM.RAM_ID
-JOIN HDD ON PC.HDD_ID = HDD.HDD_ID
-JOIN SSD ON PC.SSD_ID = SSD.SSD_ID
+LEFT JOIN HDD ON PC.HDD_ID = HDD.HDD_ID
+LEFT JOIN SSD ON PC.SSD_ID = SSD.SSD_ID
 JOIN PowerSupply ON PC.PowerSupply_ID = PowerSupply.PowerSupply_ID
-JOIN WaterCooling ON PC.WaterCooling_ID = WaterCooling.WaterCooling_ID
-JOIN FanCooling ON PC.FanCooling_ID = FanCooling.FanCooling_ID
+LEFT JOIN WaterCooling ON PC.WaterCooling_ID = WaterCooling.WaterCooling_ID
+LEFT JOIN FanCooling ON PC.FanCooling_ID = FanCooling.FanCooling_ID
 JOIN Wifi ON PC.Wifi_ID = Wifi.Wifi_ID
 JOIN Bluetooth ON PC.Bluetooth_ID = Bluetooth.Bluetooth_ID
 JOIN Tower ON PC.Tower_ID = Tower.Tower_ID
 JOIN Purchase ON Purchase.PC_ID = PC.PC_ID         
-JOIN Client ON Purchase.Client_ID = Client.Client_ID 
+JOIN Client ON Purchase.Client_ID = Client.Client_ID;
 GO
+
 
 CREATE VIEW vw_ClientPurchases AS
 SELECT 
@@ -124,11 +125,11 @@ JOIN CPU ON PC.CPU_ID = CPU.CPU_ID
 JOIN GPU ON PC.GPU_ID = GPU.GPU_ID
 JOIN Motherboard MB ON PC.Motherboard_ID = MB.Motherboard_ID
 JOIN RAM ON PC.RAM_ID = RAM.RAM_ID
-JOIN HDD ON PC.HDD_ID = HDD.HDD_ID
-JOIN SSD ON PC.SSD_ID = SSD.SSD_ID
+LEFT JOIN HDD ON PC.HDD_ID = HDD.HDD_ID
+LEFT JOIN SSD ON PC.SSD_ID = SSD.SSD_ID
 JOIN PowerSupply PS ON PC.PowerSupply_ID = PS.PowerSupply_ID
-JOIN WaterCooling WC ON PC.WaterCooling_ID = WC.WaterCooling_ID
-JOIN FanCooling FC ON PC.FanCooling_ID = FC.FanCooling_ID
+LEFT JOIN WaterCooling WC ON PC.WaterCooling_ID = WC.WaterCooling_ID
+LEFT JOIN FanCooling FC ON PC.FanCooling_ID = FC.FanCooling_ID
 JOIN Wifi WF ON PC.Wifi_ID = WF.Wifi_ID
 JOIN Bluetooth BT ON PC.Bluetooth_ID = BT.Bluetooth_ID
 JOIN Tower TWR ON PC.Tower_ID = TWR.Tower_ID;
