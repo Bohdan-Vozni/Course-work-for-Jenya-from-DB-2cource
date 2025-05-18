@@ -1,9 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
-using System;
-using System.Data;
-using System.Windows.Forms;
-
-namespace jenya_lab_7
+﻿namespace jenya_lab_7
 {
     public partial class specialistsSales : Form
     {
@@ -11,7 +6,6 @@ namespace jenya_lab_7
         {
             InitializeComponent();
         }
-
         private void LoadSpecialistsToComboBox()
         {
             using (SqlConnection connection = new SqlConnection(GetContectionString.getstr))
@@ -59,14 +53,11 @@ namespace jenya_lab_7
             dataGridView1.Columns["SpecialistName"].HeaderText = "Повне ім'я спеціаліста";
             dataGridView1.Columns["TotalSales"].HeaderText = "Кількість Продажів";
             dataGridView1.Columns["TotalRevenue"].HeaderText = "Загальний дохід";
-
         }
 
         private void specialistsSales_Load(object sender, EventArgs e)
         {
-
             LoadSpecialistsToComboBox();
-
         }
 
         private void exitAppBTN_Click(object sender, EventArgs e)
