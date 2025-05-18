@@ -39,7 +39,7 @@ namespace jenya_lab_7
                 SqlCommand command = new SqlCommand(nameProcedure, connection);
                 command.CommandType = CommandType.StoredProcedure;
 
-               
+
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 DataTable dt = new DataTable();
@@ -143,7 +143,7 @@ namespace jenya_lab_7
                     var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Bluetooth"].FormattedValue.ToString();
 
                     PcForSaveOrderForOneTime.bluetooth = cpuValue;
-                    PcForSaveOrderForOneTime.idBluetooth= idCpuValue;
+                    PcForSaveOrderForOneTime.idBluetooth = idCpuValue;
 
                     MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.bluetooth}");
                     return;
@@ -158,7 +158,7 @@ namespace jenya_lab_7
                     var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Відеокарти"].FormattedValue.ToString();
 
                     PcForSaveOrderForOneTime.gpu = cpuValue;
-                    PcForSaveOrderForOneTime.idGpu= idCpuValue;
+                    PcForSaveOrderForOneTime.idGpu = idCpuValue;
 
                     MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.gpu}");
                     return;
@@ -173,7 +173,7 @@ namespace jenya_lab_7
                     var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Вентиляторного охолодження"].FormattedValue.ToString();
 
                     PcForSaveOrderForOneTime.fanCooling = cpuValue;
-                    PcForSaveOrderForOneTime.idFanCooling= idCpuValue;
+                    PcForSaveOrderForOneTime.idFanCooling = idCpuValue;
 
                     MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.fanCooling}");
                     return;
@@ -188,7 +188,7 @@ namespace jenya_lab_7
                     var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Wi-Fi модуля"].FormattedValue.ToString();
 
                     PcForSaveOrderForOneTime.wifi = cpuValue;
-                    PcForSaveOrderForOneTime.idWifi= idCpuValue;
+                    PcForSaveOrderForOneTime.idWifi = idCpuValue;
 
                     MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.wifi}");
                     return;
@@ -203,14 +203,14 @@ namespace jenya_lab_7
                     var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Материнської плати"].FormattedValue.ToString();
 
                     PcForSaveOrderForOneTime.motherboard = cpuValue;
-                    PcForSaveOrderForOneTime.idMotherboard= idCpuValue;
+                    PcForSaveOrderForOneTime.idMotherboard = idCpuValue;
 
                     MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.motherboard}");
                     return;
                 }
 
                 bool hasWaterCoolint = result_dataGridView.Columns.Contains("Назва водяного охолодження");
-                bool hasIdWaterCoolint= result_dataGridView.Columns.Contains("ID Водяного охолодження");
+                bool hasIdWaterCoolint = result_dataGridView.Columns.Contains("ID Водяного охолодження");
 
                 if (hasWaterCoolint && hasIdWaterCoolint)
                 {
@@ -218,14 +218,14 @@ namespace jenya_lab_7
                     var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Водяного охолодження"].FormattedValue.ToString();
 
                     PcForSaveOrderForOneTime.waterCooling = cpuValue;
-                    PcForSaveOrderForOneTime.idWaterCooling= idCpuValue;
+                    PcForSaveOrderForOneTime.idWaterCooling = idCpuValue;
 
                     MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.waterCooling}");
                     return;
                 }
 
                 bool hasTower = result_dataGridView.Columns.Contains("Назва корпуса");
-                bool hasIdTower= result_dataGridView.Columns.Contains("ID Корпуса");
+                bool hasIdTower = result_dataGridView.Columns.Contains("ID Корпуса");
 
                 if (hasTower && hasIdTower)
                 {
@@ -233,13 +233,18 @@ namespace jenya_lab_7
                     var idCpuValue = result_dataGridView.Rows[e.RowIndex].Cells["ID Корпуса"].FormattedValue.ToString();
 
                     PcForSaveOrderForOneTime.tower = cpuValue;
-                    PcForSaveOrderForOneTime.idTower= idCpuValue;
+                    PcForSaveOrderForOneTime.idTower = idCpuValue;
 
                     MessageBox.Show($"Вибрано {PcForSaveOrderForOneTime.tower}");
                     return;
                 }
 
             }
+        }
+
+        private void return_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

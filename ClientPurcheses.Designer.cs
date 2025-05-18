@@ -75,7 +75,7 @@
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.SystemColors.ActiveCaption;
-            ClientSize = new System.Drawing.Size(916, 461);
+            ClientSize = new System.Drawing.Size(922, 462);
             Controls.Add(btnExportPDF);
             Controls.Add(exitAppBTN);
             Controls.Add(dataGridView1);

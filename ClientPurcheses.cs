@@ -55,33 +55,69 @@ namespace jenya_lab_7
         {
             try
             {
-                Document doc = new Document(PageSize.A4, 10, 10, 10, 10);
-                PdfWriter.GetInstance(doc, new FileStream(filename, FileMode.Create));
-                doc.Open();
-
-                PdfPTable pdfTable = new PdfPTable(dgv.ColumnCount);
-                pdfTable.WidthPercentage = 100;
-
-                foreach (DataGridViewColumn column in dgv.Columns)
+                using (FileStream stream = new FileStream(filename, FileMode.Create))
                 {
-                    PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
-                    cell.BackgroundColor = BaseColor.LIGHT_GRAY;
-                    pdfTable.AddCell(cell);
-                }
+                    Document doc = new Document(PageSize.A4.Rotate(), 20f, 20f, 20f, 20f); // Пейзажна орієнтація з полями
+                    PdfWriter.GetInstance(doc, stream);
+                    doc.Open();
 
-                foreach (DataGridViewRow row in dgv.Rows)
-                {
-                    if (!row.IsNewRow)
+                    PdfPTable pdfTable = new PdfPTable(dgv.ColumnCount);
+                    pdfTable.WidthPercentage = 100;
+                    pdfTable.HeaderRows = 1;
+
+                    // Пропорційні ширини колонок на основі ширини DataGridView
+                    float[] widths = new float[dgv.ColumnCount];
+                    float totalWidth = 0;
+                    for (int i = 0; i < dgv.ColumnCount; i++)
                     {
-                        foreach (DataGridViewCell cell in row.Cells)
+                        widths[i] = dgv.Columns[i].Width;
+                        totalWidth += dgv.Columns[i].Width;
+                    }
+
+                    for (int i = 0; i < widths.Length; i++)
+                    {
+                        widths[i] = widths[i] / totalWidth * 100;
+                    }
+
+                    pdfTable.SetWidths(widths);
+
+                    // Заголовки
+                    foreach (DataGridViewColumn column in dgv.Columns)
+                    {
+                        PdfPCell headerCell = new PdfPCell(new Phrase(column.HeaderText))
                         {
-                            pdfTable.AddCell(cell.Value?.ToString() ?? "");
+                            BackgroundColor = BaseColor.LIGHT_GRAY,
+                            HorizontalAlignment = Element.ALIGN_CENTER,
+                            VerticalAlignment = Element.ALIGN_MIDDLE,
+                            Padding = 5,
+                            NoWrap = false
+                        };
+                        pdfTable.AddCell(headerCell);
+                    }
+
+                    // Дані
+                    foreach (DataGridViewRow row in dgv.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                PdfPCell dataCell = new PdfPCell(new Phrase(cell.Value?.ToString() ?? ""))
+                                {
+                                    HorizontalAlignment = Element.ALIGN_LEFT,
+                                    VerticalAlignment = Element.ALIGN_MIDDLE,
+                                    Padding = 4,
+                                    NoWrap = false
+                                };
+                                pdfTable.AddCell(dataCell);
+                            }
                         }
                     }
-                }
 
-                doc.Add(pdfTable);
-                doc.Close();
+                    doc.Add(pdfTable);
+                    doc.Close();
+                    stream.Close();
+                }
 
                 MessageBox.Show("Файл успішно збережено!", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
